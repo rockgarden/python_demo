@@ -507,3 +507,360 @@ print ("关闭文件成功!!")
 
 
 
+# os.fchdir() 方法通过文件描述符改变当前工作目录。
+# Unix, Windows 上可用。
+# 语法
+# fchdir()方法语法格式如下：
+# os.fchdir(fd);
+# 参数
+# fd -- 文件描述符
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 首先到目录 "/var/www/html"
+os.chdir("/var/www/html" )
+
+# 输出当前目录
+print ("当前工作目录为 : %s" % os.getcwd())
+
+# 打开新目录 "/tmp"
+fd = os.open( "/tmp", os.O_RDONLY )
+
+# 使用 os.fchdir() 方法修改到新目录
+os.fchdir(fd)
+
+# 输出当前目录
+print ("当前工作目录为 : %s" % os.getcwd())
+
+# 关闭打开的目录
+os.close( fd )
+
+
+
+# os.fchmod() 方法用于改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。
+# Unix上可用。
+# 语法
+# fchmod()方法语法格式如下：
+# os.fchmod(fd, mode);
+# 参数
+# fd -- 文件描述符
+# mode -- 可以是以下一个或多个组成，多个使用 "|" 隔开：
+# stat.S_ISUID:设置 UID 位
+# stat.S_ISGID: 设置组 ID 位
+# stat.S_ENFMT: 系统文件锁定的执法行动
+# stat.S_ISVTX: 在执行之后保存文字和图片
+# stat.S_IREAD: 对于拥有者读的权限
+# stat.S_IWRITE: 对于拥有者写的权限
+# stat.S_IEXEC: 对于拥有者执行的权限
+# stat.S_IRWXU:对于拥有者读、写、执行的权限
+# stat.S_IRUSR: 对于拥有者读的权限
+# stat.S_IWUSR: 对于拥有者写的权限
+# stat.S_IXUSR: 对于拥有者执行的权限
+# stat.S_IRWXG: 对于同组的人读写执行的权限
+# stat.S_IRGRP: 对于同组读的权限
+# stat.S_IWGRP:对于同组写的权限
+# stat.S_IXGRP: 对于同组执行的权限
+# stat.S_IRWXO: 对于其他组读写执行的权限
+# stat.S_IROTH: 对于其他组读的权限
+# stat.S_IWOTH: 对于其他组写的权限
+# stat.S_IXOTH:对于其他组执行的权限
+# 返回值
+# 该方法没有返回值。
+import os, sys, stat
+
+# 打开文件 "/tmp/foo.txt"
+fd = os.open( "/tmp", os.O_RDONLY )
+
+# 设置文件可通过组执行
+
+os.fchmod( fd, stat.S_IXGRP)
+
+# 设置文件可被其他用户写入
+os.fchmod(fd, stat.S_IWOTH)
+
+print ("修改权限成功!!")
+
+# 关闭文件
+os.close( fd )
+
+
+
+# os.fchown() 方法用于修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。
+# Unix上可用。
+# 语法
+# fchown()方法语法格式如下：
+# os.fchown(fd, uid, gid)
+# 参数
+# fd -- 文件描述符
+# uid -- 文件所有者的用户id
+# gid -- 文件所有者的用户组id
+import os, sys, stat
+
+# 打开文件 "/tmp/foo.txt"
+fd = os.open( "/tmp", os.O_RDONLY )
+
+# 设置文件的用户 id 为 100
+os.fchown( fd, 100, -1)
+
+# 设置文件的用户组 id 为 100
+os.fchown( fd, -1, 50)
+
+
+print ("修改权限成功!!")
+
+# 关闭文件
+os.close( fd )
+
+
+
+# os.fdatasync() 方法用于强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。如果你需要刷新缓冲区可以使用该方法。
+# Unix上可用。
+# 语法
+# fdatasync()方法语法格式如下：
+# os.fdatasync(fd);
+# 参数
+# fd -- 文件描述符
+import os, sys
+
+# 打开文件 "/tmp/foo.txt"
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 写入字符串
+os.write(fd, "This is test")
+
+# 使用 fdatasync() 方法
+os.fdatasync(fd)
+
+# 读取文件
+os.lseek(fd, 0, 0)
+str = os.read(fd, 100)
+print ("读取的字符是 : ", str)
+
+# 关闭文件
+os.close( fd )
+
+print ("关闭文件成功!!")
+
+
+
+# os.fdopen() 方法用于通过文件描述符 fd 创建一个文件对象，并返回这个文件对象。
+# Unix, Windows上可用。
+# 语法
+# fdopen()方法语法格式如下：
+# os.fdopen(fd, [, mode[, bufsize]]);
+# 参数
+# fd -- 打开的文件的描述符，在Unix下，描述符是一个小整数。
+# mode -- 可选，和buffersize参数和Python内建的open函数一样，mode参数可以指定『r,w,a,r+,w+,a+,b』等，表示文件的是只读的还是可以读写的，以及打开文件是以二进制还是文本形式打开。这些参数和C语言中的<stdio.h>中fopen函数中指定的mode参数类似。
+# bufsize -- 可选，指定返回的文件对象是否带缓冲：buffersize=0，表示没有带缓冲；bufsize=1，表示该文件对象是行缓冲的；bufsize=正数，表示使用一个指定大小的缓冲冲，单位为byte，但是这个大小不是精确的；bufsize=负数，表示使用一个系统默认大小的缓冲，对于tty字元设备一般是行缓冲，而对于其他文件则一般是全缓冲。如果这个参数没有制定，则使用系统默认的缓冲设定。
+# 返回值
+# 通过文件描述符返回的文件对象。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 获取以上文件的对象
+fo = os.fdopen(fd, "w+")
+
+# 获取当前文章
+print ("Current I/O pointer position :%d" % fo.tell())
+
+# 写入字符串
+fo.write( "Python is a great language.\nYeah its great!!\n");
+
+# 读取内容
+os.lseek(fd, 0, 0)
+str = os.read(fd, 100)
+print ("Read String is : ", str)
+
+# 获取当前位置
+print ("Current I/O pointer position :%d" % fo.tell())
+
+# 关闭文件
+os.close( fd )
+
+print ("关闭文件成功!!")
+
+
+
+# os.fpathconf() 方法用于返回一个打开的文件的系统配置信息。
+# Unix上可用。
+# 语法
+# fpathconf()方法语法格式如下：
+# os.fpathconf(fd, name)
+# 参数
+# fd -- 打开的文件的描述符。
+# name -- 可选，和buffersize参数和Python内建的open函数一样，mode参数可以指定『r,w,a,r+,w+,a+,b』等，表示文件的是只读的还是可以读写的，以及打开文件是以二进制还是文本形式打开。这些参数和C语言中的<stdio.h>中fopen函数中指定的mode参数类似。
+# bufsize -- 检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。一些平台也定义了一些额外的名字。这些名字在主操作系统上pathconf_names的字典中。对于不在pathconf_names中的配置变量，传递一个数字作为名字，也是可以接受的。
+# 返回值
+# 返回一个打开的文件的系统配置信息。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+print ("%s" % os.pathconf_names)
+
+# 获取最大文件连接数
+no = os.fpathconf(fd, 'PC_LINK_MAX')
+print ("文件最大连接数为 :%d" % no)
+
+# 获取文件名最大长度
+no = os.fpathconf(fd, 'PC_NAME_MAX')
+print ("文件名最大长度为 :%d" % no)
+
+# 关闭文件
+os.close( fd )
+
+print ("关闭文件成功!!")
+
+
+
+# os.fstat() 方法用于返回文件描述符fd的状态，类似 stat()。
+# Unix，Windows上可用。
+# fstat 方法返回的结构:
+# st_dev: 设备信息
+# st_ino: 文件的i-node值
+# st_mode: 文件信息的掩码，包含了文件的权限信息，文件的类型信息(是普通文件还是管道文件，或者是其他的文件类型)
+# st_nlink: 硬连接数
+# st_uid: 用户ID
+# st_gid: 用户组 ID
+# st_rdev: 设备 ID (如果指定文件)
+# st_size: 文件大小，以byte为单位
+# st_blksize: 系统 I/O 块大小
+# st_blocks: 文件的是由多少个 512 byte 的块构成的
+# st_atime: 文件最近的访问时间
+# st_mtime: 文件最近的修改时间
+# st_ctime: 文件状态信息的修改时间（不是文件内容的修改时间）
+# 语法
+# fstat()方法语法格式如下：
+# os.fstat(fd)
+# 参数
+# fd -- 文件的描述符。
+# 返回值
+# 返回文件描述符fd的状态。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 获取元组
+info = os.fstat(fd)
+
+print ("文件信息 :", info)
+
+# 获取文件 uid
+print ("文件 UID :%d" % info.st_uid)
+
+# 获取文件 gid
+print ("文件 GID  :%d" % info.st_gid)
+
+# 关闭文件
+os.close( fd)
+
+
+
+# os.fstatvfs() 方法用于返回包含文件描述符fd的文件的文件系统的信息，类似 statvfs()。
+# Unix上可用。
+# fstatvfs 方法返回的结构:
+# f_bsize: 文件系统块大小
+# f_frsize: 分栈大小
+# f_blocks: 文件系统数据块总数
+# f_bfree: 可用块数
+# f_bavail:非超级用户可获取的块数
+# f_files: 文件结点总数
+# f_ffree: 可用文件结点数
+# f_favail: 非超级用户的可用文件结点数
+# f_fsid: 文件系统标识 ID
+# f_flag: 挂载标记
+# f_namemax: 最大文件长度
+# 语法
+# fstatvfs()方法语法格式如下：
+# os.fstatvfs(fd)
+# 参数
+# fd -- 文件的描述符。
+# 返回值
+# 返回包含文件描述符fd的文件的文件系统的信息。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 获取元组
+info = os.fstatvfs(fd)
+
+print ("文件信息 :", info)
+
+# 获取文件名最大长度
+print ("文件名最大长度 :%d" % info.f_namemax)
+
+# 获取可用块数
+print ("可用块数 :%d" % info.f_bfree)
+
+# 关闭文件
+os.close(fd)
+
+
+
+# os.fsync() 方法强制将文件描述符为fd的文件写入硬盘。在Unix, 将调用fsync()函数;在Windows, 调用 _commit()函数。
+# 如果你准备操作一个Python文件对象f, 首先f.flush(),然后os.fsync(f.fileno()), 确保与f相关的所有内存都写入了硬盘.在unix，Windows中有效。
+# Unix、Windows上可用。
+# 语法
+# fsync()方法语法格式如下：
+# os.fsync(fd)
+# 参数
+# fd -- 文件的描述符。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 写入字符串
+os.write(fd, "This is test")
+
+# 使用 fsync() 方法.
+os.fsync(fd)
+
+# 读取内容
+os.lseek(fd, 0, 0)
+str = os.read(fd, 100)
+print ("读取的字符串为 : ", str)
+
+# 关闭文件
+os.close( fd)
+
+print ("关闭文件成功!!")
+
+
+
+# os.ftruncate() 裁剪文件描述符fd对应的文件, 它最大不能超过文件大小。
+# Unix上可用。
+# 语法
+# ftruncate()方法语法格式如下：
+# os.ftruncate(fd, length)¶
+# 参数
+# fd -- 文件的描述符。
+# length -- 要裁剪文件大小。
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 写入字符串
+os.write(fd, "This is test - This is test")
+
+# 使用 ftruncate() 方法
+os.ftruncate(fd, 10)
+
+# 读取内容
+os.lseek(fd, 0, 0)
+str = os.read(fd, 100)
+print ("读取的字符串是 : ", str)
+
+# 关闭文件
+os.close( fd)
+
+print ("关闭文件成功!!")
