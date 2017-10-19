@@ -1,3 +1,5 @@
+# TODO: http://www.runoob.com/python3/python3-os-file-methods.html 31
+
 pathFile = "/Users/wangkan/Documents/python_demo/code/source/os.txt"
 
 # OS 文件/目录方法
@@ -858,9 +860,326 @@ os.ftruncate(fd, 10)
 # 读取内容
 os.lseek(fd, 0, 0)
 str = os.read(fd, 100)
-print ("读取的字符串是 : ", str)
+print("读取的字符串是 : ", str)
 
 # 关闭文件
 os.close( fd)
 
+print("关闭文件成功!!")
+
+
+
+# os.getcwd() 方法用于返回当前工作目录。
+# 语法
+# getcwd()方法语法格式如下：
+# os.getcwd()
+# 参数
+# 无
+# 返回值
+# 返回当前进程的工作目录。
+import os, sys
+
+# 切换到 "/var/www/html" 目录
+os.chdir("/var/www/html" )
+
+# 打印当前目录
+print ("当前工作目录 : %s" % os.getcwd())
+
+# 打开 "/tmp"
+fd = os.open( "/tmp", os.O_RDONLY )
+
+# 使用 os.fchdir() 方法修改目录
+os.fchdir(fd)
+
+# 打印当前目录
+print ("当前工作目录 : %s" % os.getcwd())
+
+# 关闭文件
+os.close( fd )
+
+
+
+# os.getcwdu() 方法用于返回一个当前工作目录的Unicode对象。
+# Unix, Windows 系统下可用。
+# 语法
+# getcwdu()方法语法格式如下：
+# os.getcwdu()
+# 参数
+# 无
+# 返回值
+# 返回一个当前工作目录的Unicode对象。
+import os, sys
+
+# 切换到 "/var/www/html" 目录
+os.chdir("/var/www/html" )
+
+# 打印当前目录
+print ("当前工作目录 : %s" % os.getcwdu())
+
+# 打开 "/tmp"
+fd = os.open( "/tmp", os.O_RDONLY )
+
+# 使用 os.fchdir() 方法修改目录
+os.fchdir(fd)
+
+# 打印当前目录
+print ("当前工作目录 : %s" % os.getcwdu())
+
+# 关闭文件
+os.close( fd )
+
+
+
+# os.isatty() 方法用于判断如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。
+# 语法
+# isatty()方法语法格式如下：
+# os.isatty()
+# 参数
+# 无
+# 返回值
+# 如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 写入字符串
+str = "This is runoob.com site"
+os.write(fd,bytes(str, 'UTF-8'))
+
+# 使用 isatty() 查看文件
+ret = os.isatty(fd)
+
+print ("返回值: ", ret)
+
+# 关闭文件
+os.close( fd )
+
+
+
+# os.lchflags() 方法用于设置路径的标记为数字标记，类似 chflags()，但是没有软链接。
+# 只支持在 Unix 下使用。
+# 语法
+# lchflags()方法语法格式如下：
+# os.lchflags(path, flags)
+# 参数
+# path -- 设置标记的文件路径
+# flags -- 可以由一个或多个标记组合，多个使用"|"隔开：
+# UF_NODUMP: 非转储文件
+# UF_IMMUTABLE: 文件是只读的
+# UF_APPEND: 文件只能追加内容
+# UF_NOUNLINK: 文件不可删除
+# UF_OPAQUE: 目录不透明，需要通过联合堆栈查看
+# SF_ARCHIVED: 可存档文件(超级用户可设)
+# SF_IMMUTABLE: 文件是只读的(超级用户可设)
+# SF_APPEND: 文件只能追加内容(超级用户可设)
+# SF_NOUNLINK: 文件不可删除(超级用户可设)
+# SF_SNAPSHOT: 快照文件(超级用户可设)
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/foo.txt"
+fd = os.open( path, os.O_RDWR|os.O_CREAT )
+
+# 关闭文件
+os.close( fd )
+
+# 修改文件标记
+ret = os.lchflags(path, os.UF_IMMUTABLE )
+
+print ("修改文件标记成功!!")
+
+
+
+# os.lchmod() 方法用于修改连接文件权限。
+# 只支持在 Unix 下使用。
+# 语法
+# lchmod()方法语法格式如下：
+# os.lchmod(path, mode)
+# 参数
+# path -- 设置标记的文件路径
+# mode -- 可以是以下一个或多个组成，多个使用 "|" 隔开：
+# stat.S_ISUID:设置 UID 位
+# stat.S_ISGID: 设置组 ID 位
+# stat.S_ENFMT: 系统文件锁定的执法行动
+# stat.S_ISVTX: 在执行之后保存文字和图片
+# stat.S_IREAD: 对于拥有者读的权限
+# stat.S_IWRITE: 对于拥有者写的权限
+# stat.S_IEXEC: 对于拥有者执行的权限
+# stat.S_IRWXU:对于拥有者读、写、执行的权限
+# stat.S_IRUSR: 对于拥有者读的权限
+# stat.S_IWUSR: 对于拥有者写的权限
+# stat.S_IXUSR: 对于拥有者执行的权限
+# stat.S_IRWXG: 对于同组的人读写执行的权限
+# stat.S_IRGRP: 对于同组读的权限
+# stat.S_IWGRP:对于同组写的权限
+# stat.S_IXGRP: 对于同组执行的权限
+# stat.S_IRWXO: 对于其他组读写执行的权限
+# stat.S_IROTH: 对于其他组读的权限
+# stat.S_IWOTH: 对于其他组写的权限
+# stat.S_IXOTH:对于其他组执行的权限
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/foo.txt"
+fd = os.open( path, os.O_RDWR|os.O_CREAT )
+
+# 关闭文件
+os.close( fd )
+
+# 修改文件权限
+# 设置文件可以通过组执行
+os.lchmod( path, stat.S_IXGRP)
+
+# 设置文件可以被其他用户写入
+os.lchmod("/tmp/foo.txt", stat.S_IWOTH)
+
+print ("修改权限成功!!")
+
+
+
+# os.lchown() 方法用于更改文件所有者，类似 chown，但是不追踪链接。
+# 只支持在 Unix 下使用。
+# 语法
+# lchown()方法语法格式如下：
+# os.lchown(path, uid, gid)
+# 参数
+# path -- 设置权限的文件路径
+# uid -- 所属用户 ID
+# gid -- 所属用户组 ID
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/foo.txt"
+fd = os.open( path, os.O_RDWR|os.O_CREAT )
+
+# 关闭打开的文件
+os.close( fd )
+
+# 修改文件权限
+# 设置文件所属用户 ID
+os.lchown( path, 500, -1)
+
+# 设置文件所属用户组 ID
+os.lchown( path, -1, 500)
+
+print ("修改权限成功!!")
+
+
+
+# os.link() 方法用于创建硬链接，名为参数 dst，指向参数 src。
+# 该方法对于创建一个已存在文件的拷贝是非常有用的。
+# 只支持在 Unix, Windows 下使用。
+# 语法
+# link()方法语法格式如下：
+# os.link(src, dst)
+# 参数
+# src -- 用于创建硬连接的源地址
+# dst -- 用于创建硬连接的目标地址
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/foo.txt"
+fd = os.open( path, os.O_RDWR|os.O_CREAT )
+
+# 关闭文件
+os.close( fd )
+
+# 创建以上文件的拷贝
+dst = "/tmp/foo.txt"
+os.link( path, dst)
+
+print ("创建硬链接成功!!")
+
+
+
+# os.listdir() 方法用于返回指定的文件夹包含的文件或文件夹的名字的列表。这个列表以字母顺序。 它不包括 '.' 和'..' 即使它在文件夹中。
+# 只支持在 Unix, Windows 下使用。
+# 语法
+# listdir()方法语法格式如下：
+# os.listdir(path)
+# 参数
+# path -- 需要列出的目录路径
+# 返回值
+# 返回指定路径下的文件和文件夹列表。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/"
+dirs = os.listdir( path )
+
+# 输出所有文件和文件夹
+for file in dirs:
+    print (file)
+
+
+
+# os.lseek() 方法用于设置文件描述符 fd 当前位置为 pos, how 方式修改。
+# 在Unix，Windows中有效。
+# 语法
+# lseek()方法语法格式如下：
+# os.lseek(fd, pos, how)
+# 参数
+# fd -- 文件描述符。
+# pos -- 这是相对于给定的参数 how 在文件中的位置。。
+# how -- 文件内参考位置。SEEK_SET 或者 0 设置从文件开始的计算的pos; SEEK_CUR或者 1 则从当前位置计算; os.SEEK_END或者2则从文件尾部开始。
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+# 写入字符串
+os.write(fd, "This is test")
+
+# 所有 fsync() 方法
+os.fsync(fd)
+
+# 从开始位置读取字符串
+os.lseek(fd, 0, 0)
+str = os.read(fd, 100)
+print ("Read String is : ", str)
+
+# 关闭文件
+os.close( fd )
+
 print ("关闭文件成功!!")
+
+
+
+# os.lstat() 方法用于类似 stat() 返回文件的信息,但是没有符号链接。在某些平台上，这是fstat的别名，例如 Windows。
+# 语法
+# lstat()方法语法格式如下：
+# os.lstat(path)
+# 参数
+# path -- 要返回信息的文件。
+# 返回值
+# 返回文件信息。
+import os, sys
+
+# 打开文件
+path = "/var/www/html/foo.txt"
+fd = os.open( path, os.O_RDWR|os.O_CREAT )
+
+# 关闭打开的文件
+os.close( fd )
+
+# 获取元组
+info = os.lstat(path)
+
+print ("文件信息 :", info)
+
+# 获取文件 uid
+print ("文件 UID  :%d" % info.st_uid)
+
+# 获取文件 gid
+print ("文件 GID :%d" % info.st_gid)
