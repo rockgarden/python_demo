@@ -1183,3 +1183,255 @@ print ("文件 UID  :%d" % info.st_uid)
 
 # 获取文件 gid
 print ("文件 GID :%d" % info.st_gid)
+
+
+
+# os.major() 方法用于从原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。
+# 语法
+# major()方法语法格式如下：
+# os.major(device)
+# 参数
+# device -- 原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。
+# 返回值
+# 返回设备major号码。
+import os, sys
+
+path = "/var/www/html/foo.txt"
+
+# 获取元组
+info = os.lstat(path)
+
+# 获取 major 和 minor 设备号
+major_dnum = os.major(info.st_dev)
+minor_dnum = os.minor(info.st_dev)
+
+print ("Major 设备号 :", major_dnum)
+print ("Minor 设备号 :", minor_dnum)
+
+
+
+# os.makedev() 方法用于以major和minor设备号组成一个原始设备号。
+# 语法
+# makedev()方法语法格式如下：
+# os.makedev(major, minor)
+# 参数
+# major -- Major 设备号。
+# minor -- inor 设备号。
+# 返回值
+# 返回设备号。
+import os, sys
+
+path = "/var/www/html/foo.txt"
+
+# 获取元组
+info = os.lstat(path)
+
+# 获取 major 和 minor 设备号
+major_dnum = os.major(info.st_dev)
+minor_dnum = os.minor(info.st_dev)
+
+print ("Major 设备号 :", major_dnum)
+print ("Minor 设备号 :", minor_dnum)
+
+# 生成设备号
+dev_num = os.makedev(major_dnum, minor_dnum)
+print ("设备号 :", dev_num)
+
+
+
+# os.makedirs() 方法用于递归创建目录。像 mkdir(), 但创建的所有intermediate-level文件夹需要包含子目录。
+# 语法
+# makedirs()方法语法格式如下：
+# os.makedirs(path, mode=0o777)
+# 参数
+# path -- 需要递归创建的目录。
+# mode -- 权限模式。
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 创建的目录
+path = "/tmp/home/monthly/daily"
+
+os.makedirs(path, 0o0755);
+
+print ("路径被创建")
+
+
+
+# os.minor() 方法用于从原始的设备号中提取设备minor号码 (使用stat中的st_dev或者st_rdev field )。
+# 语法
+# minor()方法语法格式如下：
+# os.minor(device)
+# 参数
+# device -- 原始的设备(使用stat中的st_dev或者st_rdev field )
+# 返回值
+# 返回设备 minor 号。
+import os, sys
+
+path = "/var/www/html/foo.txt"
+
+# 获取元组
+info = os.lstat(path)
+
+# 获取 major 和 minor 设备号
+major_dnum = os.major(info.st_dev)
+minor_dnum = os.minor(info.st_dev)
+
+print ("Major 设备号 :", major_dnum)
+print ("Minor 设备号 :", minor_dnum)
+
+
+
+# os.mkdir() 方法用于以数字权限模式创建目录。默认的模式为 0777 (八进制)。
+# 语法
+# mkdir()方法语法格式如下：
+# os.mkdir(path[, mode])
+# 参数
+# path -- 要创建的目录
+# mode -- 要为目录设置的权限数字模式
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 创建的目录
+path = "/tmp/home/monthly/daily/hourly"
+
+os.mkdir(path, 0o0755 )
+
+print ("目录已创建")
+
+
+
+# os.mkfifo() 方法用于创建指令路径的管道，并设置权限模式。默认的模式为 0666 (八进制)。
+# 语法
+# mkfifo()方法语法格式如下：
+# os.mkfifo(path[, mode])
+# 参数
+# path -- 要创建的目录
+# mode -- 要为目录设置的权限数字模式
+# 返回值
+# 该方法没有返回值。
+import os, sys
+
+# 创建的目录
+path = "/tmp/hourly"
+
+os.mkfifo(path, 0o0644)
+
+print ("路径被创建")
+
+
+
+# os.mknod() 方法用于创建一个指定文件名的文件系统节点（文件，设备特别文件或者命名pipe）。
+# 语法
+# mknod()方法语法格式如下：
+# os.mknod(filename[, mode=0600[, device=0]])
+# 参数
+# filename -- 创建的文件系统节点
+# mode -- mode指定创建或使用节点的权限, 组合 (或者bitwise) stat.S_IFREG, stat.S_IFCHR, stat.S_IFBLK, 和stat.S_IFIFO (这些常数在stat模块). 对于 stat.S_IFCHR和stat.S_IFBLK, 设备定义了 最新创建的设备特殊文件 (可能使用 os.makedev()),其它都将忽略。
+# device -- 可选，指定创建文件的设备
+# 返回值
+# 该方法没有返回值。
+import os
+import stat
+
+filename = '/tmp/tmpfile'
+mode = 0o0600|stat.S_IRUSR
+
+# 文件系统节点指定不同模式
+os.mknod(filename, mode)
+
+
+
+# os.open() 方法用于打开一个文件，并且设置需要的打开选项，模式参数mode参数是可选的，默认为 0777。
+# 语法
+# open()方法语法格式如下：
+# os.open(file, flags[, mode]);
+# 参数
+# file -- 要打开的文件
+# flags -- 该参数可以是以下选项，多个使用 "|" 隔开：
+# os.O_RDONLY: 以只读的方式打开
+# os.O_WRONLY: 以只写的方式打开
+# os.O_RDWR : 以读写的方式打开
+# os.O_NONBLOCK: 打开时不阻塞
+# os.O_APPEND: 以追加的方式打开
+# os.O_CREAT: 创建并打开一个新文件
+# os.O_TRUNC: 打开一个文件并截断它的长度为零（必须有写权限）
+# os.O_EXCL: 如果指定的文件存在，返回错误
+# os.O_SHLOCK: 自动获取共享锁
+# os.O_EXLOCK: 自动获取独立锁
+# os.O_DIRECT: 消除或减少缓存效果
+# os.O_FSYNC : 同步写入
+# os.O_NOFOLLOW: 不追踪软链接
+# mode -- 类似 chmod()。
+# 返回值
+# 返回新打开文件的描述符。
+import os, sys
+
+# 打开文件
+fd = os.open("foo.txt", os.O_RDWR|os.O_CREAT)
+
+# 写入字符串
+os.write(fd, "This is test")
+
+# 关闭文件
+os.close(fd)
+
+print("关闭文件成功!!")
+
+
+
+# os.openpty() 方法用于打开一个新的伪终端对。返回 pty 和 tty的文件描述符。
+# 语法
+# openpty()方法语法格式如下：
+# os.openpty()
+# 参数
+# 无
+# 返回值
+# 返回文件描述符对，主从。
+import os
+
+# 主 pty, 从 tty
+m,s = os.openpty()
+
+print (m)
+print (s)
+
+# 显示终端名
+s = os.ttyname(s)
+print (m)
+print (s)
+
+
+
+# 40
+# os.pathconf() 方法用于返回一个打开的文件的系统配置信息。
+# Unix 平台下可用。
+# 语法
+# fpathconf()方法语法格式如下：
+# os.fpathconf(fd, name)
+# 参数
+# name -- 文件描述符
+# name -- 检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。一些平台也定义了一些额外的名字。这些名字在主操作系统上pathconf_names的字典中。对于不在pathconf_names中的配置变量，传递一个数字作为名字，也是可以接受的。
+# 返回值
+# 返回文件的系统信息。
+import os, sys
+
+# 打开文件
+fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+
+print ("%s" % os.pathconf_names)
+
+# 获取文件最大连接数
+no = os.fpathconf(fd, 'PC_LINK_MAX')
+print ("Maximum number of links to the file. :%d" % no)
+
+# 获取文件名最大长度
+no = os.fpathconf(fd, 'PC_NAME_MAX')
+print ("Maximum length of a filename :%d" % no)
+
+# 关闭文件
+os.close( fd)
+
+print ("关闭文件成功!!")
