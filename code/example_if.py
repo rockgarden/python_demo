@@ -3,12 +3,10 @@
 a, b = 0, 1
 while b < 100:
     print(b)
-    a, b = b, a+b
-
+    a, b = b, a + b
 
 i = 256 * 256
 print('i 的值为：', i)
-
 
 # end 关键字
 # 关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符
@@ -17,45 +15,31 @@ print('i 的值为：', i)
 a, b = 0, 1
 while b < 1000:
     print(b, end=',')
-    a, b = b, a+b
+    a, b = b, a + b
 
-
-a=10;b=388;c=98
-print(a,b,c,sep='@')
+a = 10;
+b = 388;
+c = 98
+print(a, b, c, sep='@')
 
 
 # 递归方式求斐波纳契数列
 def fab(n):
-    if n<1:
+    if n < 1:
         print('输入有误！')
         return -1
-    if n==1 or n==2:
+    if n == 1 or n == 2:
         return 1
     else:
-        return fab(n-1)+fab(n-2)
+        return fab(n - 1) + fab(n - 2)
+
+
 list = fab(30)
 print(list)
 
-
 # 条件控制
 '''
-if 语句
-Python中if语句的一般形式如下所示：
-if condition_1:
-    statement_block_1
-elif condition_2:
-    statement_block_2
-else:
-    statement_block_3
-如果 "condition_1" 为 True 将执行 "statement_block_1" 块语句
-如果 "condition_1" 为False，将判断 "condition_2"
-如果"condition_2" 为 True 将执行 "statement_block_2" 块语句
-如果 "condition_2" 为False，将执行"statement_block_3"块语句
-Python 中用 elif 代替了 else if，所以if语句的关键字为：if – elif – else。
-注意：
-1、每个条件后面要使用冒号（:），表示接下来是满足条件后要执行的语句块。
-2、使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
-3、在Python中没有switch – case语句。
+
 '''
 var1 = 100
 if var1:
@@ -67,7 +51,6 @@ if var2:
     print("2 - if 表达式条件为 true")
     print(var2)
 print("Good bye!")
-
 
 age = int(input("请输入你家狗狗的年龄: "))
 print("")
@@ -84,7 +67,6 @@ elif age > 2:
 ### 退出提示
 input("点击 enter 键退出")
 
-
 print("=======欢迎进入狗狗年龄对比系统========")
 while True:
     try:
@@ -100,33 +82,13 @@ while True:
             print("相当于人类22岁")
             break
         else:
-            human = 22 + (age - 2)*5
-            print("相当于人类：",human)
+            human = 22 + (age - 2) * 5
+            print("相当于人类：", human)
             break
     except ValueError:
         print("输入不合法，请输入有效年龄")
 ###退出提示
 input("点击 enter 键退出")
-
-
-'''
-以下为if中常用的操作运算符:
-操作符	描述
-<	小于
-<=	小于或等于
->	大于
->=	大于或等于
-==	等于，比较对象是否相等
-!=	不等于
-'''
-# 程序演示了 == 操作符
-# 使用数字
-print(5 == 6)
-# 使用变量
-x = 5
-y = 8
-print(x == y)
-
 
 # 该实例演示了数字猜谜游戏
 number = 7
@@ -141,7 +103,6 @@ while guess != number:
         print("猜的数字小了...")
     elif guess > number:
         print("猜的数字大了...")
-
 
 '''
 if 嵌套
@@ -159,48 +120,46 @@ elif 表达式4:
 else:
     语句
 '''
-num=int(input("输入一个数字："))
-if num%2==0:
-    if num%3==0:
-        print ("你输入的数字可以整除 2 和 3")
+num = int(input("输入一个数字："))
+if num % 2 == 0:
+    if num % 3 == 0:
+        print("你输入的数字可以整除 2 和 3")
     else:
-        print ("你输入的数字可以整除 2，但不能整除 3")
+        print("你输入的数字可以整除 2，但不能整除 3")
 else:
-    if num%3==0:
-        print ("你输入的数字可以整除 3，但不能整除 2")
+    if num % 3 == 0:
+        print("你输入的数字可以整除 3，但不能整除 2")
     else:
-        print  ("你输入的数字不能整除 2 和 3")
-
+        print("你输入的数字不能整除 2 和 3")
 
 print('数字猜谜游戏！')
 
 a = 1
 i = 0
 while a != 20:
-   a = int (input ('请输入你猜的数字：'))
-   i += 1
-   if a == 20:
-      if i<3:
-         print('真厉害，这么快就猜对了！')
-      else :
-         print('总算猜对了，恭喜恭喜！')
-   elif a < 20:
-      print('你猜的数字小了，不要灰心，继续努力！')
-   else :
-      print('你猜的数字大了，不要灰心，继续加油！')
-
+    a = int(input('请输入你猜的数字：'))
+    i += 1
+    if a == 20:
+        if i < 3:
+            print('真厉害，这么快就猜对了！')
+        else:
+            print('总算猜对了，恭喜恭喜！')
+    elif a < 20:
+        print('你猜的数字小了，不要灰心，继续努力！')
+    else:
+        print('你猜的数字大了，不要灰心，继续加油！')
 
 import random
+
 x = random.choice(range(100))
 y = random.choice(range(200))
-print(x,y)
+print(x, y)
 if x > y:
-    print('x:',x)
+    print('x:', x)
 elif x == y:
     print('x+y', x + y)
 else:
-    print('y:',y)
-
+    print('y:', y)
 
 # Python3 循环语句
 '''
@@ -224,7 +183,6 @@ while counter <= n:
 
 print("1 到 %d 之和为: %d" % (n, sum))
 
-
 # 无限循环
 # var = 1
 # while var == 1:  # 表达式永远为 true
@@ -241,11 +199,10 @@ print("1 到 %d 之和为: %d" % (n, sum))
 # while 循环使用 else 语句
 count = 0
 while count < 5:
-   print (count, " 小于 5")
-   count = count + 1
+    print(count, " 小于 5")
+    count = count + 1
 else:
-   print (count, " 大于或等于 5")
-
+    print(count, " 大于或等于 5")
 
 # flag = 1
 # while (flag): print('欢迎访问菜鸟教程!')
@@ -255,9 +212,9 @@ else:
 # for 语句
 languages = ["C", "C++", "Perl", "Python"]
 for x in languages:
-    print (x)
+    print(x)
 # for 实例中使用了 break 语句，break 语句用于跳出当前循环体
-sites = ["Baidu", "Google","Runoob","Taobao"]
+sites = ["Baidu", "Google", "Runoob", "Taobao"]
 for site in sites:
     if site == "Runoob":
         print("菜鸟教程!")
@@ -267,23 +224,21 @@ else:
     print("没有循环数据!")
 print("完成循环!")
 
-
 # range()函数
 for i in range(5):
     print(i)
 # range指定区间
-for i in range(5,9):
+for i in range(5, 9):
     print(i)
 # range以指定数字开始并指定不同的增量(甚至可以是负数，有时这也叫做'步长')
-for i in range(0, 10, 3) :
+for i in range(0, 10, 3):
     print(i)
-for i in range(-10, -100, -30) :
+for i in range(-10, -100, -30):
     print(i)
 # 结合range()和len()函数以遍历一个序列的索引
 a = ['Google', 'Baidu', 'Runoob', 'Taobao', 'QQ']
 for i in range(len(a)):
     print(i, a[i])
-
 
 # break和continue语句及循环中的else子句
 
@@ -321,12 +276,11 @@ print("Good bye!")
 for n in range(2, 20):
     for x in range(2, n):
         if n % x == 0:
-            print(n, '等于', x, '*', n//x)
+            print(n, '等于', x, '*', n // x)
             break
     else:
         # 循环中没有找到元素
         print(n, ' 是质数')
-
 
 # pass 语句
 # pass是空语句，是为了保持程序结构的完整性。
@@ -339,37 +293,32 @@ for letter in 'Runoob':
 
 print("Good bye!")
 
-
 sequence = [12, 34, 34, 23, 45, 76, 89]
 for i, j in enumerate(sequence):
     print(i, j)
 
 n = 0
 sum = 0
-for n in range(0,101):# n 范围 0-100
+for n in range(0, 101):  # n 范围 0-100
     sum += n
 print(sum)
 
-
 # 循环嵌套来实现99乘法法则
-#外边一层循环控制行数
-#i是行数
-i=1
-while i<=9:
-     #里面一层循环控制每一行中的列数
-     j=1
-     while j<=i:
-          mut =j*i
-          print("%d*%d=%d"%(j,i,mut), end="  ")
-          j+=1
-     print("")
-     i+=1
-
+# 外边一层循环控制行数
+# i是行数
+i = 1
+while i <= 9:
+    # 里面一层循环控制每一行中的列数
+    j = 1
+    while j <= i:
+        mut = j * i
+        print("%d*%d=%d" % (j, i, mut), end="  ")
+        j += 1
+    print("")
+    i += 1
 
 # for 循环的嵌套
-for i in range(1,6):
-   for j in range(1, i+1):
-      print("*",end='')
-   print('\r')
-
-
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print("*", end='')
+    print('\r')

@@ -15,8 +15,7 @@ counter = 100  # 整型变量
 miles = 1000.0  # 浮点型变量
 name = "runoob"  # 字符串
 
-print(counter,miles,name)
-
+print(counter, miles, name)
 
 # 多个变量赋值
 # Python允许你同时为多个变量赋值。
@@ -24,7 +23,6 @@ a = b = c = 1
 # 以上实例，创建一个整型对象，值为1，三个变量被分配到相同的内存空间上。
 # 您也可以为多个对象指定多个变量。
 a, b, c = 1, 2, "runoob"
-
 
 '''
 Number（数字）
@@ -62,10 +60,10 @@ del var1, var2
 16 进制是以 0x 开头的: 例如: 0x11 则表示十进制的 17
 分别使用 bin，oct，hex 可输出数字的二进制，八进制，十六进制形式.
 '''
-a=0b111100
-numberX=0xA0F
-numberO=0o37
-print("二进制",a,bin(a),"十进制",oct(a),"十六进制",hex(a))
+a = 0b111100
+numberX = 0xA0F
+numberO = 0o37
+print("二进制", a, bin(a), "十进制", oct(a), "十六进制", hex(a))
 
 '''
 数字类型转换
@@ -84,14 +82,14 @@ Python 解释器可以作为一个简单的计算器，您可以在解释器里�
 表达式的语法很直白： +, -, * 和 / 和其它语言（如Pascal或C）里一样。
 '''
 2 + 2
-50 - 5*6
-(50 - 5*6) / 4
+50 - 5 * 6
+(50 - 5 * 6) / 4
 8 / 5  # 总是返回一个浮点数
 # 在整数除法中，除法（/）总是返回一个浮点数，如果只想得到整数的结果，丢弃可能的分数部分，可以使用运算符 // ：
 17 / 3  # 整数除法返回浮点型 5.666666666666667
 17 // 3  # 整数除法返回向下取整后的结果5
 17 % 3  # ％操作符返回除法的余数2
-5 * 3 + 2 # 17
+5 * 3 + 2  # 17
 5 ** 2  # 5 的平方25
 2 ** 7  # 2的7次方128
 # 不同类型的数混合运算时会将整数转换为浮点数
@@ -165,42 +163,43 @@ pi	数学常量 pi（圆周率，一般以π来表示）
 e	数学常量 e，e即自然常数（自然常数）。
 '''
 
-
-a, b, c, d = 20, 5.5, True, 4+3j
+a, b, c, d = 20, 5.5, True, 4 + 3j
 print(type(a), type(b), type(c), type(d))
 # 内置的 type() 函数可以用来查询变量所指的对象类型。
 
 a = 111
 isinstance(a, int)
 
+
 class A:
     pass
+
+
 class B(A):
     pass
+
+
 print(isinstance(A(), A))  # returns True
-print(type(A())) == A      # returns True
+print(type(A())) == A  # returns True
 print(isinstance(B(), A))  # returns True
-print(type(B()) == A)      # returns False
+print(type(B()) == A)  # returns False
 
 # 区别就是:
 # type()不会认为子类是一种父类类型。
 # isinstance()会认为子类是一种父类类型。
 
 5 + 4  # 加法
-4.3 - 2 # 减法
+4.3 - 2  # 减法
 3 * 7  # 乘法
 2 / 4  # 除法，得到一个浮点数
-2 // 4 # 除法，得到一个整数
-17 % 3 # 取余
-2 ** 5 # 乘方
+2 // 4  # 除法，得到一个整数
+17 % 3  # 取余
+2 ** 5  # 乘方
 
 # 1、Python可以同时为多个变量赋值，如a, b = 1, 2。
 # 2、一个变量可以通过赋值指向不同类型的对象。
 # 3、数值的除法（/）总是返回一个浮点数，要获取整数使用//操作符。
 # 4、在混合计算时，Python会把整型转换成为浮点数。
-
-
-
 
 
 # String（字符串）
@@ -261,7 +260,7 @@ a[0] = 9
 print(a)
 a[2:5] = [13, 14, 15]
 print(a)
-a[2:5] = []   # 删除
+a[2:5] = []  # 删除
 print(a)
 # 注意：
 # 1、List写在方括号之间，元素用逗号隔开。
@@ -293,8 +292,10 @@ print(tup[1:5])
 
 # 虽然tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
 # 构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则：
-tup1 = ()    # 空元组
-tup2 = (20,) # 一个元素，需要在元素后添加逗号
+tup1 = ()  # 空元组
+tup2 = (20,)  # 一个元素，需要在元素后添加逗号
+
+
 # string、list和tuple都属于sequence（序列）。
 # 注意：
 # 1、与字符串一样，元组的元素不能修改。
@@ -315,8 +316,9 @@ tup2 = (20,) # 一个元素，需要在元素后添加逗号
 def test(*args):
     print(args)
     return args
-print(type(test(1,2,3,4,11)))   #可以看见其函数的返回值是一个元组
 
+
+print(type(test(1, 2, 3, 4, 11)))  # 可以看见其函数的返回值是一个元组
 
 # Set（集合）
 # 集合（set）是一个无序不重复元素的序列。
@@ -332,7 +334,6 @@ if ('Rose' in student):
 else:
     print('Rose 不在集合中')
 
-
 # set可以进行集合运算
 a = set('abracadabra')
 b = set('alacazam')
@@ -342,7 +343,6 @@ print(a - b)  # a和b的差集
 print(a | b)  # a和b的并集
 print(a & b)  # a和b的交集
 print(a ^ b)  # a和b中不同时存在的元素
-
 
 # Dictionary（字典）
 # 字典（dictionary）是Python中另一个非常有用的内置数据类型。
@@ -363,6 +363,7 @@ print(tinydict)  # 输出完整的字典
 print(tinydict.keys())  # 输出所有键
 print(tinydict.values())  # 输出所有值
 
+
 # python中的字典是使用了一个称为散列表（hashtable）的算法（不具体展开），
 # 其特点就是：不管字典中有多少项，in操作符花费的时间都差不多。
 # 如果把一个字典对象作为for的迭代对象，那么这个操作将会遍历字典的键：
@@ -370,12 +371,14 @@ def example(dict):
     # d 是一个字典对象
     for c in dict:
         print(c)
-        #如果调用函数试试的话，会发现函数会将d的所有键打印出来;
-        #也就是遍历的是d的键，而不是值.
+        # 如果调用函数试试的话，会发现函数会将d的所有键打印出来;
+        # 也就是遍历的是d的键，而不是值.
+
+
 for c in dict:
-    print(c,':',dict[c])
+    print(c, ':', dict[c])
 for c in dict:
-    print(c,end=':');
+    print(c, end=':');
     print(dict[c])
 # 发现 print()函数 其实可以 添加多个参数，用逗号 隔开。
 for c in dict:
@@ -429,6 +432,3 @@ print({x: x ** 2 for x in (2, 4, 6)})
 # 将一个整数转换为一个十六进制字符串
 # oct(x)
 # 将一个整数转换为一个八进制字符串
-
-
-
