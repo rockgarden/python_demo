@@ -1,41 +1,23 @@
-# 定义一个函数
-'''
-你可以定义一个由自己想要功能的函数，以下是简单的规则：
-函数代码块以 def 关键词开头，后接函数标识符名称和圆括号 ()。
-任何传入参数和自变量必须放在圆括号中间，圆括号之间可以用于定义参数。
-函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。
-函数内容以冒号起始，并且缩进。
-return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。
-'''
-
-'''
-语法
-Python 定义函数使用 def 关键字，一般格式如下：
-def 函数名（参数列表）:
-    函数体
-默认情况下，参数值和参数名称是按函数声明中定义的的顺序匹配起来的。
-'''
+def get_formatted_name(first_name, last_name, middle_name=''):  # 默认值让实参可选
+    """Return a full name, neatly formatted."""
+    if middle_name:
+        full_name = first_name + ' ' + middle_name + ' ' + last_name
+    else:
+        full_name = first_name + ' ' + last_name
+    return full_name.title()
 
 
-# 计算面积函数
-def area(width, height):
-    return width * height
-
-
-def print_welcome(name):
-    print("Welcome", name)
-
-
-print_welcome("Runoob")
-w = 4
-h = 5
-print("width =", w, " height =", h, " area =", area(w, h))
-
-'''
-函数调用
-定义一个函数：给了函数一个名称，指定了函数里包含的参数，和代码块结构。
-这个函数的基本结构完成以后，你可以通过另一个函数调用执行，也可以直接从 Python 命令提示符执行。
-'''
+while True:
+    print("\nPlease tell me your name:")
+    print("(enter 'q' at any time to quit)")
+    f_name = input("First name: ")
+    if f_name == 'q':
+        break
+    l_name = input("Last name: ")
+    if l_name == 'q':
+        break
+    formatted_name = get_formatted_name(f_name, l_name)
+    print("\nHello," + formatted_name + "!")
 
 
 # 定义函数
@@ -331,3 +313,30 @@ def outer():
 
 
 outer()
+
+
+# ====== User Albums ======
+def make_album(artist, title, tracks=0):
+    """Build a dictionary containing information about an album."""
+    album_dict = {
+        'artist': artist.title(),
+        'title': title.title(),
+    }
+    if tracks:
+        album_dict['tracks'] = tracks
+    return album_dict
+# Prepare the prompts.
+title_prompt = "\nWhat album are you thinking of? "
+artist_prompt = "Who's the artist? "
+# Let the user know how to quit.
+print("Enter 'quit' at any time to stop.")
+while True:
+    title = input(title_prompt)
+    if title == 'quit':
+        break
+    artist = input(artist_prompt)
+    if artist == 'quit':
+        break
+    album = make_album(artist, title)
+    print(album)
+print("\nThanks for responding!")
