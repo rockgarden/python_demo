@@ -1,4 +1,3 @@
-
 '''
 Python 提供了一个办法，把这些定义存放在文件中，为一些脚本或者交互式的解释器实例使用，这个文件被称为模块。
 模块是一个包含所有你定义的函数和变量的文件，其后缀名是.py。模块可以被别的程序引入，以使用该模块中的函数等功能。这也是使用 python 标准库的方法。
@@ -16,7 +15,7 @@ import sys
 
 print('命令行参数如下:')
 for i in sys.argv:
-   print(i)
+    print(i)
 
 print('\n\nPython 路径为：', sys.path, '\n')
 
@@ -24,7 +23,7 @@ print('\n\nPython 路径为：', sys.path, '\n')
 # sys.path是python的搜索模块的路径集，是一个list
 # 可以在python 环境下使用sys.path.append(path)添加相关的路径，但在退出python环境后
 # 自己添加的路径就会自动消失了！
-sys.path.append('/Users/wangkan/Documents/python_demo/code/Module')
+sys.path.append('/Users/wangkan/Documents/python_demo/code/module')
 '''
 Python搜索模块的路径：
 1)、程序的主目录
@@ -45,8 +44,6 @@ Python搜索模块的路径：
 4. 在调用文件中添加sys.path.append("模块文件目录")；
 5. 直接把模块文件拷贝到$python_dir/Lib目录下。
 '''
-
-
 
 '''
 import 语句
@@ -72,16 +69,14 @@ print(support.__name__)
 fib = support.fib
 fib(500)
 
-
-
 '''
 from…import 语句
 Python的from语句让你从模块中导入一个指定的部分到当前命名空间中，语法如下：
 from modname import name1[, name2[, ... nameN]]
 '''
-from support import fib, fib2
-fib(5000)
+from support import fib
 
+fib(5000)
 
 '''
 深入模块
@@ -94,8 +89,8 @@ fib(5000)
 还有一种导入的方法，可以使用 import 直接把模块内（函数，变量的）名称导入到当前操作模块。
 '''
 from support import *
-fib(500)
 
+fib(500)
 
 '''
 __name__属性
@@ -104,25 +99,22 @@ __name__属性
 '''
 # 说明： 每个模块都有一个__name__属性，当其值是'__main__'时，表明该模块自身在运行，否则是被引入。
 if __name__ == '__main__':
-   print('程序自身在运行')
+    print('程序自身在运行')
 else:
-   print('我来自另一模块')
-
-
+    print('我来自另一模块')
 
 # dir() 函数
-import support, sys
+import support
+
 print(dir(support))
 # print(dir(sys))
 
 a = [1, 2, 3, 4, 5]
-dir() # 得到一个当前模块中定义的属性列表
-a = 5 # 建立一个新的变量 'a'
+dir()  # 得到一个当前模块中定义的属性列表
+a = 5  # 建立一个新的变量 'a'
 print(dir())
-del a # 删除变量名a
+del a  # 删除变量名a
 print(dir())
-
-
 
 '''
 标准模块
@@ -131,8 +123,6 @@ Python 本身带着一些标准的模块库，在 Python 库参考文档中将�
 这些组件会根据不同的操作系统进行不同形式的配置，比如 winreg 这个模块就只会提供给 Windows 系统。
 应该注意到这有一个特别的模块 sys ，它内置在每一个 Python 解析器中。
 '''
-
-
 
 '''
 包
@@ -165,8 +155,6 @@ import语法会首先把item当作一个包定义的名称，如果没找到，�
 反之，如果使用形如import item.subitem.subsubitem这种导入形式，除了最后一项，都必须是包，而最后一项则可以是模块或者是包，但是不可以是类，函数或者变量的名字。
 '''
 
-
-
 '''
 从一个包中导入*
 设想一下，如果我们使用 from sound.effects import *会发生什么？
@@ -179,9 +167,8 @@ Python 会进入文件系统，找到这个包里面所有的子模块，一个�
 作为包的作者，可别忘了在更新包之后保证 __all__ 也更新了啊。你说我就不这么做，我就不使用导入*这种用法，好吧，没问题，谁让你是老板呢。
 '''
 # 这里有一个例子，在:file:sounds/effects/__init__.py中包含如下代码:
-__all__ = ["echo", "surround", "reverse"]
+# __all__ = ["echo", "surround", "reverse"]
 # 这表示当你使用from sound.effects import *这种用法时，你只会导入包里面这三个子模块。
-
 
 
 '''

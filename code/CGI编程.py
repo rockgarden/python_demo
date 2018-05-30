@@ -96,7 +96,7 @@ print ("<ul>")
 for key in os.environ.keys():
     print ("<li><span style='color:green'>%30s </span> : %s </li>" % (key,os.environ[key]))
 print ("</ul>")
-# 保存为 pizza_models.py ,并修改文件权限为 755.
+# 保存为 pizza.py ,并修改文件权限为 755.
 
 
 
@@ -113,7 +113,7 @@ print ("</ul>")
 # GET 请求只应当用于取回数据
 # 简单的url实例：GET方法
 # 以下是一个简单的URL，使用GET方法向hello_get.py程序发送两个参数：
-# /cgi-bin/pizza_models.py?name=菜鸟教程&url=http://www.runoob.com
+# /cgi-bin/pizza.py?name=菜鸟教程&url=http://www.runoob.com
 
 # hello_get.py文件的代码
 
