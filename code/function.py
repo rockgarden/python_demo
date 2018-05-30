@@ -325,6 +325,8 @@ def make_album(artist, title, tracks=0):
     if tracks:
         album_dict['tracks'] = tracks
     return album_dict
+
+
 # Prepare the prompts.
 title_prompt = "\nWhat album are you thinking of? "
 artist_prompt = "Who's the artist? "
