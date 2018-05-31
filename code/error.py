@@ -1,15 +1,17 @@
-
-# 语法错误
-# Python 的语法错误或者称之为解析错，是初学者经常碰到的，如下实例
-# while True print('Hello world')
-#   File "<stdin>", line 1, in ?
-#     while True print('Hello world')
-#                    ^
-# SyntaxError: invalid syntax
-# 这个例子中，函数 print() 被检查到有错误，是它前面缺少了一个冒号（:）。
-# 语法分析器指出了出错的一行，并且在最先找到的错误的位置标记了一个小小的箭头。
-
-
+# ZeroDivisionError
+print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("Second number: ")
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by 0!")
+    else:
+        print(answer)
 
 # 异常
 # 即便Python程序的语法是正确的，在运行它的时候，也有可能发生错误。运行期检测到的错误被称为异常。
@@ -30,16 +32,15 @@
 # 错误信息的前面部分显示了异常发生的上下文，并以调用栈的形式显示具体信息。
 
 
-
 # 异常处理
 # 以下例子中，让用户输入一个合法的整数，但是允许用户中断这个程序（使用 Control-C 或者操作系统提供的方法）。
 # 用户中断的信息会引发一个 KeyboardInterrupt 异常。
 while True:
-        try:
-            x = int(input("Please enter a number: "))
-            break
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again   ")
+    try:
+        x = int(input("Please enter a number: "))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again   ")
 '''
 try语句按照如下方式工作；
 首先，执行try子句（在关键字try和关键字except之间的语句）
@@ -81,7 +82,9 @@ for arg in sys.argv[1:]:
 # 使用 else 子句比把所有的语句都放在 try 子句里面要好，这样可以避免一些意想不到的、而except又没有捕获的异常。
 # 异常处理并不仅仅处理那些直接发生在try子句中的异常，而且还能处理子句中调用的函数（甚至间接调用的函数）里抛出的异常。
 def this_fails():
-        x = 1 / 0
+    x = 1 / 0
+
+
 try:
     this_fails()
 except ZeroDivisionError as err:
@@ -103,25 +106,28 @@ except ZeroDivisionError as err:
 #         raise
 
 
-
 # 用户自定义异常
 # 你可以通过创建一个新的exception类来拥有自己的异常。异常应该继承自 Exception 类，或者直接继承，或者间接继承。
 class MyError(Exception):
     def __init__(self, value):
         self.value = value
+
     def __str__(self):
         return repr(self.value)
+
 
 try:
     raise MyError(2 * 2)
 except MyError as e:
     print('My exception occurred, value:', e.value)
 
+
 # 在这个例子中，类 Exception 默认的 __init__() 被覆盖。
 # 当创建一个模块有可能抛出多种不同的异常时，一种通常的做法是为这个包建立一个基础异常类，然后基于这个基础类为不同的错误情况创建不同的子类:
 class Error(Exception):
     """Base class for exceptions in this module."""
     pass
+
 
 class InputError(Error):
     """Exception raised for errors in the input.
@@ -134,6 +140,7 @@ class InputError(Error):
     def __init__(self, expression, message):
         self.expression = expression
         self.message = message
+
 
 class TransitionError(Error):
     """Raised when an operation attempts a state transition that's not
@@ -170,10 +177,10 @@ def divide(x, y):
     finally:
         print("executing finally clause")
 
+
 divide(2, 1)
 divide(2, 0)
 divide("2", "1")
-
 
 # 预定义的清理行为
 # 一些对象定义了标准的清理行为，无论系统是否成功的使用了它，一旦不需要它了，那么这个标准的清理行为就会执行。
@@ -184,4 +191,3 @@ for line in open("myfile.txt"):
 with open("myfile.txt") as f:
     for line in f:
         print(line, end="")
-

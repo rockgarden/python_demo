@@ -246,7 +246,6 @@ pathFile = "/Users/wangkan/Documents/python_demo/code/source/os.txt"
 # 写入字符串到文件描述符 fd中. 返回实际写入的字符串长度
 
 
-
 '''
 os.access() 方法使用当前的uid/gid尝试访问路径。大部分操作使用有效的 uid/gid, 因此运行环境可以在 suid/sgid 环境尝试。
 语法
@@ -263,23 +262,21 @@ os.X_OK 包含在access()的mode参数中 ，测试path是否可执行。
 如果允许访问返回 True , 否则返回False。
 '''
 
-import os, sys
+import os
 
 # 假定 /tmp/foo.txt 文件存在，并有读写权限
 
 ret = os.access(pathFile, os.F_OK)
-print ("F_OK - 返回值 %s"% ret)
+print("F_OK - 返回值 %s" % ret)
 
 ret = os.access(pathFile, os.R_OK)
-print ("R_OK - 返回值 %s"% ret)
+print("R_OK - 返回值 %s" % ret)
 
 ret = os.access(pathFile, os.W_OK)
-print ("W_OK - 返回值 %s"% ret)
+print("W_OK - 返回值 %s" % ret)
 
 ret = os.access(pathFile, os.X_OK)
-print ("X_OK - 返回值 %s"% ret)
-
-
+print("X_OK - 返回值 %s" % ret)
 
 '''
 os.chdir() 方法用于改变当前工作目录到指定的路径。
@@ -296,9 +293,7 @@ os.chdir(path)
 # 查看修改后的工作目录
 retval = os.getcwd()
 
-print ("目录修改成功 %s" % retval)
-
-
+print("目录修改成功 %s" % retval)
 
 # os.chmod() 方法用于更改文件或目录的权限。
 # 语法
@@ -327,7 +322,7 @@ print ("目录修改成功 %s" % retval)
 # stat.S_IWRITE: windows下取消只读
 # 返回值
 # 该方法没有返回值。
-import os, sys, stat
+import os, stat
 
 os.chmod(pathFile, stat.S_IXGRP)
 
@@ -335,8 +330,6 @@ os.chmod(pathFile, stat.S_IXGRP)
 os.chmod(pathFile, stat.S_IWOTH)
 
 print("修改成功!!")
-
-
 
 # os.chown() 方法用于更改文件所有者，如果不修改可以设置为 -1, 你需要超级用户权限来执行权限修改操作。
 # 只支持在 Unix 下使用。
@@ -347,13 +340,11 @@ print("修改成功!!")
 # path -- 设置权限的文件路径
 # uid -- 所属用户 ID
 # gid -- 所属用户组 ID
-import os, sys
+import os
 
 # 设置所有者 ID 为 100
 os.chown(pathFile, 100, -1)
 print("修改权限成功!!")
-
-
 
 # os.chflags() 方法用于设置路径的标记为数字标记。多个标记可以使用 OR 来组合起来。
 # 只支持在 Unix 下使用。
@@ -378,14 +369,11 @@ import stat
 
 # 为文件设置标记，使得它不能被重命名和删除
 flags = stat.SF_NOUNLINK
-retval = os.chflags(pathFile, flags )
+retval = os.chflags(pathFile, flags)
 # PermissionError: [Errno 1] Operation not permitted: '/Users/wangkan/Documents/python_demo/code/source/fileFlag.txt'
-print ("返回值: %s" % retval)
-
+print("返回值: %s" % retval)
 
 os.chmod(pathFile, stat.S_IRWXU)
-
-
 
 # os.chroot() 方法用于更改当前进程的根目录为指定的目录，使用该函数需要管理员权限。
 # 语法
@@ -399,9 +387,7 @@ os.chmod(pathFile, stat.S_IRWXU)
 # 设置根目录为 /tmp
 os.chroot("/tmp")
 
-print ("修改根目录成功!!")
-
-
+print("修改根目录成功!!")
 
 # os.close() 方法用于关闭指定的文件描述符 fd。
 # 语法
@@ -412,17 +398,15 @@ print ("修改根目录成功!!")
 # 返回值
 # 该方法没有返回值。
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 #  写入字符串
 os.write(fd, "This is test")
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.closerange() 方法用于关闭所有文件描述符 fd，从 fd_low (包含) 到 fd_high (不包含), 错误会忽略。
 # 语法
@@ -441,7 +425,7 @@ print ("关闭文件成功!!")
 # 该方法没有返回值。
 
 # 打开文件
-fd = os.open("foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -449,9 +433,7 @@ os.write(fd, "This is test")
 # 关闭文件
 os.closerange(fd, fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.dup() 方法用于复制文件描述符 fd。
 # 语法
@@ -463,10 +445,10 @@ print ("关闭文件成功!!")
 # 返回复制的文件描述符。
 
 # 打开文件
-fd = os.open("foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 复制文件描述符
-d_fd = os.dup(fd )
+d_fd = os.dup(fd)
 
 # 使用复制的文件描述符写入文件
 os.write(d_fd, "This is test")
@@ -475,8 +457,6 @@ os.write(d_fd, "This is test")
 os.closerange(fd, d_fd)
 
 print("关闭所有文件成功!!")
-
-
 
 # os.dup2() 方法用于将一个文件描述符 fd 复制到另一个 fd2。
 # Unix, Windows 上可用。
@@ -490,7 +470,7 @@ print("关闭所有文件成功!!")
 # 没有返回值。
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -502,14 +482,12 @@ os.dup2(fd, fd2);
 # 在新的文件描述符上插入数据
 os.lseek(fd2, 0, 0)
 str = os.read(fd2, 100)
-print ("读取的字符串是 : ", str)
+print("读取的字符串是 : ", str)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.fchdir() 方法通过文件描述符改变当前工作目录。
 # Unix, Windows 上可用。
@@ -520,27 +498,25 @@ print ("关闭文件成功!!")
 # fd -- 文件描述符
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 首先到目录 "/var/www/html"
-os.chdir("/var/www/html" )
+os.chdir("/var/www/html")
 
 # 输出当前目录
-print ("当前工作目录为 : %s" % os.getcwd())
+print("当前工作目录为 : %s" % os.getcwd())
 
 # 打开新目录 "/tmp"
-fd = os.open( "/tmp", os.O_RDONLY )
+fd = os.open("/tmp", os.O_RDONLY)
 
 # 使用 os.fchdir() 方法修改到新目录
 os.fchdir(fd)
 
 # 输出当前目录
-print ("当前工作目录为 : %s" % os.getcwd())
+print("当前工作目录为 : %s" % os.getcwd())
 
 # 关闭打开的目录
-os.close( fd )
-
-
+os.close(fd)
 
 # os.fchmod() 方法用于改变一个文件的访问权限，该文件由参数fd指定，参数mode是Unix下的文件访问权限。
 # Unix上可用。
@@ -571,24 +547,22 @@ os.close( fd )
 # stat.S_IXOTH:对于其他组执行的权限
 # 返回值
 # 该方法没有返回值。
-import os, sys, stat
+import os, stat
 
 # 打开文件 "/tmp/foo.txt"
-fd = os.open( "/tmp", os.O_RDONLY )
+fd = os.open("/tmp", os.O_RDONLY)
 
 # 设置文件可通过组执行
 
-os.fchmod( fd, stat.S_IXGRP)
+os.fchmod(fd, stat.S_IXGRP)
 
 # 设置文件可被其他用户写入
 os.fchmod(fd, stat.S_IWOTH)
 
-print ("修改权限成功!!")
+print("修改权限成功!!")
 
 # 关闭文件
-os.close( fd )
-
-
+os.close(fd)
 
 # os.fchown() 方法用于修改一个文件的所有权，这个函数修改一个文件的用户ID和用户组ID，该文件由文件描述符fd指定。
 # Unix上可用。
@@ -599,24 +573,21 @@ os.close( fd )
 # fd -- 文件描述符
 # uid -- 文件所有者的用户id
 # gid -- 文件所有者的用户组id
-import os, sys, stat
+import os, stat
 
 # 打开文件 "/tmp/foo.txt"
-fd = os.open( "/tmp", os.O_RDONLY )
+fd = os.open("/tmp", os.O_RDONLY)
 
 # 设置文件的用户 id 为 100
-os.fchown( fd, 100, -1)
+os.fchown(fd, 100, -1)
 
 # 设置文件的用户组 id 为 100
-os.fchown( fd, -1, 50)
+os.fchown(fd, -1, 50)
 
-
-print ("修改权限成功!!")
+print("修改权限成功!!")
 
 # 关闭文件
-os.close( fd )
-
-
+os.close(fd)
 
 # os.fdatasync() 方法用于强制将文件写入磁盘，该文件由文件描述符fd指定，但是不强制更新文件的状态信息。如果你需要刷新缓冲区可以使用该方法。
 # Unix上可用。
@@ -625,10 +596,10 @@ os.close( fd )
 # os.fdatasync(fd);
 # 参数
 # fd -- 文件描述符
-import os, sys
+import os
 
 # 打开文件 "/tmp/foo.txt"
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -639,14 +610,12 @@ os.fdatasync(fd)
 # 读取文件
 os.lseek(fd, 0, 0)
 str = os.read(fd, 100)
-print ("读取的字符是 : ", str)
+print("读取的字符是 : ", str)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.fdopen() 方法用于通过文件描述符 fd 创建一个文件对象，并返回这个文件对象。
 # Unix, Windows上可用。
@@ -662,34 +631,32 @@ print ("关闭文件成功!!")
 # - 般是行缓冲，而对于其他文件则一般是全缓冲。如果这个参数没有制定，则使用系统默认的缓冲设定。
 # 返回值
 # 通过文件描述符返回的文件对象。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 获取以上文件的对象
 fo = os.fdopen(fd, "w+")
 
 # 获取当前文章
-print ("Current I/O pointer position :%d" % fo.tell())
+print("Current I/O pointer position :%d" % fo.tell())
 
 # 写入字符串
-fo.write( "Python is a great language.\nYeah its great!!\n");
+fo.write("Python is a great language.\nYeah its great!!\n");
 
 # 读取内容
 os.lseek(fd, 0, 0)
 str = os.read(fd, 100)
-print ("Read String is : ", str)
+print("Read String is : ", str)
 
 # 获取当前位置
-print ("Current I/O pointer position :%d" % fo.tell())
+print("Current I/O pointer position :%d" % fo.tell())
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.fpathconf() 方法用于返回一个打开的文件的系统配置信息。
 # Unix上可用。
@@ -702,27 +669,25 @@ print ("关闭文件成功!!")
 # bufsize -- 检索的系统配置的值，它也许是一个定义系统值的字符串，这些名字在很多标准中指定（POSIX.1, Unix 95, Unix 98, 和其它）。一些平台也定义了一些额外的名字。这些名字在主操作系统上pathconf_names的字典中。对于不在pathconf_names中的配置变量，传递一个数字作为名字，也是可以接受的。
 # 返回值
 # 返回一个打开的文件的系统配置信息。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
-print ("%s" % os.pathconf_names)
+print("%s" % os.pathconf_names)
 
 # 获取最大文件连接数
 no = os.fpathconf(fd, 'PC_LINK_MAX')
-print ("文件最大连接数为 :%d" % no)
+print("文件最大连接数为 :%d" % no)
 
 # 获取文件名最大长度
 no = os.fpathconf(fd, 'PC_NAME_MAX')
-print ("文件名最大长度为 :%d" % no)
+print("文件名最大长度为 :%d" % no)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.fstat() 方法用于返回文件描述符fd的状态，类似 stat()。
 # Unix，Windows上可用。
@@ -747,26 +712,24 @@ print ("关闭文件成功!!")
 # fd -- 文件的描述符。
 # 返回值
 # 返回文件描述符fd的状态。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 获取元组
 info = os.fstat(fd)
 
-print ("文件信息 :", info)
+print("文件信息 :", info)
 
 # 获取文件 uid
-print ("文件 UID :%d" % info.st_uid)
+print("文件 UID :%d" % info.st_uid)
 
 # 获取文件 gid
-print ("文件 GID  :%d" % info.st_gid)
+print("文件 GID  :%d" % info.st_gid)
 
 # 关闭文件
-os.close( fd)
-
-
+os.close(fd)
 
 # os.fstatvfs() 方法用于返回包含文件描述符fd的文件的文件系统的信息，类似 statvfs()。
 # Unix上可用。
@@ -789,26 +752,24 @@ os.close( fd)
 # fd -- 文件的描述符。
 # 返回值
 # 返回包含文件描述符fd的文件的文件系统的信息。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 获取元组
 info = os.fstatvfs(fd)
 
-print ("文件信息 :", info)
+print("文件信息 :", info)
 
 # 获取文件名最大长度
-print ("文件名最大长度 :%d" % info.f_namemax)
+print("文件名最大长度 :%d" % info.f_namemax)
 
 # 获取可用块数
-print ("可用块数 :%d" % info.f_bfree)
+print("可用块数 :%d" % info.f_bfree)
 
 # 关闭文件
 os.close(fd)
-
-
 
 # os.fsync() 方法强制将文件描述符为fd的文件写入硬盘。在Unix, 将调用fsync()函数;在Windows, 调用 _commit()函数。
 # 如果你准备操作一个Python文件对象f, 首先f.flush(),然后os.fsync(f.fileno()), 确保与f相关的所有内存都写入了硬盘.在unix，Windows中有效。
@@ -818,10 +779,10 @@ os.close(fd)
 # os.fsync(fd)
 # 参数
 # fd -- 文件的描述符。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -832,14 +793,12 @@ os.fsync(fd)
 # 读取内容
 os.lseek(fd, 0, 0)
 str = os.read(fd, 100)
-print ("读取的字符串为 : ", str)
+print("读取的字符串为 : ", str)
 
 # 关闭文件
-os.close( fd)
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.ftruncate() 裁剪文件描述符fd对应的文件, 它最大不能超过文件大小。
 # Unix上可用。
@@ -851,10 +810,10 @@ print ("关闭文件成功!!")
 # length -- 要裁剪文件大小。
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test - This is test")
@@ -868,11 +827,9 @@ str = os.read(fd, 100)
 print("读取的字符串是 : ", str)
 
 # 关闭文件
-os.close( fd)
+os.close(fd)
 
 print("关闭文件成功!!")
-
-
 
 # os.getcwd() 方法用于返回当前工作目录。
 # 语法
@@ -882,27 +839,25 @@ print("关闭文件成功!!")
 # 无
 # 返回值
 # 返回当前进程的工作目录。
-import os, sys
+import os
 
 # 切换到 "/var/www/html" 目录
-os.chdir("/var/www/html" )
+os.chdir("/var/www/html")
 
 # 打印当前目录
-print ("当前工作目录 : %s" % os.getcwd())
+print("当前工作目录 : %s" % os.getcwd())
 
 # 打开 "/tmp"
-fd = os.open( "/tmp", os.O_RDONLY )
+fd = os.open("/tmp", os.O_RDONLY)
 
 # 使用 os.fchdir() 方法修改目录
 os.fchdir(fd)
 
 # 打印当前目录
-print ("当前工作目录 : %s" % os.getcwd())
+print("当前工作目录 : %s" % os.getcwd())
 
 # 关闭文件
-os.close( fd )
-
-
+os.close(fd)
 
 # os.getcwdu() 方法用于返回一个当前工作目录的Unicode对象。
 # Unix, Windows 系统下可用。
@@ -913,27 +868,25 @@ os.close( fd )
 # 无
 # 返回值
 # 返回一个当前工作目录的Unicode对象。
-import os, sys
+import os
 
 # 切换到 "/var/www/html" 目录
-os.chdir("/var/www/html" )
+os.chdir("/var/www/html")
 
 # 打印当前目录
-print ("当前工作目录 : %s" % os.getcwdu())
+print("当前工作目录 : %s" % os.getcwdu())
 
 # 打开 "/tmp"
-fd = os.open( "/tmp", os.O_RDONLY )
+fd = os.open("/tmp", os.O_RDONLY)
 
 # 使用 os.fchdir() 方法修改目录
 os.fchdir(fd)
 
 # 打印当前目录
-print ("当前工作目录 : %s" % os.getcwdu())
+print("当前工作目录 : %s" % os.getcwdu())
 
 # 关闭文件
-os.close( fd )
-
-
+os.close(fd)
 
 # os.isatty() 方法用于判断如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。
 # 语法
@@ -943,24 +896,22 @@ os.close( fd )
 # 无
 # 返回值
 # 如果文件描述符fd是打开的，同时与tty(-like)设备相连，则返回true, 否则False。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 str = "This is runoob.com site"
-os.write(fd,bytes(str, 'UTF-8'))
+os.write(fd, bytes(str, 'UTF-8'))
 
 # 使用 isatty() 查看文件
 ret = os.isatty(fd)
 
-print ("返回值: ", ret)
+print("返回值: ", ret)
 
 # 关闭文件
-os.close( fd )
-
-
+os.close(fd)
 
 # os.lchflags() 方法用于设置路径的标记为数字标记，类似 chflags()，但是没有软链接。
 # 只支持在 Unix 下使用。
@@ -982,21 +933,19 @@ os.close( fd )
 # SF_SNAPSHOT: 快照文件(超级用户可设)
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/foo.txt"
-fd = os.open( path, os.O_RDWR|os.O_CREAT )
+fd = os.open(path, os.O_RDWR | os.O_CREAT)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
 # 修改文件标记
-ret = os.lchflags(path, os.UF_IMMUTABLE )
+ret = os.lchflags(path, os.UF_IMMUTABLE)
 
-print ("修改文件标记成功!!")
-
-
+print("修改文件标记成功!!")
 
 # os.lchmod() 方法用于修改连接文件权限。
 # 只支持在 Unix 下使用。
@@ -1027,25 +976,23 @@ print ("修改文件标记成功!!")
 # stat.S_IXOTH:对于其他组执行的权限
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/foo.txt"
-fd = os.open( path, os.O_RDWR|os.O_CREAT )
+fd = os.open(path, os.O_RDWR | os.O_CREAT)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
 # 修改文件权限
 # 设置文件可以通过组执行
-os.lchmod( path, stat.S_IXGRP)
+os.lchmod(path, stat.S_IXGRP)
 
 # 设置文件可以被其他用户写入
 os.lchmod("/tmp/foo.txt", stat.S_IWOTH)
 
-print ("修改权限成功!!")
-
-
+print("修改权限成功!!")
 
 # os.lchown() 方法用于更改文件所有者，类似 chown，但是不追踪链接。
 # 只支持在 Unix 下使用。
@@ -1058,25 +1005,23 @@ print ("修改权限成功!!")
 # gid -- 所属用户组 ID
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/foo.txt"
-fd = os.open( path, os.O_RDWR|os.O_CREAT )
+fd = os.open(path, os.O_RDWR | os.O_CREAT)
 
 # 关闭打开的文件
-os.close( fd )
+os.close(fd)
 
 # 修改文件权限
 # 设置文件所属用户 ID
-os.lchown( path, 500, -1)
+os.lchown(path, 500, -1)
 
 # 设置文件所属用户组 ID
-os.lchown( path, -1, 500)
+os.lchown(path, -1, 500)
 
-print ("修改权限成功!!")
-
-
+print("修改权限成功!!")
 
 # os.link() 方法用于创建硬链接，名为参数 dst，指向参数 src。
 # 该方法对于创建一个已存在文件的拷贝是非常有用的。
@@ -1089,22 +1034,20 @@ print ("修改权限成功!!")
 # dst -- 用于创建硬连接的目标地址
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/foo.txt"
-fd = os.open( path, os.O_RDWR|os.O_CREAT )
+fd = os.open(path, os.O_RDWR | os.O_CREAT)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
 # 创建以上文件的拷贝
 dst = "/tmp/foo.txt"
-os.link( path, dst)
+os.link(path, dst)
 
-print ("创建硬链接成功!!")
-
-
+print("创建硬链接成功!!")
 
 # os.listdir() 方法用于返回指定的文件夹包含的文件或文件夹的名字的列表。这个列表以字母顺序。 它不包括 '.' 和'..' 即使它在文件夹中。
 # 只支持在 Unix, Windows 下使用。
@@ -1115,17 +1058,15 @@ print ("创建硬链接成功!!")
 # path -- 需要列出的目录路径
 # 返回值
 # 返回指定路径下的文件和文件夹列表。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/"
-dirs = os.listdir( path )
+dirs = os.listdir(path)
 
 # 输出所有文件和文件夹
 for file in dirs:
-    print (file)
-
-
+    print(file)
 
 # os.lseek() 方法用于设置文件描述符 fd 当前位置为 pos, how 方式修改。
 # 在Unix，Windows中有效。
@@ -1138,10 +1079,10 @@ for file in dirs:
 # how -- 文件内参考位置。SEEK_SET 或者 0 设置从文件开始的计算的pos; SEEK_CUR或者 1 则从当前位置计算; os.SEEK_END或者2则从文件尾部开始。
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -1152,14 +1093,12 @@ os.fsync(fd)
 # 从开始位置读取字符串
 os.lseek(fd, 0, 0)
 str = os.read(fd, 100)
-print ("Read String is : ", str)
+print("Read String is : ", str)
 
 # 关闭文件
-os.close( fd )
+os.close(fd)
 
-print ("关闭文件成功!!")
-
-
+print("关闭文件成功!!")
 
 # os.lstat() 方法用于类似 stat() 返回文件的信息,但是没有符号链接。在某些平台上，这是fstat的别名，例如 Windows。
 # 语法
@@ -1169,27 +1108,25 @@ print ("关闭文件成功!!")
 # path -- 要返回信息的文件。
 # 返回值
 # 返回文件信息。
-import os, sys
+import os
 
 # 打开文件
 path = "/var/www/html/foo.txt"
-fd = os.open( path, os.O_RDWR|os.O_CREAT )
+fd = os.open(path, os.O_RDWR | os.O_CREAT)
 
 # 关闭打开的文件
-os.close( fd )
+os.close(fd)
 
 # 获取元组
 info = os.lstat(path)
 
-print ("文件信息 :", info)
+print("文件信息 :", info)
 
 # 获取文件 uid
-print ("文件 UID  :%d" % info.st_uid)
+print("文件 UID  :%d" % info.st_uid)
 
 # 获取文件 gid
-print ("文件 GID :%d" % info.st_gid)
-
-
+print("文件 GID :%d" % info.st_gid)
 
 # os.major() 方法用于从原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。
 # 语法
@@ -1199,7 +1136,7 @@ print ("文件 GID :%d" % info.st_gid)
 # device -- 原始的设备号中提取设备major号码 (使用stat中的st_dev或者st_rdev field)。
 # 返回值
 # 返回设备major号码。
-import os, sys
+import os
 
 path = "/var/www/html/foo.txt"
 
@@ -1210,10 +1147,8 @@ info = os.lstat(path)
 major_dnum = os.major(info.st_dev)
 minor_dnum = os.minor(info.st_dev)
 
-print ("Major 设备号 :", major_dnum)
-print ("Minor 设备号 :", minor_dnum)
-
-
+print("Major 设备号 :", major_dnum)
+print("Minor 设备号 :", minor_dnum)
 
 # os.makedev() 方法用于以major和minor设备号组成一个原始设备号。
 # 语法
@@ -1224,7 +1159,7 @@ print ("Minor 设备号 :", minor_dnum)
 # minor -- inor 设备号。
 # 返回值
 # 返回设备号。
-import os, sys
+import os
 
 path = "/var/www/html/foo.txt"
 
@@ -1235,14 +1170,12 @@ info = os.lstat(path)
 major_dnum = os.major(info.st_dev)
 minor_dnum = os.minor(info.st_dev)
 
-print ("Major 设备号 :", major_dnum)
-print ("Minor 设备号 :", minor_dnum)
+print("Major 设备号 :", major_dnum)
+print("Minor 设备号 :", minor_dnum)
 
 # 生成设备号
 dev_num = os.makedev(major_dnum, minor_dnum)
-print ("设备号 :", dev_num)
-
-
+print("设备号 :", dev_num)
 
 # os.makedirs() 方法用于递归创建目录。像 mkdir(), 但创建的所有intermediate-level文件夹需要包含子目录。
 # 语法
@@ -1253,16 +1186,14 @@ print ("设备号 :", dev_num)
 # mode -- 权限模式。
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 创建的目录
 path = "/tmp/home/monthly/daily"
 
 os.makedirs(path, 0o0755);
 
-print ("路径被创建")
-
-
+print("路径被创建")
 
 # os.minor() 方法用于从原始的设备号中提取设备minor号码 (使用stat中的st_dev或者st_rdev field )。
 # 语法
@@ -1272,7 +1203,7 @@ print ("路径被创建")
 # device -- 原始的设备(使用stat中的st_dev或者st_rdev field )
 # 返回值
 # 返回设备 minor 号。
-import os, sys
+import os
 
 path = "/var/www/html/foo.txt"
 
@@ -1283,10 +1214,8 @@ info = os.lstat(path)
 major_dnum = os.major(info.st_dev)
 minor_dnum = os.minor(info.st_dev)
 
-print ("Major 设备号 :", major_dnum)
-print ("Minor 设备号 :", minor_dnum)
-
-
+print("Major 设备号 :", major_dnum)
+print("Minor 设备号 :", minor_dnum)
 
 # os.mkdir() 方法用于以数字权限模式创建目录。默认的模式为 0777 (八进制)。
 # 语法
@@ -1297,16 +1226,14 @@ print ("Minor 设备号 :", minor_dnum)
 # mode -- 要为目录设置的权限数字模式
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 创建的目录
 path = "/tmp/home/monthly/daily/hourly"
 
-os.mkdir(path, 0o0755 )
+os.mkdir(path, 0o0755)
 
-print ("目录已创建")
-
-
+print("目录已创建")
 
 # os.mkfifo() 方法用于创建指令路径的管道，并设置权限模式。默认的模式为 0666 (八进制)。
 # 语法
@@ -1317,16 +1244,14 @@ print ("目录已创建")
 # mode -- 要为目录设置的权限数字模式
 # 返回值
 # 该方法没有返回值。
-import os, sys
+import os
 
 # 创建的目录
 path = "/tmp/hourly"
 
 os.mkfifo(path, 0o0644)
 
-print ("路径被创建")
-
-
+print("路径被创建")
 
 # os.mknod() 方法用于创建一个指定文件名的文件系统节点（文件，设备特别文件或者命名pipe）。
 # 语法
@@ -1343,12 +1268,10 @@ import os
 import stat
 
 filename = '/tmp/tmpfile'
-mode = 0o0600|stat.S_IRUSR
+mode = 0o0600 | stat.S_IRUSR
 
 # 文件系统节点指定不同模式
 os.mknod(filename, mode)
-
-
 
 # os.open() 方法用于打开一个文件，并且设置需要的打开选项，模式参数mode参数是可选的，默认为 0777。
 # 语法
@@ -1373,10 +1296,10 @@ os.mknod(filename, mode)
 # mode -- 类似 chmod()。
 # 返回值
 # 返回新打开文件的描述符。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open("foo.txt", os.O_RDWR|os.O_CREAT)
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
 # 写入字符串
 os.write(fd, "This is test")
@@ -1385,8 +1308,6 @@ os.write(fd, "This is test")
 os.close(fd)
 
 print("关闭文件成功!!")
-
-
 
 # os.openpty() 方法用于打开一个新的伪终端对。返回 pty 和 tty的文件描述符。
 # 语法
@@ -1399,17 +1320,15 @@ print("关闭文件成功!!")
 import os
 
 # 主 pty, 从 tty
-m,s = os.openpty()
+m, s = os.openpty()
 
-print (m)
-print (s)
+print(m)
+print(s)
 
 # 显示终端名
 s = os.ttyname(s)
-print (m)
-print (s)
-
-
+print(m)
+print(s)
 
 # 40
 # os.pathconf() 方法用于返回一个打开的文件的系统配置信息。
@@ -1423,22 +1342,22 @@ print (s)
 # 台也定义了一些额外的名字。这些名字在主操作系统上pathconf_names的字典中。对于不在pathconf_names中的配置变量，传递一个数字作为名字，也是可以接受的。
 # 返回值
 # 返回文件的系统信息。
-import os, sys
+import os
 
 # 打开文件
-fd = os.open( "foo.txt", os.O_RDWR|os.O_CREAT )
+fd = os.open("foo.txt", os.O_RDWR | os.O_CREAT)
 
-print ("%s" % os.pathconf_names)
+print("%s" % os.pathconf_names)
 
 # 获取文件最大连接数
 no = os.fpathconf(fd, 'PC_LINK_MAX')
-print ("Maximum number of links to the file. :%d" % no)
+print("Maximum number of links to the file. :%d" % no)
 
 # 获取文件名最大长度
 no = os.fpathconf(fd, 'PC_NAME_MAX')
-print ("Maximum length of a filename :%d" % no)
+print("Maximum length of a filename :%d" % no)
 
 # 关闭文件
-os.close( fd)
+os.close(fd)
 
-print ("关闭文件成功!!")
+print("关闭文件成功!!")

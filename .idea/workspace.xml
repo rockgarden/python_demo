@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/code/module/battery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/module/car.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/module/die.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/module/restaurant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/module/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/assets/pi_digits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/assets/pi_million_digits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/error.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/file.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/json.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/module/word_count.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/CGI编程.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/CGI编程.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Module/pizza_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/module/pizza.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Module/printing_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/module/printing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Module/support.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/module/support.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Module/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/class.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/class.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/class.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/module/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/function.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/function.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/模块.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/os.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/os.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/parse_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/错误和异常.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/error.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,79 +25,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="class.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/class.ipynb">
+      <file leaf-file-name="file.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/file.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="21" />
+              <selected id="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/collections/__init__.py">
+      <file leaf-file-name="json.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/json.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1746">
-              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+            <state relative-caret-position="216">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="模块.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/模块.py">
+      <file leaf-file-name="os.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/os.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-437">
-              <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+            <state relative-caret-position="-3875">
+              <caret line="226" column="13" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="support.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/support.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="die.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/die.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+      <file leaf-file-name="SMTP发送邮件.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/SMTP发送邮件.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="网络编程.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/网络编程.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="json.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/json.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="car.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/car.py">
+      <file leaf-file-name="file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battery.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/battery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="restaurant.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/restaurant.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/module/user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -110,8 +90,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -119,8 +99,10 @@
     <findStrings>
       <find>age</find>
       <find>make_pizza</find>
+      <find>open</find>
     </findStrings>
     <dirStrings>
+      <dir>$PROJECT_DIR$/code/source</dir>
       <dir>$PROJECT_DIR$/code</dir>
     </dirStrings>
   </component>
@@ -161,6 +143,19 @@
         <option value="$PROJECT_DIR$/code/module/die.py" />
         <option value="$PROJECT_DIR$/code/class.ipynb" />
         <option value="$PROJECT_DIR$/code/模块.py" />
+        <option value="$PROJECT_DIR$/code/assets/pi_digits.txt" />
+        <option value="$PROJECT_DIR$/code/input.ipynb" />
+        <option value="$PROJECT_DIR$/code/assets/pi_million_digits.txt" />
+        <option value="$PROJECT_DIR$/code/input.py" />
+        <option value="$PROJECT_DIR$/code/error.py" />
+        <option value="$PROJECT_DIR$/code/module/word_count.py" />
+        <option value="$PROJECT_DIR$/code/error.ipynb" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/code/json.ipynb" />
+        <option value="$PROJECT_DIR$/code/file.py" />
+        <option value="$PROJECT_DIR$/code/file.ipynb" />
+        <option value="$PROJECT_DIR$/code/json.py" />
+        <option value="$PROJECT_DIR$/code/os.py" />
       </list>
     </option>
   </component>
@@ -173,22 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,7 +184,34 @@
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_demo" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
+              <item name="code" type="cbb8eebc:String" user="code" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
+              <item name="code" type="cbb8eebc:String" user="code" />
+              <item name="module" type="cbb8eebc:String" user="module" />
             </path>
           </expand>
           <select />
@@ -215,7 +221,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="python_demo" sdk-home="/usr/local/bin/python3.6">
+        <option name="mySdkHome" value="/usr/local/bin/python3.6" />
+        <option name="myModuleName" value="python_demo" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/assets" />
+      <recent name="$PROJECT_DIR$/code/source" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.class">
+  <component name="RunManager" selected="Python.json">
     <configuration name="python_demo" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,42 +266,6 @@
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
     </configuration>
-    <configuration name="字典" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/字典.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="内置函数" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/内置函数.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -295,6 +279,42 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="file" type="PythonConfigurationType" factoryName="Python">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="json" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/json.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,20 +375,20 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
+      <item itemvalue="Python.file" />
       <item itemvalue="Jupyter Notebook.python_demo" />
-      <item itemvalue="Python.字典" />
       <item itemvalue="Python.making_pizzas" />
+      <item itemvalue="Python.json" />
       <item itemvalue="Python.printing_models" />
       <item itemvalue="Python.operator" />
       <item itemvalue="Python.class" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.json" />
         <item itemvalue="Python.class" />
         <item itemvalue="Python.operator" />
-        <item itemvalue="Python.making_pizzas" />
         <item itemvalue="Python.printing_models" />
-        <item itemvalue="Python.字典" />
       </list>
     </recent_temporary>
   </component>
@@ -383,199 +403,56 @@
       <option name="presentableId" value="Default" />
       <updated>1515938849795</updated>
     </task>
+    <task id="LOCAL-00001" summary="add module source root">
+      <created>1527692771031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527692771031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18194444" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="DB Browser" order="2" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50625" side_tool="true" visible="true" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49375" visible="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.35347223" side_tool="true" visible="true" weight="0.39976415" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49739584" weight="0.3151751" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49583334" weight="0.32900944" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18194444" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49722221" weight="0.32900944" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.48958334" weight="0.32900944" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6375" weight="0.32900944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.64652777" visible="true" weight="0.39976415" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="3" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49513888" weight="0.32900944" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add module source root" />
+    <option name="LAST_COMMIT_MESSAGE" value="add module source root" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/CGI编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8145">
-          <caret line="543" column="4" selection-start-line="543" selection-start-column="4" selection-end-line="543" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/网络编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/CGI编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/网络编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/collections_tuples.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/基础语法.py" />
-    <entry file="file://$PROJECT_DIR$/code/example_if.py" />
-    <entry file="file://$PROJECT_DIR$/code/collections_dictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="2787" column="6" selection-start-line="2787" selection-start-column="6" selection-end-line="2787" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/字典.py" />
-    <entry file="file://$PROJECT_DIR$/code/基础语法.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/列表.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/conditions.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/输入和输出.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/collections_list.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/basic.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/collections_collection.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/conditions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/collections_dictionary.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/loop_statement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/CGI编程.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="543" column="4" selection-start-line="543" selection-start-column="4" selection-end-line="543" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/内置函数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/实例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-477" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/标准库概览.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1936" />
@@ -639,16 +516,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/module/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/class.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/code/module/test.py" />
+    <entry file="file://$PROJECT_DIR$/code/class.py" />
     <entry file="file://$PROJECT_DIR$/code/function.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -668,21 +537,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/module/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="1188">
           <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/module/car.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="684">
           <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/module/battery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="414">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
@@ -690,7 +559,7 @@
     <entry file="file://$PROJECT_DIR$/code/module/die.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -699,7 +568,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/模块.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
+        <state relative-caret-position="1620">
           <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
         </state>
       </provider>
@@ -709,17 +578,156 @@
         <state relative-caret-position="-4806" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/class.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="21" />
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/collections/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/collections/__init__.py">
+    <entry file="file://$PROJECT_DIR$/code/source/testfile.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/data.json" />
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1746">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+        <state relative-caret-position="6115">
+          <caret line="341" column="4" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/source/os.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/pi_digits.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/class.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/pi_million_digits.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27639">
+          <caret line="10000" selection-start-line="10000" selection-end-line="10000" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/programming.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/module/word_count.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="22" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/error.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/siddhartha.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/alice.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/moby_dict.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/error.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/input.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="18">
+            <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/output/username.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/numbers.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/file.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/json.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/SMTP发送邮件.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/网络编程.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3875">
+          <caret line="226" column="13" selection-start-line="226" selection-start-column="13" selection-end-line="226" selection-end-column="13" />
         </state>
       </provider>
     </entry>
