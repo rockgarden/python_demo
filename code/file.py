@@ -12,3 +12,62 @@ if birthday in pi_string:
     print("Your birthday appears in the first million digits of pi!")
 else:
     print("Your birthday does not appear in the first million digits of pi.")
+
+filename = 'assets/guest_book.txt'
+print("Enter 'quit' when you are finished.")
+while True:
+    name = input("\nWhat's your name? ")
+    if name == 'quit':
+        break
+    else:
+        try:
+            with open(filename, 'a') as f:
+                f.write(name + "\n")
+        except FileNotFoundError:
+            with open(filename, 'w') as f:
+                f.write(name + "\n")
+                print("Hi " + name + ", you've been added to the guest book.")
+        else:
+            print("Hi " + name + ", you've been added to the guest book.")
+
+filename = 'assets/programming_poll.txt'
+responses = []
+while True:
+    response = input("\nWhy do you like programming? ")
+    responses.append(response)
+    continue_poll = input("Would you like to let someone else respond? (y/n) ")
+    if continue_poll != 'y':
+        break
+try:
+    with open(filename, 'a') as f:
+        for response in responses:
+            f.write(response + "\n")
+except FileNotFoundError:
+    with open(filename, 'w') as f:
+        for response in responses:
+            f.write(response + "\n")
+
+filenames = ['assets/cats.txt', 'assets/dogs.txt']
+for filename in filenames:
+    print("\nReading file: " + filename)
+    try:
+        with open(filename) as f:
+            contents = f.read()
+            print(contents)
+    except FileNotFoundError:
+        with open(filename, 'w') as f:
+            contents = f.read()
+            print(contents)
+
+import json
+
+try:
+    with open('favorite_number.json') as f:
+        number = json.load(f)
+except FileNotFoundError:
+    number = input("What's your favorite number? ")
+    with open('favorite_number.json', 'w') as f:
+        json.dump(number, f)
+    print("Thanks, I'll remember that.")
+else:
+    print("I know your favorite number! It's " + str(number) + ".")
