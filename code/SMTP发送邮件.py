@@ -20,8 +20,8 @@
 
 # Python发送邮件简单的实例
 import smtplib
-from email.mime.text import MIMEText
 from email.header import Header
+from email.mime.text import MIMEText
 
 sender = 'from@rockgarden.com'
 receivers = ['1013205233@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
@@ -133,9 +133,9 @@ att1["Content-Disposition"] = 'attachment; filename="test.txt"'
 message.attach(att1)
 
 # 构造附件2，传送当前目录下的 runoob.txt 文件
-att2 = MIMEText(open('runoob.txt', 'rb').read(), 'base64', 'utf-8')
+att2 = MIMEText(open('assets/runoob.txt', 'rb').read(), 'base64', 'utf-8')
 att2["Content-Type"] = 'application/octet-stream'
-att2["Content-Disposition"] = 'attachment; filename="runoob.txt"'
+att2["Content-Disposition"] = 'attachment; filename="assets/runoob.txt"'
 message.attach(att2)
 
 try:
