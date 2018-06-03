@@ -58,7 +58,7 @@ from employee import Employee
 
 
 class TestEmployee(unittest.TestCase):
-    """Tests for the module employee."""
+    """Tests for the modules employee."""
 
     def setUp(self):
         """Make an employee to use in tests."""

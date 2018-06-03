@@ -241,7 +241,7 @@ def outer():
     def inner():
         i_count = 2  # 局部作用域
         
-Python 中只有模块（module），类（class）以及函数（def、lambda）才会引入新的作用域;
+Python 中只有模块（modules），类（class）以及函数（def、lambda）才会引入新的作用域;
 其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这这些语句内定义的变量，外部也可以访问.
 '''
 if True:
@@ -253,7 +253,7 @@ def test():
     msg_inner = 'I am from Runoob'
 msg_inner
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in <modules>
 NameError: name 'msg_inner' is not defined
 从报错的信息上看，说明了 msg_inner 未定义，无法使用，因为它是局部变量，只有在函数内可以使用。
 '''
