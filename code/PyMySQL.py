@@ -19,7 +19,7 @@ import pymysql
 # $ python3 setup.py install
 # $ # 现在你可以删除 PyMySQL* 目录
 # 注意：请确保您有root权限来安装上述模块。
-# 安装的过程中可能会出现"ImportError: No module named setuptools"的错误提示，意思是你没有安装setuptools，你可以访问https://pypi.python.org/pypi/setuptools 找到各个系统的安装方法。
+# 安装的过程中可能会出现"ImportError: No modules named setuptools"的错误提示，意思是你没有安装setuptools，你可以访问https://pypi.python.org/pypi/setuptools 找到各个系统的安装方法。
 # Linux 系统安装实例：
 # $ wget https://bootstrap.pypa.io/ez_setup.py
 # $ python3 ez_setup.py

@@ -23,7 +23,7 @@ print('\n\nPython 路径为：', sys.path, '\n')
 # sys.path是python的搜索模块的路径集，是一个list
 # 可以在python 环境下使用sys.path.append(path)添加相关的路径，但在退出python环境后
 # 自己添加的路径就会自动消失了！
-sys.path.append('/Users/wangkan/Documents/python_demo/code/module')
+sys.path.append('/Users/wangkan/Documents/python_demo/code/modules')
 '''
 Python搜索模块的路径：
 1)、程序的主目录

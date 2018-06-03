@@ -1,4 +1,4 @@
-"""Functions related to printing 3d models."""
+"""Functions related to printing 3d modules."""
 
 
 def print_models(unprinted_designs, completed_models):
@@ -15,7 +15,7 @@ def print_models(unprinted_designs, completed_models):
 
 
 def show_completed_models(completed_models):
-    """Show all the models that were printed."""
-    print("\nThe following models have been printed:")
+    """Show all the modules that were printed."""
+    print("\nThe following modules have been printed:")
     for completed_model in completed_models:
         print(completed_model)

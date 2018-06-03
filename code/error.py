@@ -125,7 +125,7 @@ except MyError as e:
 # 在这个例子中，类 Exception 默认的 __init__() 被覆盖。
 # 当创建一个模块有可能抛出多种不同的异常时，一种通常的做法是为这个包建立一个基础异常类，然后基于这个基础类为不同的错误情况创建不同的子类:
 class Error(Exception):
-    """Base class for exceptions in this module."""
+    """Base class for exceptions in this modules."""
     pass
 
 
