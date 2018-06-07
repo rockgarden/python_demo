@@ -5,6 +5,7 @@ import sys
 
 HOST = '127.0.0.1'  # Symbolic name meaning all available interfaces '127.0.0.1'
 PORT = 50007  # Arbitrary non-privileged port
+MaxClients = 5
 s = None
 for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC,
                               socket.SOCK_STREAM, 0, socket.AI_PASSIVE):
@@ -17,7 +18,7 @@ for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC,
     try:
         # 绑定端口
         s.bind(sa)
-        s.listen(1)
+        s.listen(MaxClients)
     except OSError as msg:
         s.close()
         s = None
@@ -25,12 +26,12 @@ for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC,
     break
 if s is None:
     print('could not open socket')
-    sys.exit(1)
-conn, addr = s.accept()
+    sys.exit(MaxClients)
 
-with conn:
-    print('Connected by', addr)
-    while True:
+while True:
+    conn, addr = s.accept()
+    with conn:
+        print('Connected by', addr)
         # 接收数据
         data = conn.recv(1024)
         if not data: break
