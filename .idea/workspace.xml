@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/requests_demo/requests_demo.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requests_demo/requests_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requests_demo/requests_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/requests_demo/requests_demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +18,21 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="356">
-              <caret line="962" column="13" selection-start-line="962" selection-start-column="13" selection-end-line="962" selection-end-column="13" />
+              <caret line="967" column="13" selection-start-line="967" selection-start-column="13" selection-end-line="967" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requests_demo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="requests_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requests_demo/requests_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state>
+              <caret column="44" selection-start-column="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requests_demo.ipynb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requests_demo.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requests_demo/requests_demo.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
@@ -210,8 +207,8 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requests_demo/requests_functions.py" />
-        <option value="$PROJECT_DIR$/requests_demo/requests_demo.py" />
         <option value="$PROJECT_DIR$/requests_demo/requests_demo.ipynb" />
+        <option value="$PROJECT_DIR$/requests_demo/requests_demo.py" />
       </list>
     </option>
   </component>
@@ -509,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528445774953</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add jpynb">
+      <created>1528730940598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528730940598</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -607,7 +611,8 @@
     <MESSAGE value="add game demo" />
     <MESSAGE value="add socket demo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="add jpynb" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jpynb" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -884,7 +889,7 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="962" column="13" selection-start-line="962" selection-start-column="13" selection-end-line="962" selection-end-column="13" />
+          <caret line="967" column="13" selection-start-line="967" selection-start-column="13" selection-end-line="967" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -893,16 +898,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="450">
             <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="126">
-            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
@@ -926,6 +921,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requests_demo/requests_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="126">
+            <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requests_demo/requests_functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -935,15 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requests_demo/requests_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requests_demo/requests_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="1" />
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
         </state>
       </provider>
     </entry>
