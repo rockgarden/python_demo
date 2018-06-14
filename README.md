@@ -7,4 +7,5 @@ python_demo
 
 相关库
 ---
-[requests](http://www.python-requests.org/en/master/)
+- [requests](http://www.python-requests.org/en/master/)
+- [BeautifulSoup/](https://www.crummy.com/software/BeautifulSoup/)
