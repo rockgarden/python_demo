@@ -16,6 +16,8 @@ NEWSPIDER_MODULE = 'scrapydemo.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'scrapydemo (+http://www.yourdomain.com)'
+# 伪造USER_AGENT
+# USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -24,8 +26,9 @@ ROBOTSTXT_OBEY = True
 # Downloader最大并发请求下载数量
 # CONCURRENT_REQUESTS = 32
 
-# Configure a delay for requests for the same website (default: 0)
+# 降低请求速率 Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
+# See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 # See also autothrottle settings and docs
 # DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
@@ -40,8 +43,11 @@ ROBOTSTXT_OBEY = True
 
 # Override the default request headers:
 # DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
+#     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#     'User-Agent': USER_AGENT,
+#     'Connection': 'Keep-Alive',
+#     'Accept-Encoding': 'gzip, deflate',
+#     'Accept-Language': 'en',
 # }
 
 # Enable or disable spider middlewares

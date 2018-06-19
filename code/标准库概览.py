@@ -9,7 +9,6 @@ os.system('mkdir today')   # 执行系统命令 mkdir
 dir(os)
 help(os)
 # 针对日常的文件和目录管理任务，:mod:shutil 模块提供了一个易于使用的高级接口:
-import shutil
 # shutil.copyfile('data.db', 'archive.db')
 # shutil.move('/build/executables', 'installdir')
 
@@ -23,7 +22,7 @@ glob.glob('*.py')
 
 
 # 命令行参数
-# 通用工具脚本经常调用命令行参数。这些命令行参数以链表形式存储于 sys 模块的 argv 变量。例如在命令行中执行 "python demo.py one two three" 后可以得到以下输出结果:
+# 通用工具脚本经常调用命令行参数。这些命令行参数以链表形式存储于 sys 模块的 argv 变量。例如在命令行中执行 "python demo_spider.py one two three" 后可以得到以下输出结果:
 import sys
 print(sys.argv)
 

@@ -13,8 +13,11 @@
   5. beautiful_soup_demo: bs4 网页解析库入门
   6. socket_demo: socket 库开发
   
-### 相关库
+## 相关库
 
-- [requests](http://www.python-requests.org/en/master/)
-- [BeautifulSoup/](https://www.crummy.com/software/BeautifulSoup/)
+- [rsa](https://pypi.org/project/rsa/)
+- [PIL](https://pypi.org/project/Pillow/):image processing 图像处理。
+
+- [PyInstaller](https://pypi.org/project/PyInstaller/)
 - [pyintaller](http://www.pyinstaller.org)
+

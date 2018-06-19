@@ -43,11 +43,13 @@ class StocksSpider(scrapy.Spider):
             'User-Agent': ua
         }  # 构造请求头
 
+
         for href in response.css('a::attr(href)').extract()[10:15]:  # 用CSS Selector提取信息
             try:
                 stock = re.findall(r'[s][hz]\d{6}', href)[0]
                 url = 'https://gupiao.baidu.com/stock/' + stock + '.html'  # 百度股票对应的链接
-                yield scrapy.Request(url, callback=self.parse_stock, headers=headers)  # callback给出处理这个url对应响应的处理函数
+                yield scrapy.Request(url, callback=self.parse_stock, headers=headers)
+                # callback给出处理这个url对应响应的处理函数
             except:
                 continue
 
