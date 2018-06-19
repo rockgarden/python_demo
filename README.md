@@ -17,3 +17,4 @@
 
 - [requests](http://www.python-requests.org/en/master/)
 - [BeautifulSoup/](https://www.crummy.com/software/BeautifulSoup/)
+- [pyintaller](http://www.pyinstaller.org)

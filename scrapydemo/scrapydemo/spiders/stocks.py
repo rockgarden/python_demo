@@ -7,14 +7,12 @@ import scrapy
 
 # TODO: https://blog.csdn.net/real_Rickys/article/details/79780650
 
-# from lego import UserAgent
-
 class StocksSpider(scrapy.Spider):
     name = 'stocks'
     allowed_domains = ['baidu.com', 'eastmoney.com']
     start_urls = ['http://quote.eastmoney.com/stocklist.html']
 
-    user_agent_list = [ \
+    user_agent_list = [
         "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1" \
         "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11", \
         "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6", \
@@ -45,9 +43,7 @@ class StocksSpider(scrapy.Spider):
             'User-Agent': ua
         }  # 构造请求头
 
-        # rh = UserAgent.random_header()
-
-        for href in response.css('a::attr(href)').extract()[10:200]:  # 用CSS Selector提取信息
+        for href in response.css('a::attr(href)').extract()[10:15]:  # 用CSS Selector提取信息
             try:
                 stock = re.findall(r'[s][hz]\d{6}', href)[0]
                 url = 'https://gupiao.baidu.com/stock/' + stock + '.html'  # 百度股票对应的链接

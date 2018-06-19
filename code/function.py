@@ -1,4 +1,5 @@
-def get_formatted_name(first_name, last_name, middle_name=''):  # 默认值让实参可选
+# 默认值让实参可选
+def get_formatted_name(first_name, last_name, middle_name=''):
     """Return a full name, neatly formatted."""
     if middle_name:
         full_name = first_name + ' ' + middle_name + ' ' + last_name
@@ -18,18 +19,6 @@ while True:
         break
     formatted_name = get_formatted_name(f_name, l_name)
     print("\nHello," + formatted_name + "!")
-
-
-# 定义函数
-def printme(str):
-    "打印任何传入的字符串"
-    print(str);
-    return;
-
-
-# 调用函数
-printme("我要调用用户自定义函数!");
-printme("再次调用同一函数");
 
 '''
 参数传递
@@ -77,17 +66,6 @@ def changeme(mylist):
 mylist = [10, 20, 30];
 changeme(mylist);
 print("函数外取值: ", mylist)
-
-'''
-参数
-以下是调用函数时可使用的正式参数类型：
-必需参数
-关键字参数
-默认参数
-不定长参数
-必需参数
-必需参数须以正确的顺序传入函数。调用时的数量必须和声明时的一样。
-'''
 
 
 def printme(str):
@@ -181,50 +159,6 @@ def func(country, province, **kwargs):
 func("China", "Sichuan", city="Chengdu", section="JingJiang")
 
 '''
-匿名函数
-python 使用 lambda 来创建匿名函数。
-所谓匿名，意即不再使用 def 语句这样标准的形式定义一个函数。
-lambda 只是一个表达式，函数体比 def 简单很多。
-lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。
-lambda 函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。
-虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存从而增加运行效率。
-语法
-lambda 函数的语法只包含一个语句，如下：
-lambda [arg1 [,arg2,.....argn]]:expression
-'''
-sum = lambda arg1, arg2: arg1 + arg2;
-
-# 调用sum函数
-print("相加后的值为 : ", sum(10, 20))
-print("相加后的值为 : ", sum(20, 20))
-
-# 匿名函数也是可以使用"关键字参数"进行参数传递
-g = lambda x, y: print(x ** 2 + y ** 2)
-g(y=3, x=2)
-
-# lambda 匿名函数也可以设定默认值
-g = lambda x=0, y=0: print(x ** 2 + y ** 2)
-g(y=3)
-
-
-# 注意：如果只打算给其中一部分参数设定默认值，那么应当将其放在靠后的位置，否则会报错。
-
-
-# return语句
-# return [表达式] 语句用于退出函数，选择性地向调用方返回一个表达式。不带参数值的return语句返回None。
-# 可写函数说明
-def sum(arg1, arg2):
-    # 返回2个参数的和."
-    total = arg1 + arg2
-    print("函数内 : ", total)
-    return total;
-
-
-# 调用sum函数
-total = sum(10, 20);
-print("函数外 : ", total)
-
-'''
 变量作用域
 Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。
 变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称。Python的作用域一共有4中，分别是：
@@ -257,62 +191,6 @@ Traceback (most recent call last):
 NameError: name 'msg_inner' is not defined
 从报错的信息上看，说明了 msg_inner 未定义，无法使用，因为它是局部变量，只有在函数内可以使用。
 '''
-
-'''
-全局变量和局部变量
-定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。
-局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序范围内访问。调用函数时，所有在函数内声明的变量名称都将被加入到作用域中。如下实例
-'''
-total = 0;  # 这是一个全局变量
-
-
-# 可写函数说明
-def sum(arg1, arg2):
-    # 返回2个参数的和."
-    total = arg1 + arg2;  # total在这里是局部变量.
-    print("函数内是局部变量 : ", total)
-    return total;
-
-
-# 调用sum函数
-sum(10, 20);
-print("函数外是全局变量 : ", total)
-
-'''
-global 和 nonlocal关键字
-当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字了。
-'''
-num = 1
-
-
-def fun1():
-    global num  # 需要使用 global 关键字声明
-    print(num)
-    num = 123
-    print(num)
-
-
-fun1()
-'''
-如果要修改嵌套作用域（enclosing
-作用域，外层非全局作用域）中的变量则需要
-nonlocal 关键字了.
-'''
-
-
-def outer():
-    num = 10
-
-    def inner():
-        nonlocal num  # nonlocal关键字声明
-        num = 100
-        print(num)
-
-    inner()
-    print(num)
-
-
-outer()
 
 
 # ====== User Albums ======
