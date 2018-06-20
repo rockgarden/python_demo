@@ -21,3 +21,4 @@
 - [PyInstaller](https://pypi.org/project/PyInstaller/)
 - [pyintaller](http://www.pyinstaller.org)
 
+- [PyMySQL](https://pypi.org/project/PyMySQL/)

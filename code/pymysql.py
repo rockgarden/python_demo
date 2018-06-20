@@ -1,12 +1,6 @@
-
-# TODO: 加载 PyMySQL
-import pymysql
-
 # PyMySQL 安装
-# 在使用 PyMySQL 之前，我们需要确保 PyMySQL 已安装。
-# PyMySQL 下载地址：https://github.com/PyMySQL/PyMySQL。
-# 如果还未安装，我们可以使用以下命令安装最新版的 PyMySQL：
-# $ pip install PyMySQL
+# PIP安装:
+# $ pip3 install PyMySQL
 # 如果你的系统不支持 pip 命令，可以使用以下方式安装：
 # 1、使用 git 命令下载安装包安装(你也可以手动下载)：
 # $ git clone https://github.com/PyMySQL/PyMySQL
@@ -24,7 +18,7 @@ import pymysql
 # $ wget https://bootstrap.pypa.io/ez_setup.py
 # $ python3 ez_setup.py
 
-
+import pymysql
 
 # 数据库连接
 # 连接数据库前，请先确认以下事项：
@@ -33,8 +27,6 @@ import pymysql
 # EMPLOYEE表字段为 FIRST_NAME, LAST_NAME, AGE, SEX 和 INCOME。
 # 连接数据库TESTDB使用的用户名为 "testuser" ，密码为 "test123",你可以可以自己设定或者直接使用root用户名及其密码，Mysql数据库用户授权请使用Grant命令。
 # 在你的机子上已经安装了 Python MySQLdb 模块。
-
-
 
 
 # 打开数据库连接
@@ -53,8 +45,6 @@ print("Database version : %s " % data)
 
 # 关闭数据库连接
 db.close()
-
-
 
 # 创建数据库表
 # 如果数据库连接存在我们可以使用execute()
@@ -82,8 +72,6 @@ cursor.execute(sql)
 # 关闭数据库连接
 db.close()
 
-
-
 # 数据库插入操作
 # 以下实例使用执行 SQL INSERT 语句向表 EMPLOYEE 插入记录
 
@@ -109,8 +97,6 @@ except:
 # 关闭数据库连接
 db.close()
 
-
-
 # 以上例子也可以写成如下形式：实例
 
 # 打开数据库连接
@@ -135,8 +121,6 @@ except:
 
 # 关闭数据库连接
 db.close()
-
-
 
 # 数据库查询操作
 # Python查询Mysql使用 fetchone() 方法获取单条数据, 使用fetchall() 方法获取多条数据。
@@ -176,8 +160,6 @@ except:
 # 关闭数据库连接
 db.close()
 
-
-
 # 数据库更新操作
 # 更新操作用于更新数据表的的数据，以下实例将 TESTDB表中的 SEX 字段全部修改为 'M'，AGE 字段递增1
 # 打开数据库连接
@@ -199,8 +181,6 @@ except:
 
 # 关闭数据库连接
 db.close()
-
-
 
 # 删除操作
 # 删除操作用于删除数据表中的数据，以下实例演示了删除数据表 EMPLOYEE 中 AGE 大于 20 的所有数据
@@ -225,8 +205,6 @@ except:
 # 关闭连接
 db.close()
 
-
-
 # 执行事务
 # 事务机制可以确保数据一致性。
 # 事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性。
@@ -239,17 +217,16 @@ db.close()
 # SQL删除记录语句
 sql = "DELETE FROM EMPLOYEE WHERE AGE > '%d'" % (20)
 try:
-   # 执行SQL语句
-   cursor.execute(sql)
-   # 向数据库提交
-   db.commit()
+    # 执行SQL语句
+    cursor.execute(sql)
+    # 向数据库提交
+    db.commit()
 except:
-   # 发生错误时回滚
-   db.rollback()
+    # 发生错误时回滚
+    db.rollback()
 
 # 对于支持事务的数据库， 在Python数据库编程中，当游标建立之时，就自动开始了一个隐形的数据库事务。
 # commit()方法游标的所有更新操作，rollback（）方法回滚当前游标的所有操作。每一个方法都开始了一个新的事务。
-
 
 
 # 错误处理
@@ -265,4 +242,3 @@ except:
 # InternalError	数据库的内部错误，例如游标（cursor）失效了、事务同步失败等等。 必须是DatabaseError子类。
 # ProgrammingError	程序错误，例如数据表（table）没找到或已存在、SQL语句语法错误、 参数数量错误等等。必须是DatabaseError的子类。
 # NotSupportedError	不支持错误，指使用了数据库不支持的函数或API等。例如在连接对象上 使用.rollback()函数，然而数据库并不支持事务或者事务已关闭。 必须是DatabaseError的子类。
-
