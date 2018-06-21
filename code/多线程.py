@@ -1,4 +1,3 @@
-
 # 多线程类似于同时执行多个不同程序，多线程运行有如下优点：
 # 使用线程可以把占据长时间的程序中的任务放到后台去处理。
 # 用户界面可以更加吸引人，这样比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度
@@ -21,7 +20,6 @@
 # 所以，在 Python3 中不能再使用"thread" 模块。为了兼容性，Python3 将 thread 重命名为 "_thread"。
 
 
-
 # Python中使用线程有两种方式：函数或者用类来包装线程对象。
 # 函数式：调用 _thread 模块中的start_new_thread()函数来产生新线程。语法如下:
 # _thread.start_new_thread ( function, args[, kwargs] )
@@ -31,27 +29,27 @@
 # kwargs - 可选参数。
 
 import _thread
-import time
+
 
 # 为线程定义一个函数
 def print_time(threadName, delay):
-   count = 0
-   while count < 5:
-      time.sleep(delay)
-      count += 1
-      print("%s: %s" %(threadName, time.ctime(time.time())))
+    count = 0
+    while count < 5:
+        time.sleep(delay)
+        count += 1
+        print("%s: %s" % (threadName, time.ctime(time.time())))
+
 
 # 创建两个线程
 try:
-   _thread.start_new_thread(print_time, ("Thread-1", 2, ))
-   _thread.start_new_thread(print_time, ("Thread-2", 4, ))
+    _thread.start_new_thread(print_time, ("Thread-1", 2,))
+    _thread.start_new_thread(print_time, ("Thread-2", 4,))
 except:
-   print("Error: 无法启动线程")
+    print("Error: 无法启动线程")
 
 while 1:
-   pass
+    pass
 # 执行以上程后可以按下 ctrl-c to 退出。
-
 
 
 # 线程模块
@@ -71,28 +69,31 @@ while 1:
 # 使用 threading 模块创建线程
 # 我们可以通过直接从 threading.Thread 继承创建一个新的子类，并实例化后调用 start() 方法启动新线程，即它调用了线程的 run() 方法。
 import threading
-import time
 
 exitFlag = 0
 
-class myThread (threading.Thread):
+
+class myThread(threading.Thread):
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
         self.counter = counter
+
     def run(self):
-        print ("开始线程：" + self.name)
+        print("开始线程：" + self.name)
         print_time(self.name, self.counter, 5)
-        print ("退出线程：" + self.name)
+        print("退出线程：" + self.name)
+
 
 def print_time(threadName, delay, counter):
     while counter:
         if exitFlag:
             threadName.exit()
         time.sleep(delay)
-        print ("%s: %s" % (threadName, time.ctime(time.time())))
+        print("%s: %s" % (threadName, time.ctime(time.time())))
         counter -= 1
+
 
 # 创建新线程
 thread1 = myThread(1, "Thread-1", 1)
@@ -103,9 +104,7 @@ thread1.start()
 thread2.start()
 thread1.join()
 thread2.join()
-print ("退出主线程")
-
-
+print("退出主线程")
 
 # 线程同步
 # 如果多个线程共同对某个数据修改，则可能出现不可预料的结果，为了保证数据的正确性，需要对多个线程进行同步。
@@ -117,27 +116,30 @@ print ("退出主线程")
 # 锁有两种状态——锁定和未锁定。每当一个线程比如"set"要访问共享数据时，必须先获得锁定；如果已经有别的线程比如"print"获得锁定了，那么就让线程"set"暂停，也就是同步阻塞；等到线程"print"访问完毕，释放锁以后，再让线程"set"继续。
 # 经过这样的处理，打印列表时要么全部输出0，要么全部输出1，不会再出现一半0一半1的尴尬场面。
 import threading
-import time
 
-class myThread (threading.Thread):
+
+class myThread(threading.Thread):
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
         self.counter = counter
+
     def run(self):
-        print ("开启线程： " + self.name)
+        print("开启线程： " + self.name)
         # 获取锁，用于线程同步
         threadLock.acquire()
         print_time(self.name, self.counter, 3)
         # 释放锁，开启下一个线程
         threadLock.release()
 
+
 def print_time(threadName, delay, counter):
     while counter:
         time.sleep(delay)
-        print ("%s: %s" % (threadName, time.ctime(time.time())))
+        print("%s: %s" % (threadName, time.ctime(time.time())))
         counter -= 1
+
 
 threadLock = threading.Lock()
 threads = []
@@ -157,9 +159,7 @@ threads.append(thread2)
 # 等待所有线程完成
 for t in threads:
     t.join()
-print ("退出主线程")
-
-
+print("退出主线程")
 
 # 线程优先级队列（ Queue）
 # Python 的 Queue 模块中提供了同步的、线程安全的队列类，包括FIFO（先入先出)队列Queue，LIFO（后入先出）队列LifoQueue，和优先级队列 PriorityQueue。
@@ -181,16 +181,19 @@ import time
 
 exitFlag = 0
 
-class myThread (threading.Thread):
+
+class myThread(threading.Thread):
     def __init__(self, threadID, name, q):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
         self.q = q
+
     def run(self):
-        print ("开启线程：" + self.name)
+        print("开启线程：" + self.name)
         process_data(self.name, self.q)
-        print ("退出线程：" + self.name)
+        print("退出线程：" + self.name)
+
 
 def process_data(threadName, q):
     while not exitFlag:
@@ -198,10 +201,11 @@ def process_data(threadName, q):
         if not workQueue.empty():
             data = q.get()
             queueLock.release()
-            print ("%s processing %s" % (threadName, data))
+            print("%s processing %s" % (threadName, data))
         else:
             queueLock.release()
         time.sleep(1)
+
 
 threadList = ["Thread-1", "Thread-2", "Thread-3"]
 nameList = ["One", "Two", "Three", "Four", "Five"]
@@ -233,4 +237,4 @@ exitFlag = 1
 # 等待所有线程完成
 for t in threads:
     t.join()
-print ("退出主线程")
+print("退出主线程")

@@ -13,38 +13,6 @@ print(a)
 a.sort()
 print(a)
 
-motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
-motorcycles[0] = 'ducati'  # 修改元素
-print(motorcycles)
-motorcycles.append('honda')  # 末尾添加元素
-motorcycles.insert(0, 'yamaha')  # 插入元素
-motorcycles.insert(1, 'suzuki')
-
-# del 语句
-# 使用 del 语句可以从一个列表中依索引而不是值来删除一个元素。这与使用 pop() 返回一个值不同。
-# 可以用 del 语句从列表中删除一个切割，或清空整个列表（我们以前介绍的方法是给该切割赋一个空列表）。
-a = [-1, 1, 66.25, 333, 333, 1234.5]
-del a[0]  # delete 0 元素
-print(a)
-del a[2:4]
-print(a)
-del a[:]
-print(a)
-del a  # del 删除实体变量
-
-# List 删除任一元素，若有重复只删除第一个
-too_expensive = 'ducati'
-motorcycles.remove(too_expensive)
-print(motorcycles)
-print("\nA " + too_expensive.title() + " is too expensive for me.")
-
-# List 当做堆栈使用
-# 列表方法使得列表可以很方便的作为一个堆栈来使用，堆栈作为特定的数据结构，最先进入的元素最后一个被释放（后进先出）。
-# 用 append() 方法可以把一个元素添加到堆栈顶。用不指定索引的 pop() 方法可以把一个元素从堆栈顶释放出来。
-stack = [3, 4, 5, 6, 7]
-last_one = stack.pop()
-stack.pop(0)  # 弹出0元素
-print(stack)
 
 # List 永久排序
 cars = ['bmw', 'audi', 'toyota', 'subaru']
@@ -110,15 +78,6 @@ print(squares)
 
 # 统计计算
 print(min(squares), max(squares), sum(squares))
-
-# List 切片
-players = ['charles', 'martina', 'michael', 'florence', 'eli']
-print(players[1:4])  # 2到4
-print(players[2:])  # 3到最后
-print(players[-3:])  # 最后3个
-print("Here are the first three players on my team:")
-for player in players[:3]:  # 未指定第一个索引相当于0开始
-    print(player.title())
 
 # List 复制
 my_foods = ['pizza', 'falafel', 'carrot cake']
