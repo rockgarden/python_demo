@@ -22,3 +22,9 @@
 - [pyintaller](http://www.pyinstaller.org)
 
 - [PyMySQL](https://pypi.org/project/PyMySQL/)
+
+- [jieba](https://pypi.org/project/jieba/):中文分词组件
+
+- [wordcloud](https://github.com/amueller/word_cloud):词云组件
+
+- [scipy](https://github.com/scipy/scipy):科学和工程设计组件
