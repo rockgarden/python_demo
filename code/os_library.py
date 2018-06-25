@@ -264,6 +264,12 @@ os.X_OK 包含在access()的mode参数中 ，测试path是否可执行。
 
 import os
 
+# 进程管理-执行程序或命令
+os.system('ls')
+print(os.system('ping www.baidu.com -c 3'))
+# TODO: MacOS 上如何调三方应用？！
+print(os.system("/Applications/Calculator.app/Contents/MacOS/Calculator"))
+
 # 假定 /tmp/foo.txt 文件存在，并有读写权限
 
 ret = os.access(pathFile, os.F_OK)

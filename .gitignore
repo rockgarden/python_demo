@@ -241,3 +241,5 @@ game/restore_points/restore_point_3_end_chapter_12/
 /matplotlib/data/btc_close_2017_request.json
 /matplotlib/data/btc_close_2017_urllib.json
 /matplotlib/output/python_repos.svg
+/code/output/tk_wordcloud.png
+/code/output/pyw_cloud.png
