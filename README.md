@@ -4,7 +4,10 @@
 
 - **重要：在一个项目下 所有的 modules 是一起编译的，也就是说不同的 modules 文件夹类名等不能重复！**
 
-### 介绍
+## 使用
+首先运行 librarys_batch_installer.py，安装三方库。
+
+## 介绍
 
   1. code: python 语言入门
   2. game: python 项目练习
