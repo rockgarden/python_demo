@@ -2,10 +2,10 @@ Chapter 15
 ===
 
 - [Installing matplotlib](#installing-matplotlib)
-    - [Checking if matplotlib is already installed](#checking-if-matplotlib-is-already-installed)
+    - [Checking if matplotlib is already installed](##checking-if-matplotlib-is-already-installed)
     - [Installing matplotlib on Linux](#installing-matplotlib-on-linux)
     - [Installing matplotlib on OS X](#installing-matplotlib-on-os-x)
-    - [Installing matplotlib on Windows](#installing-matplotlib-on-windows)
+    - [Installing matplotlib on Windows](##installing-matplotlib-on-windows)
 - [Installing Pygal](#installing-pygal)
 - [Updates](#updates)
 

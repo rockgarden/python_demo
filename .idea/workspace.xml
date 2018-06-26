@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/code/design_python.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/os_library.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_crawling/web_crawl.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/assets/PyPDF2 1.26.0 documentation - Index.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/docx_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/numpy_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/numpy_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/pypdf2_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/turtle_demo.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matplotlib/chinese_font_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matplotlib/holland_radar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawling/CrawlBaiduStock.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/CrawlBaiduStock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawling/CrawlTaobaoPrice.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/CrawlTaobaoPrice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawling/GetUniversityRanking.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/GetUniversityRanking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawling/crawl_passport_futu5_com.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/crawl_passport_futu5_com.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawling/scrapySaveHTMLContent.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/scrapySaveHTMLContent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/os.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/os.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/project.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/网站爬虫.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/迭代器与生成器.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/迭代器与生成器.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matplotlib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/matplotlib/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,20 +23,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="file.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/file.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="1" />
+      <file leaf-file-name="chinese_font_check.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matplotlib/chinese_font_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+              <folding>
+                <element signature="e#409#461#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="design_python.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/design_python.py">
+      <file leaf-file-name="matplotlibrc" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/mpl-data/matplotlibrc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+            <state relative-caret-position="282">
+              <caret line="205" selection-start-line="205" selection-end-line="205" />
             </state>
           </provider>
         </entry>
@@ -54,20 +53,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="btc_close_2017.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="btc_close_2017.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.py">
+      <file leaf-file-name="holland_radar.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matplotlib/holland_radar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1193">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="442">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <folding>
+                <element signature="e#234#251#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,35 +69,63 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="882">
-                <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <first_editor relative-caret-position="347">
+                <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/os.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="268" column="43" selection-start-line="268" selection-start-column="43" selection-end-line="268" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="os_library.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/os_library.ipynb">
+      <file leaf-file-name="function.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/function.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="3" />
+              <selected id="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pymysql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/pymysql.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="turtle_demo.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/turtle_demo.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="die_2_visual.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matplotlib/die_2_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="die_3_visual.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matplotlib/die_3_visual.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highs_lows.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matplotlib/highs_lows.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -119,18 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>age</find>
-      <find>make_pizza</find>
-      <find>open</find>
-      <find>get_stored_username</find>
-      <find>next</find>
-      <find>fo.read(</find>
-      <find>readlines</find>
-      <find>flip</find>
-      <find>bg_color</find>
-      <find>ship_hit</find>
-      <find>NoneType</find>
-      <find>output/s</find>
       <find>connection</find>
       <find>input</find>
       <find>requests</find>
@@ -149,6 +158,18 @@
       <find>abspath</find>
       <find>system</find>
       <find>btc_close_2017_urllib</find>
+      <find>font</find>
+      <find>utf</find>
+      <find>rcParams</find>
+      <find>frac</find>
+      <find>font.family</find>
+      <find>STFangsong</find>
+      <find>font.sans-serif</find>
+      <find>fc-list:</find>
+      <find>import</find>
+      <find>as</find>
+      <find>coding: utf-8</find>
+      <find>turtle</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/code/source</dir>
@@ -171,16 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scrapydemo/BaiduStockInfo.txt" />
-        <option value="$PROJECT_DIR$/code/collections_list.py" />
-        <option value="$PROJECT_DIR$/code/collections_list.ipynb" />
-        <option value="$PROJECT_DIR$/librarys_batch_installer.py" />
-        <option value="$PROJECT_DIR$/legos/__init__.py" />
-        <option value="$PROJECT_DIR$/lego/__init__.py" />
-        <option value="$PROJECT_DIR$/requests_demo/requests_functions.py" />
-        <option value="$PROJECT_DIR$/lego/user_agent.py" />
-        <option value="$PROJECT_DIR$/lego/README.md" />
-        <option value="$PROJECT_DIR$/scrapydemo/scrapydemo/spiders/stocks.py" />
         <option value="$PROJECT_DIR$/lego/socket_chat/README.md" />
         <option value="$PROJECT_DIR$/scrapydemo/scrapydemo/settings.py" />
         <option value="$PROJECT_DIR$/scrapydemo/scrapydemo/spiders/demo.py" />
@@ -221,11 +232,21 @@
         <option value="$PROJECT_DIR$/code/design_python.py" />
         <option value="$PROJECT_DIR$/code/os.py" />
         <option value="$PROJECT_DIR$/code/os_library.ipynb" />
+        <option value="$PROJECT_DIR$/matplotlib/README.md" />
+        <option value="$PROJECT_DIR$/code/numpy_demo.py" />
+        <option value="$PROJECT_DIR$/code/numpy_demo.ipynb" />
+        <option value="$PROJECT_DIR$/code/pypdf2_demo.ipynb" />
+        <option value="$PROJECT_DIR$/code/docx_demo.ipynb" />
+        <option value="$PROJECT_DIR$/matplotlib/fc_list.py" />
+        <option value="$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/mpl-data/matplotlibrc" />
+        <option value="$PROJECT_DIR$/matplotlib/holland_radar.py" />
+        <option value="$PROJECT_DIR$/matplotlib/chinese_font_check.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/code/turtle_demo.ipynb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="168" />
     <option name="y" value="23" />
     <option name="width" value="1272" />
@@ -291,19 +312,27 @@
             <path>
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="matplotlib" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="readme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_demo" type="462c0819:PsiDirectoryNode" />
               <item name="matplotlib" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="matplotlib" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -346,7 +375,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.design_python">
+  <component name="RunManager" selected="Python.holland_radar">
     <configuration name="python_demo" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -362,42 +391,6 @@
       <option name="additionalOptions" value="" />
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
-    </configuration>
-    <configuration name="SevenDigitsDraw" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/function_SevenDigitsDraw.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="code" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="/code.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="design_python" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_demo" />
@@ -430,6 +423,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib/die_2_diff_visual.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="fc_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/matplotlib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib/chinese_font_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -471,6 +482,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="holland_radar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/matplotlib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib/holland_radar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="unittests_demo" type="tests" factoryName="Unittests">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -489,19 +518,19 @@
       <item itemvalue="Jupyter Notebook.python_demo" />
       <item itemvalue="Python.file" />
       <item itemvalue="Python tests.unittests_demo" />
-      <item itemvalue="Python.SevenDigitsDraw" />
-      <item itemvalue="Python.code" />
       <item itemvalue="Python.highs_lows" />
       <item itemvalue="Python.die_2_diff_visual" />
       <item itemvalue="Python.design_python" />
+      <item itemvalue="Python.holland_radar" />
+      <item itemvalue="Python.fc_list" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.holland_radar" />
+        <item itemvalue="Python.fc_list" />
         <item itemvalue="Python.design_python" />
         <item itemvalue="Python.die_2_diff_visual" />
         <item itemvalue="Python.highs_lows" />
-        <item itemvalue="Python.code" />
-        <item itemvalue="Python.SevenDigitsDraw" />
       </list>
     </recent_temporary>
   </component>
@@ -607,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529854672830</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add os_library">
+      <created>1529937217661</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1529937217661</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -652,23 +688,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="168" y="23" width="1272" height="877" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894404" weight="0.3292683" />
       <window_info id="DB Browser" order="2" weight="0.32980973" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.53347427" side_tool="true" visible="true" weight="0.4474359" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49400985" weight="0.3139394" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.77026075" weight="0.3260606" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.67371386" weight="0.25939393" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71881604" weight="0.3212121" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22781774" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33051446" side_tool="true" visible="true" weight="0.25939393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.66948557" visible="true" weight="0.25939393" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49330515" weight="0.3139394" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.7688513" weight="0.45939395" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7167019" weight="0.3212121" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22762509" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46652573" weight="0.42303032" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465821" weight="0.42303032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6264975" weight="0.4460606" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -698,7 +734,8 @@
     <MESSAGE value="opt" />
     <MESSAGE value="add sequence" />
     <MESSAGE value="add filew" />
-    <option name="LAST_COMMIT_MESSAGE" value="add filew" />
+    <MESSAGE value="add os_library" />
+    <option name="LAST_COMMIT_MESSAGE" value="add os_library" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -728,139 +765,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/dictionary.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/conditions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/sequence.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/collection.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/conditions.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/assets/trace_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/data/btc_close_2017.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/data/sitka_rainfall_2015_url.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/data/sitka_rainfall_2015.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/highs_lows.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/dice_visual.svg" />
-    <entry file="file://$PROJECT_DIR$/matplotlib/output/squares_plot.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_diff_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/bar_descriptions.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/python_repos.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/data/death_valley_2014.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/output/csv_test.txt" />
-    <entry file="file://$PROJECT_DIR$/code/output/output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/items.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/spiders/stocks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-878" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/output/csv_test.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/sequence_list.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/spiders/example.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapydemo/scrapydemo/spiders/demo_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/output/pyw_cloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/jieba_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/output/tk_wordcloud.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/wordcloud_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -868,13 +772,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/网站爬虫.py" />
-    <entry file="file://$PROJECT_DIR$/code/function.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -925,17 +822,56 @@
     <entry file="file://$PROJECT_DIR$/code/pymysql.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/file.ipynb">
+    <entry file="file://$PROJECT_DIR$/btc_close_2017_urllib.json" />
+    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/os.py">
+    <entry file="file://$PROJECT_DIR$/code/os_library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="268" column="43" selection-start-line="268" selection-start-column="43" selection-end-line="268" selection-end-column="43" />
+        <state relative-caret-position="348">
+          <caret line="1143" column="11" selection-start-line="1143" selection-start-column="11" selection-end-line="1143" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1311">
+            <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/numpy_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/numpy_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/pypdf2_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/docx_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -946,13 +882,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="882">
-            <caret line="49" selection-start-line="49" selection-end-line="49" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/code/file.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/wordcloud_demo.ipynb">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/cbook/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="1879" column="4" selection-start-line="1879" selection-start-column="4" selection-end-line="1879" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/rainfall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/hn_submissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/github_python_repos_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/github_python_repos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_demo/udp_multiple_connection_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/output/收盘价周日均值（¥）.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/output/收盘价对数变换折线图（¥）.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/output/squares_plot.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/output/holland_radar.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/output/placeholder.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/font_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="1458" column="12" selection-start-line="1458" selection-start-column="12" selection-end-line="1458" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lego/csv_url_downloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/cgi_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_diff_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_multiplication_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/die_3_visual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/highs_lows.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/mpl-data/matplotlibrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/holland_radar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <element signature="e#234#251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matplotlib/chinese_font_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+          <folding>
+            <element signature="e#409#461#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,20 +1075,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/btc_close_2017_urllib.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="347">
+            <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1193">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="37" />
+    <entry file="file://$PROJECT_DIR$/code/function.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/turtle_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
