@@ -1,3 +1,7 @@
+# if else 紧凑形式：适用于简单表达式的二分支结构
+guess = eval(input())
+print("猜{}了".format("对" if guess == 99 else "错"))
+
 # if 嵌套
 # 在嵌套 if 语句中，可以把 if...elif...else 结构放在另外一个 if...elif...else 结构中。
 # if 表达式1:
@@ -56,6 +60,9 @@ while a != 20:
         print('你猜的数字大了，不要灰心，继续加油！')
 input("点击 enter 键退出")
 
+# 多分支结构
+# 注意多条件之间的包含关系
+# 注意变量取值范围的覆盖
 print("=======狗狗年龄对比系统========")
 # 条件控制 if
 age = int(input("请输入你家狗狗的年龄: "))
@@ -92,3 +99,22 @@ while True:
     except ValueError:
         print("输入不合法，请输入有效年龄")
 input("点击 enter 键退出")
+
+# CalBMIv3.py
+height, weight = eval(input("请输入身高(米)和体重(公斤)[逗号隔开]: "))
+bmi = weight / pow(height, 2)
+print("BMI 数值为：{:.2f}".format(bmi))
+who, nat = "", ""
+if bmi < 18.5:
+    who, nat = "偏瘦", "偏瘦"
+elif 18.5 <= bmi < 24:
+    who, nat = "正常", "正常"
+elif 24 <= bmi < 25:
+    who, nat = "正常", "偏胖"
+elif 25 <= bmi < 28:
+    who, nat = "偏胖", "偏胖"
+elif 28 <= bmi < 30:
+    who, nat = "偏胖", "肥胖"
+else:
+    who, nat = "肥胖", "肥胖"
+print("BMI 指标为:国际'{0}', 国内'{1}'".format(who, nat))

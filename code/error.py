@@ -37,10 +37,12 @@ while True:
 # 用户中断的信息会引发一个 KeyboardInterrupt 异常。
 while True:
     try:
-        x = int(input("Please enter a number: "))
+        x = eval(input("Please enter a number: "))
         break
     except ValueError:
         print("Oops!  That was no valid number.  Try again   ")
+    except NameError:  # 标注异常类型后，仅响应该异常异常类型名字等同于变量
+        print("输入不是整数")
 '''
 try语句按照如下方式工作；
 首先，执行try子句（在关键字try和关键字except之间的语句）
@@ -157,30 +159,6 @@ class TransitionError(Error):
         self.next = next
         self.message = message
 
-
-# 定义清理行为
-# try 语句还有另外一个可选的子句，它定义了无论在任何情况下都会执行的清理行为。
-# try:
-#     raise KeyboardInterrupt
-# finally:
-#     print('Goodbye, world!')
-
-# 如果一个异常在try 子句里（或者在 except 和 else 子句里）被抛出，而又没有任何的 except 把它截住，那么这个异常会在 finally 子句执行后再次被抛出。
-
-def divide(x, y):
-    try:
-        result = x / y
-    except ZeroDivisionError:
-        print("division by zero!")
-    else:
-        print("result is", result)
-    finally:
-        print("executing finally clause")
-
-
-divide(2, 1)
-divide(2, 0)
-divide("2", "1")
 
 # 预定义的清理行为
 # 一些对象定义了标准的清理行为，无论系统是否成功的使用了它，一旦不需要它了，那么这个标准的清理行为就会执行。

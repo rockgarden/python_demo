@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # File Name: chinese_font_check.py
 
-# osx系统无fc-list 需要安装X11来解决这一问题：https://www.xquartz.org
+# osx系统无fc-list 需要安装X11来解决这一问题 https://www.xquartz.org
 
 """
 中文显示
