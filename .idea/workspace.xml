@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/code/string.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/time_library.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/turtle_library.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/basic.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/basic.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/random_library.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/random_library.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/数据类型.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/数据类型.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/function.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/function.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/turtle_demo.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/内置函数.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,38 +19,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chinese_font_check.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/chinese_font_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loop_statement.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/loop_statement.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="数据类型.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/数据类型.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4742">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="字符串.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/字符串.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5412" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="string.ipynb" pinned="false" current-in-tab="false">
@@ -71,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time_library.ipynb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="time_library.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/time_library.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
@@ -80,22 +51,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basic.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/basic.ipynb">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="433">
+                <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/function.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="26" />
+              <selected id="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="turtle_library.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/turtle_library.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="basic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/basic.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="random_library.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/random_library.ipynb">
+      <file leaf-file-name="basic.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/basic.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
               <selected id="3" />
@@ -115,8 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UserAgentMiddleware</find>
-      <find>ITEMS</find>
       <find>CONCURRENT</find>
       <find>Ship</find>
       <find>ship</find>
@@ -141,10 +135,12 @@
       <find>import</find>
       <find>as</find>
       <find>coding: utf-8</find>
-      <find>turtle</find>
       <find>finally</find>
       <find>continue</find>
       <find>random</find>
+      <find>turtle</find>
+      <find>保留字</find>
+      <find>eval</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/code/source</dir>
@@ -167,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/function.py" />
-        <option value="$PROJECT_DIR$/code/function.ipynb" />
-        <option value="$PROJECT_DIR$/code/collections_collection.py" />
         <option value="$PROJECT_DIR$/code/collections_collection.ipynb" />
         <option value="$PROJECT_DIR$/code/sequence.py" />
         <option value="$PROJECT_DIR$/code/多线程.py" />
@@ -215,13 +208,16 @@
         <option value="$PROJECT_DIR$/code/random_library.ipynb" />
         <option value="$PROJECT_DIR$/matplotlib/chinese_font_check.py" />
         <option value="$PROJECT_DIR$/code/数据类型.py" />
-        <option value="$PROJECT_DIR$/code/basic.ipynb" />
         <option value="$PROJECT_DIR$/code/string.ipynb" />
         <option value="$PROJECT_DIR$/code/time_library.ipynb" />
+        <option value="$PROJECT_DIR$/code/turtle_library.ipynb" />
+        <option value="$PROJECT_DIR$/code/basic.py" />
+        <option value="$PROJECT_DIR$/code/basic.ipynb" />
+        <option value="$PROJECT_DIR$/code/function.ipynb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -637,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530111008095</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="opt">
+      <created>1530199402151</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1530199402151</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -683,18 +686,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894404" weight="0.3292683" />
       <window_info id="DB Browser" order="2" weight="0.32980973" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3326286" side_tool="true" visible="true" weight="0.25939393" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4926004" weight="0.3139394" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.76744187" weight="0.45939395" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6673714" visible="true" weight="0.25939393" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.23326287" side_tool="true" visible="true" weight="0.45939395" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4918957" weight="0.17333333" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.76673716" visible="true" weight="0.45939395" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6666667" weight="0.25939393" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7167019" weight="0.3212121" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16701902" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465821" weight="0.42303032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6264975" weight="0.4460606" />
@@ -707,7 +710,6 @@
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49964765" weight="0.32969698" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465821" weight="0.42303032" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -759,20 +761,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/numpy_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/pypdf2_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/docx_demo.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -795,12 +783,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/wordcloud_demo.ipynb">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="2" />
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/cbook/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -903,20 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/function.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/turtle_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_crawling/crawl_unittest_demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -928,16 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="18">
-            <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -992,7 +956,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matplotlib/chinese_font_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="54">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
@@ -1004,34 +968,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/random_demo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/basic.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/basic.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/code/random_demo.ipynb" />
     <entry file="file://$PROJECT_DIR$/code/数据类型.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4742">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="234">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/字符串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5412" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/string.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
@@ -1051,6 +997,54 @@
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="433">
+            <caret line="91" column="3" selection-start-line="91" selection-start-column="3" selection-end-line="91" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/turtle_demo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/turtle_library.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/basic.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/内置函数.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/function.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="36" />
         </state>
       </provider>
     </entry>
