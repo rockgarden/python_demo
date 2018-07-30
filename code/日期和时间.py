@@ -7,9 +7,8 @@
 import time;  # 引入time模块
 
 ticks = time.time()
-print ("当前时间戳为:", ticks)
+print("当前时间戳为:", ticks)
 # 时间戳单位最适于做日期运算。但是1970年之前的日期就无法以此表示了。太遥远的日期也不行，UNIX和Windows只支持到2038年。
-
 
 
 # 时间元组？
@@ -38,24 +37,19 @@ print ("当前时间戳为:", ticks)
 # 8	tm_isdst	是否为夏令时，值有：1(夏令时)、0(不是夏令时)、-1(未知)，默认 -1
 
 
-
 # 获取当前时间
 # 从返回浮点数的时间辍方式向时间元组转换，只要将浮点数传递给如localtime之类的函数。
 import time
 
 localtime = time.localtime(time.time())
-print ("本地时间为 :", localtime)
-
-
+print("本地时间为 :", localtime)
 
 # 获取格式化的时间
 # 你可以根据需求选取各种格式，但是最简单的获取可读的时间模式的函数是asctime():
 import time
 
-localtime = time.asctime( time.localtime(time.time()) )
-print ("本地时间为 :", localtime)
-
-
+localtime = time.asctime(time.localtime(time.time()))
+print("本地时间为 :", localtime)
 
 # 格式化日期
 # 我们可以使用 time 模块的 strftime 方法来格式化日期：time.strftime(format[, t])
@@ -63,6 +57,7 @@ import time
 
 # 格式化成2016-03-20 11:45:39形式
 print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+print(time.strftime("%Y-%m-%d", time.localtime()))
 
 # 格式化成Sat Mar 28 22:24:24 2016形式
 print(time.strftime("%a %b %d %H:%M:%S %Y", time.localtime()))
@@ -70,8 +65,6 @@ print(time.strftime("%a %b %d %H:%M:%S %Y", time.localtime()))
 # 将格式字符串转换为时间戳
 a = "Sat Mar 28 22:24:24 2016"
 print(time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y")))
-
-
 
 # python中时间日期格式化符号：
 # %y 两位数的年份表示（00-99）
@@ -98,16 +91,13 @@ print(time.mktime(time.strptime(a, "%a %b %d %H:%M:%S %Y")))
 # %% %号本身
 
 
-
 # 获取某月日历
 # Calendar模块有很广泛的方法用来处理年历和月历
 import calendar
 
 cal = calendar.month(2016, 1)
-print ("以下输出2016年1月份的日历:")
-print (cal)
-
-
+print("以下输出2016年1月份的日历:")
+print(cal)
 
 # Time 模块
 # Time 模块包含了以下内置函数，既有时间处理相的，也有转换时间格式的：
@@ -185,7 +175,6 @@ print (cal)
 # 属性time.tzname包含一对根据情况的不同而不同的字符串，分别是带夏令时的本地时区名称，和不带的。
 
 
-
 # 日历（Calendar）模块
 # 此模块的函数都是日历相关的，例如打印某月的字符月历。
 # 星期一是默认的每周第一天，星期天是默认的最后一天。更改设置需调用calendar.setfirstweekday()函数。模块包含了以下内置函数：
@@ -214,7 +203,6 @@ print (cal)
 # 和time.gmtime相反：接受一个时间元组形式，返回该时刻的时间辍（1970纪元后经过的浮点秒数）。
 # 12	calendar.weekday(year,month,day)
 # 返回给定日期的日期码。0（星期一）到6（星期日）。月份为 1（一月） 到 12（12月）。
-
 
 
 # 其他相关模块和函数
