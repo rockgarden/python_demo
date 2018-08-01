@@ -58,6 +58,7 @@
 - [re](https://docs.python.org/3.6/library/re.html):(自带)正则表达式解析和处理功能库
 - [goose3](http://goose3.readthedocs.io/en/latest/index.html):提取文章类型Web页面的功能库, [github_python-goose](https://github.com/goose3/goose3),另有JAVA版支持python2 [goose-extractor](https://github.com/grangier/python-goose)
 
+
 ### Web网站开发
 - [django](https://www.djangoproject.com/)最流行的Web开发框架, [github](https://github.com/django/django)
 - [pyramid](https://trypyramid.com/):规模适中的Web应用框架
@@ -91,7 +92,10 @@
 - [ascii_art](https://github.com/lord63/ascii_art):ASCII艺术库-普通图片转为ASCII艺术风格
 - [turtle](https://docs.python.org/3/library/turtle.html):(自带)海龟绘图库
 
-SymPy 数学符号计算工具pip install sympy
-Networkx 复杂网络和图结构的建模和分析pip install networkx
-PyOpenGL 多平台OpenGL开发接口 pip installpyopengl
-docopt Python命令行解析 pip install docopt
+### 其它
+- [pyquery](https://github.com/gawel/pyquery):类似于jquery的python库
+
+- SymPy 数学符号计算工具pip install sympy
+- Networkx 复杂网络和图结构的建模和分析pip install networkx
+- PyOpenGL 多平台OpenGL开发接口 pip installpyopengl
+- docopt Python命令行解析 pip install docopt
