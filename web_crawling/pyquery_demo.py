@@ -43,38 +43,34 @@ class QueryStringSuite(unittest.TestCase):
                 dicts.append(dict_n)
 
     def test_url_openself(self):
-        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=478023'
+        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=477256'
         # 478023
         response = pq(url, encoding="utf-8")
         # print("\n", response('#mobanDiv tr').text())
         # 无用内容 #mobanDiv > .tab2 tr > td > span, #mobanDiv > .tab2 #titDiv
         useless_topics = ['免责声明', '发布公告的媒介', '电子采购应答规则']
-        for each in response('#mobanDiv tr').items():
+        for each in response('#mobanDiv > table tr').items():
+            # print("\n", each.text())
+            # print(len(each('tr > td > span').children()))
+            # if len(each('tr > td > span') > 0:
+
             # 过滤无用内容
-            span_text = each('td > span').text()
-            if span_text:
-                topic = span_text.split('、')[1]
+            span_list = list(each('tr > td > span').items())
+            # print(len(span_list))
+            if len(span_list) > 0:
+                topic = span_list[0].text().split('、')[1]
                 if topic not in useless_topics:
-                    print("\n\n", topic)
+                    print("\n", topic)
                     dict_n = {}
-                    # dict_n["采购人"] = tds[0].text()
-                    # dict_n["type"] = tds[1].text()
-                    # dict_n["title"] = tds[2].text()
-                    # dict_n["date"] = tds[3].text()
-                    # dict_n["url"] = "https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=" + notice_id
                     if topic == "联系方式":
-
                         # print("ggdiv3: ", each('#ggdiv3').text())
-
-                        # https://blog.csdn.net/wangbowj123/article/details/78061618
                         contact_info = each('#ggdiv3').text().splitlines()
-
                         # print("MsoNormal: ", each('#ggdiv3 .MsoNormal > span').text())
-
+                        dict_c = {}
                         for info in contact_info:
-                            print(info)
-
-                            dict_n["".join(info.split("：")[0].split())] = info.split("：")[1]
+                            # Del Non - breaking space
+                            dict_c["".join(info.split("：")[0].split())] = info.split("：")[1]
+                        dict_n.update(dict_c)
                         print(dict_n)
 
 
