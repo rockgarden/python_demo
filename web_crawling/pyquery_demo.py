@@ -51,9 +51,9 @@ class QueryStringSuite(unittest.TestCase):
         useless_topics = ['免责声明', '发布公告的媒介', '电子采购应答规则']
         for each in response('#mobanDiv tr').items():
             # 过滤无用内容
-            span = each('td > span').text()
-            if span:
-                topic = span.split('、')[1]
+            span_text = each('td > span').text()
+            if span_text:
+                topic = span_text.split('、')[1]
                 if topic not in useless_topics:
                     print("\n\n", topic)
                     dict_n = {}
@@ -63,9 +63,21 @@ class QueryStringSuite(unittest.TestCase):
                     # dict_n["date"] = tds[3].text()
                     # dict_n["url"] = "https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=" + notice_id
                     if topic == "联系方式":
-                        contact_info = each('#ggdiv3')
-                        print("span: ", each('#ggdiv3 span').text())
-                        print("MsoNormal: ", each('#ggdiv3 .MsoNormal').text())
+
+                        # print("ggdiv3: ", each('#ggdiv3').text())
+
+                        # https://blog.csdn.net/wangbowj123/article/details/78061618
+                        contact_info = each('#ggdiv3').text().splitlines()
+
+                        # print("MsoNormal: ", each('#ggdiv3 .MsoNormal > span').text())
+
+                        for info in contact_info:
+                            print(info)
+
+                            dict_n["".join(info.split("：")[0].split())] = info.split("：")[1]
+                        print(dict_n)
+
+
 
 
 def suite():
