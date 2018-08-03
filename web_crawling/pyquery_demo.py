@@ -43,17 +43,13 @@ class QueryStringSuite(unittest.TestCase):
                 dicts.append(dict_n)
 
     def test_url_openself(self):
-        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=477256'
-        # 478023
+        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=478023'
+        # 478023 477256
         response = pq(url, encoding="utf-8")
-        # print("\n", response('#mobanDiv tr').text())
-        # 无用内容 #mobanDiv > .tab2 tr > td > span, #mobanDiv > .tab2 #titDiv
+        dict_n = {}
+        # 无用内容
         useless_topics = ['免责声明', '发布公告的媒介', '电子采购应答规则']
         for each in response('#mobanDiv > table tr').items():
-            # print("\n", each.text())
-            # print(len(each('tr > td > span').children()))
-            # if len(each('tr > td > span') > 0:
-
             # 过滤无用内容
             span_list = list(each('tr > td > span').items())
             # print(len(span_list))
@@ -61,9 +57,7 @@ class QueryStringSuite(unittest.TestCase):
                 topic = span_list[0].text().split('、')[1]
                 if topic not in useless_topics:
                     print("\n", topic)
-                    dict_n = {}
                     if topic == "联系方式":
-                        # print("ggdiv3: ", each('#ggdiv3').text())
                         contact_info = each('#ggdiv3').text().splitlines()
                         # print("MsoNormal: ", each('#ggdiv3 .MsoNormal > span').text())
                         dict_c = {}
@@ -71,9 +65,12 @@ class QueryStringSuite(unittest.TestCase):
                             # Del Non - breaking space
                             dict_c["".join(info.split("：")[0].split())] = info.split("：")[1]
                         dict_n.update(dict_c)
-                        print(dict_n)
-
-
+                        print(dict_c)
+                    elif topic == "资格要求":
+                        info = each('p').text().splitlines()
+                        dict_n['资格要求"'] = info
+                        print(info)
+        print("\n noticeBean: ", dict_n)
 
 
 def suite():
