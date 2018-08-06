@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/code/fuzzywuzzy_demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/RegularExpression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/RegularExpression.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/string.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/string.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_crawling/pyquery_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_crawling/pyquery_demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,39 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="string.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/string.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dictionary.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/dictionary.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="4941" column="8" selection-start-line="4941" selection-start-column="8" selection-end-line="4941" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="pyquery_demo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web_crawling/pyquery_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="995">
+              <caret line="95" column="88" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -53,43 +30,89 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conditions.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/conditions.ipynb">
+      <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="4736" column="8" selection-start-line="4736" selection-start-column="8" selection-end-line="4736" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typing.pyi" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="509" column="8" selection-start-line="509" selection-start-column="8" selection-end-line="509" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="namedval.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyasn1/type/namedval.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pip/_internal/configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyquery.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyquery/pyquery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1778">
+              <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="105">
+                <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="string.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/string.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="0" />
+              <selected id="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conditions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/conditions.py">
+      <file leaf-file-name="fuzzywuzzy_demo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/fuzzywuzzy_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_crawling/assets/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
-                <element signature="e#662#681#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/test.py">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="RegularExpression.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/RegularExpression.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <selected id="10" />
             </state>
           </provider>
         </entry>
@@ -100,15 +123,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>little_w</find>
-      <find>alice</find>
       <find>death_valley_2014</find>
       <find>abspath</find>
       <find>system</find>
@@ -136,6 +157,8 @@
       <find>items</find>
       <find>etree</find>
       <find>fromkeys</find>
+      <find>regex</find>
+      <find>fuzzywuzzy</find>
       <find>translate</find>
     </findStrings>
     <dirStrings>
@@ -159,8 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/assets/三国演义" />
-        <option value="$PROJECT_DIR$/code/jieba_demo.ipynb" />
         <option value="$PROJECT_DIR$/code/file.py" />
         <option value="$PROJECT_DIR$/code/assets/trace_data.txt" />
         <option value="$PROJECT_DIR$/matplotlib/btc_close_2017.ipynb" />
@@ -200,22 +221,24 @@
         <option value="$PROJECT_DIR$/web_crawling/querystring.py" />
         <option value="$PROJECT_DIR$/web_crawling/test.html" />
         <option value="$PROJECT_DIR$/librarys_batch_installer.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/code/sequence.ipynb" />
         <option value="$PROJECT_DIR$/code/json.ipynb" />
         <option value="$PROJECT_DIR$/code/列表.py" />
         <option value="$PROJECT_DIR$/code/sequence_list.ipynb" />
         <option value="$PROJECT_DIR$/code/basic.ipynb" />
         <option value="$PROJECT_DIR$/code/字符串.py" />
-        <option value="$PROJECT_DIR$/code/string.ipynb" />
         <option value="$PROJECT_DIR$/code/dictionary.ipynb" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/code/fuzzywuzzy_demo.py" />
+        <option value="$PROJECT_DIR$/code/string.ipynb" />
+        <option value="$PROJECT_DIR$/code/RegularExpression.ipynb" />
         <option value="$PROJECT_DIR$/web_crawling/pyquery_demo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -232,7 +255,44 @@
             <path>
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="beautiful_soup_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="matplotlib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapydemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapydemo" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapydemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="socket_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="socket_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="tensorflow_demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
@@ -244,6 +304,10 @@
               <item name="python_demo" type="462c0819:PsiDirectoryNode" />
               <item name="web_crawling" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -349,24 +413,6 @@
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
     </configuration>
-    <configuration name="fc_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/matplotlib" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib/chinese_font_check.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="file" type="PythonConfigurationType" factoryName="Python">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,6 +430,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;fuzzywuzzy_demo.FuzzywuzzySuite.test_simple&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="py.test for pyquery_demo.QueryStringSuite" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -459,19 +519,19 @@
       <item itemvalue="Jupyter Notebook.python_demo" />
       <item itemvalue="Python.file" />
       <item itemvalue="Python tests.unittests_demo" />
-      <item itemvalue="Python.fc_list" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_simple" />
       <item itemvalue="Python tests.py.test in pyquery_demo.py" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_url_openself" />
+      <item itemvalue="Python tests.py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_url_openself" />
+        <item itemvalue="Python tests.py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" />
         <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_simple" />
         <item itemvalue="Python tests.py.test in pyquery_demo.py" />
         <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite" />
-        <item itemvalue="Python.fc_list" />
       </list>
     </recent_temporary>
   </component>
@@ -644,34 +704,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 16m 02s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 19m 19s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 16m 58s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 19m 39s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 19m 52s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 20m 38s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 27m 30s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 21m 25s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 27m 53s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 22m 42s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 29m 15s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 25m 03s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 30m 02s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 28m 03s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 31m 43s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 28m 41s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 34m 03s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 31m 48s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.02 at 22h 34m 37s.xml">
+    <history-entry file="py_test_for_pyquery_demo_QueryStringSuite_test_url_openself - 2018.08.06 at 16h 32m 57s.xml">
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
   </component>
@@ -685,32 +745,43 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894404" weight="0.3292683" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49788806" weight="0.3292683" />
       <window_info id="DB Browser" order="2" weight="0.32980973" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49964765" weight="0.32969698" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33615223" side_tool="true" visible="true" weight="0.49212122" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6638478" visible="true" weight="0.49212122" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49119097" weight="0.29575756" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.7655755" weight="0.2296748" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71594507" weight="0.3211382" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20225511" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33949313" side_tool="true" visible="true" weight="0.61585367" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.48838437" weight="0.2957317" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.7629356" weight="0.2296748" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.66050684" visible="true" weight="0.61585367" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71436113" weight="0.3211382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20221753" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.465821" weight="0.42303032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62566" weight="0.44512194" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62302005" weight="0.44512194" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20225511" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49894404" weight="0.3292683" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49119097" weight="0.29575756" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6638478" visible="true" weight="0.49212122" />
+      <window_info id="DB Browser" order="2" weight="0.32980973" />
       <window_info anchor="right" id="R Packages" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62566" weight="0.44512194" />
+      <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33615223" side_tool="true" visible="true" weight="0.49212122" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49964765" weight="0.32969698" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.71594507" weight="0.3211382" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.7655755" weight="0.2296748" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -758,21 +829,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="68" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/内置函数.py" />
-    <entry file="file://$PROJECT_DIR$/code/function.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/appnope/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/web_crawling/querystring.py" />
-    <entry file="file://$PROJECT_DIR$/web_crawling/test.html" />
     <entry file="file://$PROJECT_DIR$/web_crawling/scrapySaveHTMLContent.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -847,27 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1782">
-            <caret line="99" column="44" lean-forward="true" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/loop_statement.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/RegularExpression.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -878,12 +921,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/assets/numbers.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/output/username.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/code/assets/numbers.json" />
+    <entry file="file://$PROJECT_DIR$/code/output/username.json" />
     <entry file="file://$PROJECT_DIR$/code/json.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-497" />
@@ -903,13 +942,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/pyquery/pyquery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18406">
-          <caret line="1171" column="32" selection-start-line="1171" selection-start-column="32" selection-end-line="1171" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/pyquery/pyquery.py" />
     <entry file="file://$PROJECT_DIR$/code/列表.py" />
     <entry file="file://$PROJECT_DIR$/code/多线程.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -935,13 +968,6 @@
     <entry file="file://$PROJECT_DIR$/code/RegularExpression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1640" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/sequence_list.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="10" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/sequence_list.py">
@@ -980,36 +1006,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/字符串.py" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4941" column="8" selection-start-line="4941" selection-start-column="8" selection-end-line="4941" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/dictionary.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_crawling/assets/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="24" column="111" selection-start-line="24" selection-start-column="111" selection-end-line="24" selection-end-column="111" />
-          <folding>
-            <element signature="e#662#681#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,17 +1030,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/sequence_list.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pip/_internal/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyasn1/type/namedval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="158" column="8" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="509" column="8" selection-start-line="509" selection-start-column="8" selection-end-line="509" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyquery/pyquery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1778">
+          <caret line="176" column="12" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/dictionary.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/string.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="17" />
+          <selected id="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/fuzzywuzzy_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1199943127/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="4736" column="8" selection-start-line="4736" selection-start-column="8" selection-end-line="4736" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/RegularExpression.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_crawling/pyquery_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="995">
+          <caret line="95" column="88" selection-start-line="95" selection-start-column="88" selection-end-line="95" selection-end-column="88" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

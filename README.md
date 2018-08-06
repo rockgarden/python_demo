@@ -27,6 +27,7 @@
 - [PyMySQL](https://pypi.org/project/PyMySQL/)
 
 - [jieba](https://pypi.org/project/jieba/):中文分词组件
+- [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy):字符串模糊匹配
 
 - [wordcloud](https://github.com/amueller/word_cloud):词云组件
 
