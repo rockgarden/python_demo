@@ -44,8 +44,8 @@ class QueryStringSuite(unittest.TestCase):
                 dicts.append(dict_n)
 
     def test_url_openself(self):
-        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=479328'
-        # 478023 477256 478772 478825
+        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=479700'
+        # 478023 477256 478772 478825 479328 479412 479700
 
         # 去除无效元素 script
         result = pq(url, encoding="utf-8").remove('script')
@@ -55,11 +55,13 @@ class QueryStringSuite(unittest.TestCase):
         # 无用内容列表
         useless_topics = ['免责声明', '发布公告的媒介', '电子采购应答规则']
         # 项目概况相关主题列表
-        project_overview_topics = ['项目概况与招标范围', '采购说明', '采购内容及相关内容', '采购项目概况', '采购货物的名称']
+        project_overview_topics = ['项目概况与招标范围', '项目概况', '招标范围', '项目概况与招标内容',
+                                   '采购说明', '采购内容', '采购内容及相关内容', '采购项目概况', '采购货物的名称', '采购项目的名称',
+                                   '工程概况与比选内容', '比选项目的名称', ]
         # 截止日期正则表达式
         deadline_pattern = re.compile('截止时间(.*)(\d+)年(\d{1,2})月(\d{1,2})日')
-        # 日期正则表达式
-        date_pattern = re.compile('(\d+)年(\d{1,2})月(\d{1,2})日(\d{1,2})时')
+        # 日期正则表达式 年月日上午时
+        date_pattern = re.compile('(\d+)年(\d{1,2})月(\d{1,2})日(.*)(\d{1,2})时')
         # 无效字符字典
         useless_char = dict.fromkeys(ord(c) for c in u"\xa0\n\t_ ")
 
@@ -85,15 +87,19 @@ class QueryStringSuite(unittest.TestCase):
                 topics['招标代理机构'] = text.split("/")[1]
             else:
                 topics['招标人'] = text
+                topics['招标代理机构'] = '无'
 
         # !提取--采购内容概况
         for each in tr_items_nonzero:
             span_list = list(each('tr > td > span').items())
             if len(span_list) > 0:
                 topic = span_list[0].text().split('、')[1]
-                if topic in project_overview_topics:
-                    print("\n", topic)
+                while topic in project_overview_topics:
+                    print("\n 采购内容概况: ", topic)
                     topics['采购内容概况'] = pq(each).clone().remove('table')('div').text().translate(useless_char)
+                else:
+                    print("\n 采购内容概况: ", topic)
+                    topics['采购内容概况'] = '解析失败'
 
         # !提取--其它主题
         for each in result('#mobanDiv > table tr').items():
@@ -115,7 +121,7 @@ class QueryStringSuite(unittest.TestCase):
                             items = each('div').items()
 
                     for item in items:
-                        text = item.text().translate(useless_char)
+                        text = item.clone().text().translate(useless_char)
                         # !提取--投标截止时间
                         deadline = deadline_pattern.findall(text)
                         if len(deadline) > 0:

@@ -24,6 +24,8 @@
 - [PyInstaller-pyintaller](http://www.pyinstaller.org):打包Python源文件为可执行文件(安装命令 pip install pyintaller)。
 - [Wheels](https://pythonwheels.com):第三方打包工具(安装命令 pip install wheel), [github_wheel](https://github.com/pypa/wheel)。
 
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/):GUI库, QT5应用的框架, 跨平台的工具包.
+
 - [PyMySQL](https://pypi.org/project/PyMySQL/)
 
 - [jieba](https://pypi.org/project/jieba/):中文分词组件
