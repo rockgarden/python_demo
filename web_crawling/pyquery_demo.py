@@ -44,11 +44,11 @@ class QueryStringSuite(unittest.TestCase):
                 dicts.append(dict_n)
 
     def test_url_openself(self):
-        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=478023'
+        url = 'https://b2b.10086.cn/b2b/main/viewNoticeContent.html?noticeBean.id=479328'
         # 478023 477256 478772 478825
 
         # 去除无效元素 script
-        response = pq(url, encoding="utf-8").remove('script')
+        result = pq(url, encoding="utf-8").remove('script')
 
         topics = {}
 
@@ -64,7 +64,7 @@ class QueryStringSuite(unittest.TestCase):
         useless_char = dict.fromkeys(ord(c) for c in u"\xa0\n\t_ ")
 
         # 去除空元素
-        tr_items = response('#mobanDiv > table tr').items()
+        tr_items = result('#mobanDiv > table tr').items()
         tr_items_nonzero = []
         for item in tr_items:
             # print(item('span').length)
@@ -72,7 +72,7 @@ class QueryStringSuite(unittest.TestCase):
                 tr_items_nonzero.append(item)
 
         # !提取--项目名称
-        topics['项目名称'] = response('h1').text()
+        topics['项目名称'] = result('h1').text()
 
         # !提取--招标人
         last_tr = tr_items_nonzero[-1]
@@ -96,7 +96,7 @@ class QueryStringSuite(unittest.TestCase):
                     topics['采购内容概况'] = pq(each).clone().remove('table')('div').text().translate(useless_char)
 
         # !提取--其它主题
-        for each in response('#mobanDiv > table tr').items():
+        for each in result('#mobanDiv > table tr').items():
             span = each('tr > td > span')
             # 过滤无主题内容
             if span.length > 0:
