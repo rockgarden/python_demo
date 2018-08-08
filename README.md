@@ -18,11 +18,11 @@
   
 ## 相关库
 
-- [rsa](https://pypi.org/project/rsa/)
+- [rsa](https://pypi.org/project/rsa/):RSA实现, 它支持加密和解密, 签名和验证签名, 以及根据PKCS＃1版本1.5生成密钥.
 - [PIL-pillow](https://pypi.org/project/Pillow/):图像处理(安装命令 pip install pillow)。
 
-- [PyInstaller-pyintaller](http://www.pyinstaller.org):打包Python源文件为可执行文件(安装命令 pip install pyintaller)。
-- [Wheels](https://pythonwheels.com):第三方打包工具(安装命令 pip install wheel), [github_wheel](https://github.com/pypa/wheel)。
+- [PyInstaller-pyintaller](http://www.pyinstaller.org):打包Python源文件为可执行文件(安装命令 pip install pyintaller).
+- [Wheels](https://pythonwheels.com):第三方打包工具(安装命令 pip install wheel), [github_wheel](https://github.com/pypa/wheel).
 
 - [PyQt5](https://www.riverbankcomputing.com/software/pyqt/):GUI库, QT5应用的框架, 跨平台的工具包.
 
@@ -32,6 +32,8 @@
 - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy):字符串模糊匹配
 
 - [wordcloud](https://github.com/amueller/word_cloud):词云组件
+
+- [chardet](https://github.com/chardet/chardet):通用字符编码检测器
 
 ### 数据分析
 - [NumPy-numpy](http://www.numpy.org):N维数据表示和运算
