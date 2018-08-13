@@ -1,7 +1,8 @@
 import logging
 import os
-import sys
 import tempfile
+
+import sys
 import time
 
 logger = logging.getLogger(__name__)

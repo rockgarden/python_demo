@@ -1,6 +1,15 @@
 # scrapy demo
 http://sangaline.com/post/advanced-web-scraping-tutorial/
 
+## scrapy shell
+支持通过 xpath() 方法模拟 $x 命令
+
+    scrapy shell http://example.com
+    ...
+    response.xpath('/html').extract()
+    response.xpath('/html/body/div/h1').extract()
+
+
 ## crawl常规返爬技术应对
 1. User agent 过滤
     Scrapy将其标识为“Scrapy / 1.3.3（+ http：//scrapy.org）”，某些服务器可能会阻止它或者甚至只是将有限数量的User Agent列入白名单。 
@@ -78,3 +87,6 @@ http://sangaline.com/post/advanced-web-scraping-tutorial/
     xvfbwrapper
     
 http://dryscrape.readthedocs.io/en/latest/installation.html
+
+
+

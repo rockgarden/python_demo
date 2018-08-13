@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for scrapydemo project
+# Scrapy settings for scrapy_demo project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,13 +9,13 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapydemo'
+BOT_NAME = 'scrapy_demo'
 
-SPIDER_MODULES = ['scrapydemo.spiders']
-NEWSPIDER_MODULE = 'scrapydemo.spiders'
+SPIDER_MODULES = ['scrapy_demo.spiders']
+NEWSPIDER_MODULE = 'scrapy_demo.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'scrapydemo (+http://www.yourdomain.com)'
+# USER_AGENT = 'scrapy_demo (+http://www.yourdomain.com)'
 # 伪造USER_AGENT
 # USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'
 
@@ -53,13 +53,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'scrapydemo.middlewares.ScrapydemoSpiderMiddleware': 543,
+#    'scrapy_demo.middlewares.ScrapydemoSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'scrapydemo.middlewares.ScrapydemoDownloaderMiddleware': 543,
+#    'scrapy_demo.middlewares.ScrapydemoDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -72,8 +72,8 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 # TODO: 如何配对 PIPELINES -- spider
 ITEM_PIPELINES = {
-    # 'scrapydemo.pipelines.ScrapydemoPipeline': 300,
-    'scrapydemo.pipelines.BaidustocksInfoPipeline': 300,
+    # 'scrapy_demo.pipelines.ScrapydemoPipeline': 300,
+    'scrapy_demo.pipelines.BaidustocksInfoPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
