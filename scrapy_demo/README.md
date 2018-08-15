@@ -4,10 +4,16 @@ http://sangaline.com/post/advanced-web-scraping-tutorial/
 ## scrapy shell
 支持通过 xpath() 方法模拟 $x 命令
 
-    scrapy shell http://example.com
+    scrapy shell -s USER_AGENT="Mozilla/5.0" https://www.futunn.com
     ...
     response.xpath('/html').extract()
     response.xpath('/html/body/div/h1').extract()
+    response.xpath('//tbody[@id="raiseTop"]/tr/text()').extract()
+
+## new project
+    $ scrapy startproject properties
+    $ cd properties
+    $ scrapy genspider basic web
 
 
 ## crawl常规返爬技术应对

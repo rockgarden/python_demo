@@ -43,7 +43,6 @@ class StocksSpider(scrapy.Spider):
             'User-Agent': ua
         }  # 构造请求头
 
-
         for href in response.css('a::attr(href)').extract()[10:15]:  # 用CSS Selector提取信息
             try:
                 stock = re.findall(r'[s][hz]\d{6}', href)[0]
