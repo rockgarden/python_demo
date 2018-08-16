@@ -9,11 +9,20 @@ http://sangaline.com/post/advanced-web-scraping-tutorial/
     response.xpath('/html').extract()
     response.xpath('/html/body/div/h1').extract()
     response.xpath('//tbody[@id="raiseTop"]/tr/text()').extract()
+    
+    scrapy parse --spider=basic url
+    scrapy crawl url
 
 ## new project
     $ scrapy startproject properties
     $ cd properties
     $ scrapy genspider basic web
+      Created spider 'basic' using template 'basic' in module:
+         properties.spiders.basic
+    // 输出为文件
+    $ scrapy crawl basic -o items.json/.csv/.xml/.jl
+    // 输出到FTP
+    ¥ scrapy crawl basic -o "ftp://user:pass@url/items.json"
 
 
 ## crawl常规返爬技术应对

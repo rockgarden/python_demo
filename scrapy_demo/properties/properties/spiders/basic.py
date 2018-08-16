@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-# Created spider 'basic' using template 'basic' in module:
-#   properties.spiders.basic
+# Created spider 'basic' using template 'basic' in module: properties.spiders.basic
 
 import datetime
 import socket
@@ -11,6 +10,7 @@ import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import MapCompose, Join
 
+# 引入 PropertiesItem
 from properties.items import PropertiesItem
 
 
@@ -35,16 +35,17 @@ class BasicSpider(scrapy.Spider):
         l = ItemLoader(item=PropertiesItem(), response=response)
 
         # Load fields using XPath expressions
+        # python 2 str => unicode
         l.add_xpath('title', '//*[@itemprop="name"][1]/text()',
-                    MapCompose(unicode.strip, unicode.title))
+                    MapCompose(str.strip, str.title))
         l.add_xpath('price', './/*[@itemprop="price"][1]/text()',
                     MapCompose(lambda i: i.replace(',', ''), float),
                     re='[,.0-9]+')
         l.add_xpath('description', '//*[@itemprop="description"][1]/text()',
-                    MapCompose(unicode.strip), Join())
+                    MapCompose(str.strip), Join())
         l.add_xpath('address',
                     '//*[@itemtype="http://schema.org/Place"][1]/text()',
-                    MapCompose(unicode.strip))
+                    MapCompose(str.strip))
         l.add_xpath('image_urls', '//*[@itemprop="image"][1]/@src',
                     MapCompose(lambda i: urlparse.urljoin(response.url, i)))
 

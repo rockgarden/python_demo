@@ -104,3 +104,7 @@
 - Networkx 复杂网络和图结构的建模和分析pip install networkx
 - PyOpenGL 多平台OpenGL开发接口 pip installpyopengl
 - docopt Python命令行解析 pip install docopt
+
+## 附录
+[lib2to3](https://docs.python.org/3.5/library/2to3.html?highlight=unicode#module-lib2to3):将可运行的python2转换成python3
+运行在command line: 2to3 xx.py
