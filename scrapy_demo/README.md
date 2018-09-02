@@ -1,5 +1,8 @@
 # scrapy demo
-http://sangaline.com/post/advanced-web-scraping-tutorial/
+参考：http://sangaline.com/post/advanced-web-scraping-tutorial/
+代码：https://github.com/scalingexcellence/scrapybook
+
+* Scrapy 在处理请求时使用后入先出LIFO。
 
 ## scrapy shell
 支持通过 xpath() 方法模拟 $x 命令
@@ -13,7 +16,7 @@ http://sangaline.com/post/advanced-web-scraping-tutorial/
     scrapy parse --spider=basic url
     scrapy crawl url
 
-## new project
+### new project
     $ scrapy startproject properties
     $ cd properties
     $ scrapy genspider basic web
@@ -22,10 +25,14 @@ http://sangaline.com/post/advanced-web-scraping-tutorial/
     // 输出为文件
     $ scrapy crawl basic -o items.json/.csv/.xml/.jl
     // 输出到FTP
-    ¥ scrapy crawl basic -o "ftp://user:pass@url/items.json"
+    $ scrapy crawl basic -o "ftp://user:pass@url/items.json"
+    // 限制crawl数量
+    $ scrapy crawl manual -s CLOSESPIDER_ITEMCOUNT=90
+    // 使用 CrawlSpider 模板 构造 Spider.
+    $ scrapy genspider -t crawl easy web
 
-
-## crawl常规返爬技术应对
+    
+## crawl常规反爬技术应对
 1. User agent 过滤
     Scrapy将其标识为“Scrapy / 1.3.3（+ http：//scrapy.org）”，某些服务器可能会阻止它或者甚至只是将有限数量的User Agent列入白名单。 
     
