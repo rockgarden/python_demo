@@ -66,6 +66,7 @@ ROBOTSTXT_OBEY = True
 # ITEM_PIPELINES = {
 #    'properties.pipelines.PropertiesPipeline': 300,
 # }
+ITEM_PIPELINES = {'scrapyapperyio.ApperyIoPipeline': 300}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -87,3 +88,14 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# Appery.io 相关配置
+# 在 Appery.io 上建数据库
+APPERYIO_DB_ID = '5b8d31970f0d31413f366fcd'
+APPERYIO_USERNAME = 'root'
+APPERYIO_PASSWORD = 'freestar87'
+APPERYIO_COLLECTION_NAME = 'properties'
+
+# Disable S3
+AWS_ACCESS_KEY_ID = ""
+AWS_SECRET_ACCESS_KEY = ""

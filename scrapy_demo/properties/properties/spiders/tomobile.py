@@ -1,19 +1,17 @@
 import datetime
 import socket
-# python3 中 urljoin 独立引入
-# from urllib.parse import urlparse
 from urllib.parse import urljoin
 
-import scrapy
-from scrapy.contrib.loader import ItemLoader
-from scrapy.contrib.loader.processor import MapCompose, Join
-from scrapy.http import Request
+from scrapy.linkextractors import LinkExtractor
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import MapCompose, Join
+from scrapy.spiders import CrawlSpider, Rule
 
 from properties.items import PropertiesItem
 
 
-class BasicSpider(scrapy.Spider):
-    name = "manual"
+class ToMobileSpider(CrawlSpider):
+    name = 'tomobile'
     allowed_domains = ["scrapybook.s3.amazonaws.com"]
 
     # Start on the first index page
@@ -21,22 +19,16 @@ class BasicSpider(scrapy.Spider):
         'http://scrapybook.s3.amazonaws.com/properties/index_00000.html',
     )
 
-    def parse(self, response):
-        # Get the next index URLs and yield Requests
-        # 水平爬取
-        next_selector = response.xpath('//*[contains(@class,"next")]//@href')
-        for url in next_selector.extract():
-            yield Request(urlparse.urljoin(response.url, url))
-
-        # Get item URLs and yield Requests
-        # 垂直爬取
-        item_selector = response.xpath('//*[@itemprop="url"]/@href')
-        for url in item_selector.extract():
-            yield Request(urlparse.urljoin(response.url, url),
-                          callback=self.parse_item)
+    # Rules for horizontal and vertical crawling
+    rules = (
+        Rule(LinkExtractor(restrict_xpaths='//*[contains(@class,"next")]')),
+        Rule(LinkExtractor(restrict_xpaths='//*[@itemprop="url"]'),
+             callback='parse_item')
+    )
 
     def parse_item(self, response):
         """ This function parses a property page.
+
         @url http://scrapybook.s3.amazonaws.com/properties/property_000000.html
         @returns items 1
         @scrapes title price description address image_urls
@@ -64,8 +56,7 @@ class BasicSpider(scrapy.Spider):
         l.add_value('url', response.url)
         l.add_value('project', self.settings.get('BOT_NAME'))
         l.add_value('spider', self.name)
-        l.add_value('server', (lambda i: i + ' (' + socket.gethostbyname(i) +
-                                         ')')(socket.gethostname()))
+        l.add_value('server', socket.gethostname())
         l.add_value('date', datetime.datetime.now())
 
         return l.load_item()

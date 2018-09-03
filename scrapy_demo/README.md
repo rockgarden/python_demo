@@ -4,6 +4,16 @@
 
 * Scrapy 在处理请求时使用后入先出LIFO。
 
+* 若装有两个版本的python请在scrapy的命令前加上 python3 -m 
+
+
+    python3 -m scrapy crawl tomobile -s CLOSESPIDER_ITEMCOUNT=90
+
+## install
+
+用不同的pip安装对应版本的scrapy.
+
+
 ## scrapy shell
 支持通过 xpath() 方法模拟 $x 命令
 
@@ -16,7 +26,7 @@
     scrapy parse --spider=basic url
     scrapy crawl url
 
-### new project
+### new project 命令
     $ scrapy startproject properties
     $ cd properties
     $ scrapy genspider basic web
