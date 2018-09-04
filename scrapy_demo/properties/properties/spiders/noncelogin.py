@@ -1,43 +1,47 @@
 import datetime
 import socket
-# python3 中 urljoin 独立引入
-# from urllib.parse import urlparse
 from urllib.parse import urljoin
 
-import scrapy
-from scrapy.contrib.loader import ItemLoader
-from scrapy.contrib.loader.processor import MapCompose, Join
-from scrapy.http import Request
+from scrapy.http import Request, FormRequest
+from scrapy.linkextractors import LinkExtractor
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import MapCompose, Join
+from scrapy.spiders import CrawlSpider, Rule
 
 from properties.items import PropertiesItem
 
 
-class BasicSpider(scrapy.Spider):
-    name = "manual"
-    allowed_domains = ["scrapybook.s3.amazonaws.com"]
+class NonceLoginSpider(CrawlSpider):
+    name = 'noncelogin'
+    allowed_domains = ["web"]
 
-    # Start on the first index page
-    start_urls = (
-        'http://scrapybook.s3.amazonaws.com/properties/index_00000.html',
+    # Start on the welcome page
+    # 获取 nonce info
+    def start_requests(self):
+        return [
+            Request(
+                "http://web:9312/dynamic/nonce",
+                callback=self.parse_welcome)
+        ]
+
+    # Post welcome page's first form with the given user/pass
+    def parse_welcome(self, response):
+        return FormRequest.from_response(
+            response,
+            formdata={"user": "user", "pass": "pass"}
+        )
+
+    # Rules for horizontal and vertical crawling
+    rules = (
+        Rule(LinkExtractor(restrict_xpaths='//*[contains(@class,"next")]')),
+        Rule(LinkExtractor(restrict_xpaths='//*[@itemprop="url"]'),
+             callback='parse_item')
     )
-
-    def parse(self, response):
-        # Get the next index URLs and yield Requests
-        # 水平爬取
-        next_selector = response.xpath('//*[contains(@class,"next")]//@href')
-        for url in next_selector.extract():
-            yield Request(urljoin(response.url, url))
-
-        # Get item URLs and yield Requests
-        # 垂直爬取
-        item_selector = response.xpath('//*[@itemprop="url"]/@href')
-        for url in item_selector.extract():
-            yield Request(urljoin(response.url, url),
-                          callback=self.parse_item)
 
     def parse_item(self, response):
         """ This function parses a property page.
-        @url http://scrapybook.s3.amazonaws.com/properties/property_000000.html
+
+        @url http://web:9312/properties/property_000000.html
         @returns items 1
         @scrapes title price description address image_urls
         @scrapes url project spider server date
@@ -64,8 +68,7 @@ class BasicSpider(scrapy.Spider):
         l.add_value('url', response.url)
         l.add_value('project', self.settings.get('BOT_NAME'))
         l.add_value('spider', self.name)
-        l.add_value('server', (lambda i: i + ' (' + socket.gethostbyname(i) +
-                                         ')')(socket.gethostname()))
+        l.add_value('server', socket.gethostname())
         l.add_value('date', datetime.datetime.now())
 
         return l.load_item()

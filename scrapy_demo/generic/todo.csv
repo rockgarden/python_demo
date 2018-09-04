@@ -1,0 +1,4 @@
+url   ,name                                   ,price
+a.html,"//*[@id=""itemTitle""]/text()"        ,"//*[@id=""prcIsum""]/text()"
+b.html,//h1/text()                            ,//span/strong/text()
+c.html,"//*[@id=""product-desc""]/span/text()"
