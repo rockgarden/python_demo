@@ -1,6 +1,7 @@
 # scrapy demo
-参考：http://sangaline.com/post/advanced-web-scraping-tutorial/
-代码：https://github.com/scalingexcellence/scrapybook
+参考：[scraping-tutorial](http://sangaline.com/post/advanced-web-scraping-tutorial/)
+
+代码：[scrapybook](https://github.com/scalingexcellence/scrapybook)
 
 * Scrapy 在处理请求时使用后入先出LIFO。
 
