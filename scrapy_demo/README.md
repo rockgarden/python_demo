@@ -28,7 +28,7 @@
     scrapy crawl url
 
 ### new project 命令
-    $ scrapy startproject properties
+    $ python3 -m scrapy startproject properties
     $ cd properties
     $ scrapy genspider basic web
       Created spider 'basic' using template 'basic' in module:
@@ -55,7 +55,7 @@
 2. 爬虫访问表现得更像人类的操作
 
     降低请求速率(原理上借助[AutoThrottle](https://link.jianshu.com/?t=https://doc.scrapy.org/en/latest/topics/autothrottle.html))，在settings.py
-    
+
     
     CONCURRENT_REQUESTS = 1
     DOWNLOAD_DELAY = 5

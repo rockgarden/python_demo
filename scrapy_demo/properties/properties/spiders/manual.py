@@ -5,9 +5,9 @@ import socket
 from urllib.parse import urljoin
 
 import scrapy
-from scrapy.contrib.loader import ItemLoader
-from scrapy.contrib.loader.processor import MapCompose, Join
 from scrapy.http import Request
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import MapCompose, Join
 
 from properties.items import PropertiesItem
 

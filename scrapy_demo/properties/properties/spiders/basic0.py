@@ -10,7 +10,7 @@ from properties.items import PropertiesItem
 
 
 class Basic0Spider(scrapy.Spider):
-    name = "basic"
+    name = "basic0"
     allowed_domains = ["web"]
 
     # Start on a property page
