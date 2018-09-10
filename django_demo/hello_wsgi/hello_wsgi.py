@@ -1,4 +1,5 @@
-# run command: gunicorn hello --log-file=-
+# run command:
+# $ gunicorn hello --log-file=-
 
 import os
 import sys
