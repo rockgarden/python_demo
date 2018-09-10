@@ -3,6 +3,17 @@
 
 代码：[scrapybook](https://github.com/scalingexcellence/scrapybook)
 
+## 使用 Docker 安装开发环境
+
+安装并启动Docker后，切换到项目目录并运行：
+
+  1. 在docker-compose.yml所在目录运行 `docker-compose pull` - 检查更新的 mages
+  2. `docker-compose up` - 将在各种容器（虚拟机）启动时滚动日志消息。要在此窗口中停止容器Ctrl-C，或在另一个shell窗口中输入`docker-compose down`。
+
+`docker system prune` 将删除当您想要恢复空间时未使用的系统范围的Docker镜像，容器和卷。
+
+
+## scrapy 摘要
 * Scrapy 在处理请求时使用后入先出LIFO。
 
 * 若装有两个版本的python请在scrapy的命令前加上 python3 -m 
@@ -11,9 +22,7 @@
     python3 -m scrapy crawl tomobile -s CLOSESPIDER_ITEMCOUNT=90
 
 ## install
-
 用不同的pip安装对应版本的scrapy.
-
 
 ## scrapy shell
 支持通过 xpath() 方法模拟 $x 命令
@@ -28,7 +37,7 @@
     scrapy crawl url
 
 ### new project 命令
-    $ python3 -m scrapy startproject properties
+    $ python3 -m scrapy startproject hooksasync
     $ cd properties
     $ scrapy genspider basic web
       Created spider 'basic' using template 'basic' in module:
@@ -106,6 +115,8 @@
 
 - [rsa](https://pypi.org/project/rsa/)
 - [PIL](https://pypi.org/project/Pillow/)
+
+- [scrapyapperyio](https://github.com/scalingexcellence/scrapy-apperyio): 待更新！
 
 ### dryscrape 安装
 先装`webkit-server`再装`dryscrape`

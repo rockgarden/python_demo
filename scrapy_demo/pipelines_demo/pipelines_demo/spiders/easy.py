@@ -1,6 +1,6 @@
+# -*- coding: utf-8 -*-
 # run command:
-# $ cd ./properties
-# $ python3 -m scrapy crawl tomobile -s CLOSESPIDER_ITEMCOUNT=10 -s LOG_LEVEL=INFO
+# $ scrapy crawl easy -s CLOSESPIDER_ITEMCOUNT=90 -L DEBUG
 
 import datetime
 import socket
@@ -14,31 +14,24 @@ from scrapy.spiders import CrawlSpider, Rule
 from properties.items import PropertiesItem
 
 
-class ToMobileSpider(CrawlSpider):
-    name = 'tomobile'
-    allowed_domains = ["scrapybook.s3.amazonaws.com"]
+class EasySpider(CrawlSpider):
+    name = 'easy'
+    allowed_domains = ['web']
 
     # Start on the first index page
     start_urls = (
-        'http://scrapybook.s3.amazonaws.com/properties/index_00000.html',
+        'http://web:9312/properties/index_00000.html',
     )
 
     # Rules for horizontal and vertical crawling
     rules = (
+        # Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
+        # LinkExtractor 抽取链接的函数.
         Rule(LinkExtractor(restrict_xpaths='//*[contains(@class,"next")]')),
-        Rule(LinkExtractor(restrict_xpaths='//*[@itemprop="url"]'),
-             callback='parse_item')
+        Rule(LinkExtractor(restrict_xpaths='//*[@itemprop="url"]'), callback='parse_item'),
     )
 
     def parse_item(self, response):
-        """ This function parses a property page.
-
-        @url http://scrapybook.s3.amazonaws.com/properties/property_000000.html
-        @returns items 1
-        @scrapes title price description address image_urls
-        @scrapes url project spider server date
-        """
-
         # Create the loader using the response
         l = ItemLoader(item=PropertiesItem(), response=response)
 
@@ -60,7 +53,8 @@ class ToMobileSpider(CrawlSpider):
         l.add_value('url', response.url)
         l.add_value('project', self.settings.get('BOT_NAME'))
         l.add_value('spider', self.name)
-        l.add_value('server', socket.gethostname())
+        l.add_value('server', (lambda i: i + ' (' + socket.gethostbyname(i) +
+                                         ')')(socket.gethostname()))
         l.add_value('date', datetime.datetime.now())
 
         return l.load_item()

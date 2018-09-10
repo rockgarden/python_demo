@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for properties project
+# Scrapy settings for hooksasync project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,13 +9,13 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'properties'
+BOT_NAME = 'hooksasync'
 
-SPIDER_MODULES = ['properties.spiders']
-NEWSPIDER_MODULE = 'properties.spiders'
+SPIDER_MODULES = ['hooksasync.spiders']
+NEWSPIDER_MODULE = 'hooksasync.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'properties (+http://www.yourdomain.com)'
+# USER_AGENT = 'hooksasync (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -46,33 +46,26 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'properties.middlewares.PropertiesSpiderMiddleware': 543,
+#    'hooksasync.middlewares.HooksasyncSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'properties.middlewares.PropertiesDownloaderMiddleware': 543,
+#    'hooksasync.middlewares.HooksasyncDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-EXTENSIONS = {
-    'scrapy.extensions.telnet.TelnetConsole': None,
-    'properties.latencies.Latencies': 500,
-}
-LATENCIES_INTERVAL = 5
+# EXTENSIONS = {
+#    'scrapy.extensions.telnet.TelnetConsole': None,
+# }
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 # ITEM_PIPELINES = {
-#    'properties.pipelines.PropertiesPipeline': 300,
+#    'hooksasync.pipelines.HooksasyncPipeline': 300,
 # }
-ITEM_PIPELINES = {
-    # TODO TypeError: 'map' object is not subscriptable error in Python 3!
-    'scrapyapperyio.ApperyIoPipeline': 300,
-    'properties.pipelines.tidyup.TidyUp': 100,
-}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -94,14 +87,3 @@ ITEM_PIPELINES = {
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-# Appery.io 相关配置
-# 在 Appery.io 上建数据库
-APPERYIO_DB_ID = '5b8d31970f0d31413f366fcd'
-APPERYIO_USERNAME = 'root'
-APPERYIO_PASSWORD = 'freestar87'
-APPERYIO_COLLECTION_NAME = 'properties'
-
-# Disable S3
-AWS_ACCESS_KEY_ID = ""
-AWS_SECRET_ACCESS_KEY = ""
