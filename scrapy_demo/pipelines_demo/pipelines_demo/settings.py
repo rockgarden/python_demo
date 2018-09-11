@@ -65,10 +65,13 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'pipelines_demo.pipelines.tidyup.TidyUp': 100,
-    'pipelines_demo.pipelines.geo.GeoPipeline': 400,
+    # 'pipelines_demo.pipelines.geo.GeoPipeline': 400,
+    'pipelines_demo.pipelines.geo2.GeoPipeline': 400,
+    'properties.pipelines.mysql.MysqlWriter': 700,
     'pipelines_demo.pipelines.es.EsWriter': 800,
 }
 ES_PIPELINE_URL = 'http://es:9200/properties/property'
+MYSQL_PIPELINE_URL = 'mysql://root:pass@mysql/properties'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
