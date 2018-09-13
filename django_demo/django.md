@@ -7,6 +7,8 @@
 
     $ django-admin.py startproject foo --template=project_name
 
+## 相关库
+- [django_compressor](https://pypi.org/project/django-compressor/)压缩工具.
 
 ## Tips
 Django被称为模型 - 模板 - 视图（MTV）框架。 视图部分通常检查传入的HTTP请求，并查询或构造发送到表示层的必要数据。

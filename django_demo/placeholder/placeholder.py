@@ -45,7 +45,7 @@ settings.configure(
     STATICFILES_DIRS=(
         os.path.join(BASE_DIR, 'static'),
     ),
-    # TODO: Not Found: /static/site.css
+    # TODO: odd bug: Not Found: /static/site.css
     STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles'),
     STATIC_URL='/static/',
 )
