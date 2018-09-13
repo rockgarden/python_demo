@@ -26,7 +26,14 @@
 
 - [PyQt5](https://www.riverbankcomputing.com/software/pyqt/):GUI库, QT5应用的框架, 跨平台的工具包.
 
-- [PyMySQL](https://pypi.org/project/PyMySQL/)
+- [PyMySQL](https://pypi.org/project/PyMySQL/):可代替MySQLdb-python.
+
+
+    # 应用主文件 __init.py__/app.py
+    # 手动指定将MySQLdb转给pymysql处理
+    import pymysql
+    pymysql.install_as_MySQLdb() 
+
 
 - [jieba](https://pypi.org/project/jieba/):中文分词组件
 - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy):字符串模糊匹配

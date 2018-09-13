@@ -1,3 +1,4 @@
+# 基于 Twisted 实现线程池和同步
 import traceback
 
 import treq
@@ -44,8 +45,8 @@ class DeferredCache(object):
 
     def __init__(self, key_not_found_callback):
         """Takes as an argument """
-        self.records = {}
-        self.deferreds_waiting = {}
+        self.records = {}  # 键值对中出现过的dict
+        self.deferreds_waiting = {}  # 这是一个延迟项的队列，等待给键赋值
         self.key_not_found_callback = key_not_found_callback
 
     @defer.inlineCallbacks

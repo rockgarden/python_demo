@@ -1,7 +1,7 @@
 import traceback
 
-import MySQLdb
 import dj_database_url
+import pymysql  # MySQLdb
 from scrapy.exceptions import NotConfigured
 from twisted.enterprise import adbapi
 from twisted.internet import defer
@@ -54,7 +54,7 @@ class MysqlWriter(object):
 
         try:
             yield self.dbpool.runInteraction(self.do_replace, item)
-        except MySQLdb.OperationalError:
+        except pymysql.OperationalError:
             if self.report_connection_error:
                 logger.error("Can't connect to MySQL: %s" % self.mysql_url)
                 self.report_connection_error = False
