@@ -28,8 +28,8 @@ settings.configure(
     ),
     STATIC_URL='/static/',
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
-    SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),  # 此设置配置命令完成后静态生成的文件将存在的输出目录。
-    STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),  # 在_build目录中启用静态内容。
+    SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),  # 此设置配置了, 文件生成命令完成后, 生成的静态文件所存放的输出目录。
+    STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),  # 启用存放在_build目录下的静态内容.
     STATICFILES_FINDERS=(
         'django.contrib.staticfiles.finders.FileSystemFinder',
         'django.contrib.staticfiles.finders.AppDirectoriesFinder',

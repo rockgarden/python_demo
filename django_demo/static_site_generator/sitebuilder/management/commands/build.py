@@ -1,3 +1,5 @@
+# run command:
+# $ python3 prototypes.py build index
 import os
 import shutil
 
