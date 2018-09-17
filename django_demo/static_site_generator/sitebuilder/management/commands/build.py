@@ -1,5 +1,16 @@
+# 自定义管理命令-用于生成网页
 # run command:
+# 生成单个所有页面
+# $ python3 prototypes.py build
+# 生成单个page index.html
 # $ python3 prototypes.py build index
+# $ cd _build
+# $ python3 -m http.server 9000
+
+# 若在build page 时出现：
+# TemplateSyntaxError Invalid block tag: 'else', expected 'endif', Did you forget to register or load this tag?
+# 一般是 html 代码格式异常.
+
 import os
 import shutil
 
@@ -21,14 +32,17 @@ class Command(BaseCommand):
     leave_locale_alone = True
 
     def add_arguments(self, parser):
-        # 检查是否有任何参数传递给命令。一次可以传递多个名称。
+        """
+        检查是否有任何参数传递给命令(指定生成哪个page), 一次可以传递多个参数.
+        :param parser:
+        """
         parser.add_argument('args', nargs='*')
 
     def handle(self, *args, **options):
         """Request pages and build output."""
         settings.DEBUG = False
-        settings.COMPRESS_ENABLED = True
-        if args:
+        settings.COMPRESS_ENABLED = True  # 启动表态压缩
+        if args:  # 处理传入由命令带入的参数.
             pages = args
             available = list(get_pages())
             invalid = []
@@ -36,25 +50,28 @@ class Command(BaseCommand):
                 if page not in available:
                     invalid.append(page)
             if invalid:
-                # 如果传递的任何名称不存在，则会引发错误。
+                # 如果传递的 page 名称不存在, 则会引发错误.
                 msg = 'Invalid pages: {}'.format(', '.join(invalid))
                 raise CommandError(msg)
         else:
             pages = get_pages()
 
-            # 检查输出目录是否存在，如果存在，则将其删除以创建干净版本。
-            if os.path.exists(settings.SITE_OUTPUT_DIRECTORY):
-                shutil.rmtree(settings.SITE_OUTPUT_DIRECTORY)
-            os.mkdir(settings.SITE_OUTPUT_DIRECTORY)
+        # 检查输出目录是否存在，如果存在，则将其删除以创建干净版本。
+        if os.path.exists(settings.SITE_OUTPUT_DIRECTORY):
+            shutil.rmtree(settings.SITE_OUTPUT_DIRECTORY)
+        os.mkdir(settings.SITE_OUTPUT_DIRECTORY)
         os.makedirs(settings.STATIC_ROOT, exist_ok=True)
 
-        # 使用call_command实用程序运行collecstatic命令将所有站点静态资源复制到STATIC_ROOT中，
+        # 使用 call_command 实用程序运行 collecstatic 命令将所有站点静态资源复制到STATIC_ROOT中，
         # 该STATIC_ROOT配置为在SITE_OUTPUT_DIRECTORY内。
         call_command('collectstatic', interactive=False, clear=True, verbosity=0)
-        call_command('compress', interactive=False, force=True)
+
+        # 压缩 templates 中带 'compress' 标记的内容, 并输出到 /static/CACHE 目录下.
+        call_command('compress', traceback=False, force=True)
+
         client = Client()
 
-        # 遍历pages目录并收集位于那里的所有.html文件。
+        # 遍历 pages 目录并收集位于那里的所有.html文件。
         for page in pages:
             url = reverse('page', kwargs={'slug': page})
             response = client.get(url)

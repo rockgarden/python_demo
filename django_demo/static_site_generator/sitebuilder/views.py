@@ -25,6 +25,10 @@ def get_page_or_404(name):
         # Opens up each file and instantiates a new Django template object with its contents.
         page = Template(f.read())
     meta = None
+
+    # 此代码循环遍历页面的原始节点列表，并检查名称为context的BlockNode。
+    # BlockNode是用于在Django模板中创建{％block％}元素的类定义。
+    # 如果找到上下文BlockNode，它会为我们定义包含该内容的元变量。
     for i, node in enumerate(list(page.nodelist)):
         if isinstance(node, BlockNode) and node.name == 'context':
             meta = page.nodelist.pop(i)
@@ -41,6 +45,9 @@ def page(request, slug='index'):
         'slug': slug,
         'page': page,
     }
+
+    # 1、将 JSON 数据作为上下文载入网页
+    # 使用Python的json模块呈现meta context，将我们的{％block context％}转换为可理解的Python。
     if page._meta is not None:
         meta = page._meta.render(Context())
         extra_context = json.loads(meta)
