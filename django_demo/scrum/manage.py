@@ -1,4 +1,13 @@
-#!/usr/bin/env python
+# hostname $ django-admin.py startproject scrum
+# hostname $ cd scrum
+# hostname $ python3 manage.py startapp board
+# hostname $ python3 manage.py makemigrations board
+# hostname $ python3 manage.py migrate
+# hostname $ python3 manage.py createsuperuser
+# $ python3 manage.py runserver
+
+
+
 import os
 import sys
 

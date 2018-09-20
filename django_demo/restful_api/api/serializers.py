@@ -11,16 +11,17 @@ User = get_user_model()
 
 
 # 通过API对模型进行序列化和反序列化(serialized and deserialized)
+# 每个序列化程序都有一个响应正文的新的只读链接字段links。
+# 要填充链接links值，每个序列化程序都有一个get_links方法来构建相关链接。
+
 
 class SprintSerializer(serializers.ModelSerializer):
-    # 每个序列化程序都有一个响应正文的新的只读链接字段links。
     links = serializers.SerializerMethodField()
 
     class Meta:
         model = Sprint
         fields = ('id', 'name', 'description', 'end', 'links',)
 
-    # 要填充链接links值，每个序列化程序都有一个get_links方法来构建相关链接。
     def get_links(self, obj):
         """
         get_links不使用Django的标准reverse，而是使用内置于django-rest-framework的修改过的版本。
@@ -47,6 +48,7 @@ class SprintSerializer(serializers.ModelSerializer):
 
 
 class TaskSerializer(serializers.ModelSerializer):
+    # 用SlugRelatedField来实现通过用户名来引用用户
     assigned = serializers.SlugRelatedField(
         slug_field=User.USERNAME_FIELD, required=False, allow_null=True,
         queryset=User.objects.all())
@@ -63,6 +65,11 @@ class TaskSerializer(serializers.ModelSerializer):
                   'completed', 'links',)
 
     def get_status_display(self, obj):
+        """
+        显示状态文本
+        :param obj:
+        :return:
+        """
         return obj.get_status_display()
 
     def get_links(self, obj):
@@ -117,7 +124,7 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    full_name = serializers.CharField(source='get_full_name', read_only=True)
+    full_name = serializers.CharField(source='get_full_name', read_only=True)  # get_full_name是一个方法
     links = serializers.SerializerMethodField()
 
     class Meta:

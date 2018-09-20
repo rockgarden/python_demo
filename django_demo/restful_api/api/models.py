@@ -1,3 +1,4 @@
+# Create your models here.
 from django.conf import settings
 from django.db import models
 # from django.utils.six import python_2_unicode_compatible
@@ -42,11 +43,10 @@ class Task(models.Model):
     # SET()：此值设置，会调用外面的值，可以是一个函数。
     sprint = models.ForeignKey(Sprint, blank=True, null=True, on_delete=models.CASCADE)
 
-    status = models.SmallIntegerField(choices=STATUS_CHOICES,
-                                      default=STATUS_TODO)
+    status = models.SmallIntegerField(choices=STATUS_CHOICES, default=STATUS_TODO)
     order = models.SmallIntegerField(default=0)
 
-    # 允许支持交换默认用户模型, 虽然此项目将使用默认用户，但该板应用程序设计为尽可能可重用.
+    # 引入settings.AUTH_USER_MODEL支持默认用户模型
     assigned = models.ForeignKey(settings.AUTH_USER_MODEL,
                                  null=True, blank=True, on_delete=models.CASCADE)
     started = models.DateField(blank=True, null=True)

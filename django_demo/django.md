@@ -9,6 +9,20 @@
 
 ## 相关库
 - [django_compressor](https://pypi.org/project/django-compressor/)压缩工具.
+- djangorestframework
+- Markdown
+- [django-filter]()pluggable filter backends
+- [psycopg2](http://initd.org/psycopg/)最流行的PostgreSQL数据库适配器。它的主要功能是完整实现Python DB API 2.0规范和线程安全（多个线程可以共享相同的连接）。
+
+
+    The psycopg2 wheel package will be renamed from release 2.8; 
+    in order to keep installing from binary please use "pip install psycopg2-binary" instead. 
+    For details see: <http://initd.org/psycopg/docs/install.html#binary-install-from-pypi>.
+
+
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+
+
 
 ## Tips
 Django被称为模型 - 模板 - 视图（MTV）框架。 视图部分通常检查传入的HTTP请求，并查询或构造发送到表示层的必要数据。

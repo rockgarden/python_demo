@@ -1,19 +1,18 @@
-# run command:
-# $ python3 manage.py makemigrations board
-
 from django.contrib.auth import get_user_model
 from rest_framework import authentication, permissions, viewsets, filters
 
-from .forms import SprintFilter, TaskFilter
 from .models import Sprint, Task
+from .my_filters import SprintFilter, TaskFilter
 from .serializers import SprintSerializer, TaskSerializer, UserSerializer
+
+# Create your views here.
 
 User = get_user_model()
 
 
 class DefaultsMixin(object):
     """
-    DefaultsMixin将是API视图类的基类之
+    DefaultsMixin将是API视图类的基类之, 实现 authentication
     Default settings for view authentication, permissions, filtering
      and pagination."""
 
@@ -27,7 +26,10 @@ class DefaultsMixin(object):
     paginate_by = 25
     paginate_by_param = 'page_size'
     max_paginate_by = 100
+
+    # 存放需要可用filters的列表
     filter_backends = (
+        filters.BaseFilterBackend,
         # filters.DjangoFilterBackend,
         # module 'rest_framework.filters' has no attribute 'DjangoFilterBackend'
         filters.SearchFilter,
@@ -37,6 +39,12 @@ class DefaultsMixin(object):
 
 # ModelViewSet使用相应的HTTP谓词提供创建，读取，更新，删除（CRUD）操作所需的脚手架。
 # 如果未在视图本身上设置，则REST_FRAMEWORK设置字典将控制身份验证，权限，分页和筛选的默认值。
+
+# 继承DefaultsMixin类都将加入权限控制
+# search_fields添加到所有ViewSet，实现字段搜索
+# ordering_fields添加到所有ViewSet, 实现排序
+
+# Sprint endpoint
 class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
     """API endpoint for listing and creating sprints."""
 
@@ -47,6 +55,7 @@ class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
     ordering_fields = ('end', 'name',)
 
 
+# Task endpoint
 class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
     """API endpoint for listing and creating tasks."""
 
@@ -57,6 +66,7 @@ class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
     ordering_fields = ('name', 'order', 'started', 'due', 'completed',)
 
 
+# User endpoint
 class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
     """API endpoint for listing users."""
 
