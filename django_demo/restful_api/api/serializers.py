@@ -1,9 +1,11 @@
 from datetime import date
 
 from django.contrib.auth import get_user_model
+# ugettext_lazy to make the error messages translatable.
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from rest_framework.reverse import reverse  # 提供返回完全限定URL或视图名称的urlresolver函数
+# 提供返回完全限定URL或视图名称的urlresolver函数
+from rest_framework.reverse import reverse
 
 from .models import Sprint, Task
 

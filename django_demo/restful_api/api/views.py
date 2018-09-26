@@ -1,4 +1,6 @@
+# 3 - 创建View层
 from django.contrib.auth import get_user_model
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import authentication, permissions, viewsets, filters
 
 from .models import Sprint, Task
@@ -29,9 +31,14 @@ class DefaultsMixin(object):
 
     # 存放需要可用filters的列表
     filter_backends = (
-        filters.BaseFilterBackend,
+        DjangoFilterBackend,
+
+        # filters.BaseFilterBackend,
+        # NotImplementedError: .filter_queryset() must be overridden.
+
         # filters.DjangoFilterBackend,
         # module 'rest_framework.filters' has no attribute 'DjangoFilterBackend'
+
         filters.SearchFilter,
         filters.OrderingFilter,
     )

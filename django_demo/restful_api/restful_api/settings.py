@@ -36,8 +36,11 @@ INSTALLED_APPS = [
     # 'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third party apps
+    # 添加了rest_framework。
     'rest_framework',
     'rest_framework.authtoken',
+    # 添加该模块, 否则django应用不报错，但是不能正确过滤
+    'django_filters',
     # Internal apps
     'api',
 ]
@@ -117,3 +120,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# REST框架API的任何全局设置都保存在名为REST_FRAMEWORK的单个配置字典中。
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+    ),
+}

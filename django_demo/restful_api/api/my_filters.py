@@ -1,10 +1,10 @@
+# 2 - 创建filter层
 import django_filters
 from django.contrib.auth import get_user_model
 
 from .models import Sprint, Task
 
 User = get_user_model()
-
 
 # 处理值为Null的数据
 class NullFilter(django_filters.BooleanFilter):
@@ -37,3 +37,5 @@ class TaskFilter(django_filters.FilterSet):
         super().__init__(*args, **kwargs)
         self.filters['assigned'].extra.update(
             {'to_field_name': User.USERNAME_FIELD})
+
+# 另有ChoiceFilter,CharFilter等方式根据需要使用

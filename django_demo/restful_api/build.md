@@ -21,7 +21,8 @@
     /// test http://127.0.0.1:8000 
     /// get 404 
     /// path error: The empty path didn't match any of these.
-   
+  
+    /// 第一步 - 创建model层
     /// 创建 api/models.py 
     $ python3 manage.py makemigrations api
     $ python3 manage.py migrate
@@ -43,10 +44,11 @@
     /// test http://127.0.0.1:8000/api/sprints/
     /// 需要鉴权 wangkan/freestar
     
+    /// 第二步 - 创建filter和view层的层次结构
     /// edit api/views.py 添加过滤器
     /// new api/my_filters.py 实现自定义过滤器
     /// edit api/views.py 引入自定义过滤器
-    http://localhost:8000/api/tasks/?search=foor
-    http://localhost:8000/api/tasks/?search=first
+    http://127.0.0.1:8000/api/tasks/?search=foor
+    http://127.0.0.1:8000/api/tasks/?search=first
     
     /// edit api/serializers.py 添加链接将 sprint user task 关联起来

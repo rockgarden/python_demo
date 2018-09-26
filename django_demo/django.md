@@ -9,9 +9,9 @@
 
 ## 相关库
 - [django_compressor](https://pypi.org/project/django-compressor/)压缩工具.
-- djangorestframework
-- Markdown
-- [django-filter]()pluggable filter backends
+- [djangorestframework](http://www.django-rest-framework.org/#installation)
+- [Markdown]()
+- [django-filter]()pluggable filter backends, 通用的、可重用的应用程序来缓解写一些常见的视图代码。具体地说,它允许用户过滤queryset基于模型的字段，从而显示对应的过滤结果。因此在使用django-filter的时候能节省很多查询的后台代码。
 - [psycopg2](http://initd.org/psycopg/)最流行的PostgreSQL数据库适配器。它的主要功能是完整实现Python DB API 2.0规范和线程安全（多个线程可以共享相同的连接）。
 
 
