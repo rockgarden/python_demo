@@ -10,7 +10,7 @@
     
     $ pip3 install psycopy2
     $ pip3 install psycopg2-binary
-    
+           
     $ pg_ctl -D /usr/local/var/postgres start
     $ createdb -E UTF-8 api
     
@@ -52,3 +52,10 @@
     http://127.0.0.1:8000/api/tasks/?search=first
     
     /// edit api/serializers.py 添加链接将 sprint user task 关联起来
+
+## Error
+    /// django.db.utils.OperationalError: could not connect to server: No such file or directory
+        Is the server running locally and accepting
+        connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+        当报此错误时表示 PostgreSQL 没有启动, 需要重新 运行 postgres start
+    $ pg_ctl -D /usr/local/var/postgres start
