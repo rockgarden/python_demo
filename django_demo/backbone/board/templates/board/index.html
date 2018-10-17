@@ -9,6 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'board/vendor/normalize.css' %}">
         <link rel="stylesheet" href="{% static 'board/css/board.css' %}">
+
+        <!--在head中加入模板代码确保当视图代码载入时已经定义了模板-->
+        <!--定义ID-->
         <script type="text/html" id="home-template">
             <h1>Welcome to my Scrum Board Project!</h1>
         </script>
@@ -34,6 +37,7 @@
     <body>
     
         <div id="content"></div>
+        <!--加入ID content 用以匹配路由选择器-->
         
         <script src="{% static 'board/vendor/jquery.js' %}"></script>
         <script src="{% static 'board/vendor/underscore.js' %}"></script>

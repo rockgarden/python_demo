@@ -1,16 +1,17 @@
 (function ($, Backbone, _, app) {
 
     var AppRouter = Backbone.Router.extend({
+        ///定义路由
         routes: {
             '': 'home'
         },
         initialize: function (options) {
-            this.contentElement = '#content';
+            this.contentElement = '#content'; //引用ID选择器，指定Underscore模板加载的位置.
             this.current = null;
             this.header = new app.views.HeaderView();
             $('body').prepend(this.header.el);
             this.header.render();
-            Backbone.history.start();
+            Backbone.history.start(); //触发路由
         },
         home: function () {
             var view = new app.views.HomepageView({el: this.contentElement});
@@ -41,7 +42,7 @@
             });
             return Backbone.Router.prototype.route.apply(this, [route, name, callback]);
         },
-        render: function (view) {
+        render: function (view) { //render function 在视图切换时帮助路由追踪
             if (this.current) {
                 this.current.undelegateEvents();
                 this.current.$el = $();
@@ -52,6 +53,6 @@
         }
     });
     
-    app.router = AppRouter;
+    app.router = AppRouter; //路由附加到app配置中让它在整个项目范围内可用.
 
 })(jQuery, Backbone, _, app);
