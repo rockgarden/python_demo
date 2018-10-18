@@ -15,6 +15,8 @@
         <script type="text/html" id="home-template">
             <h1>Welcome to my Scrum Board Project!</h1>
         </script>
+
+        <!--该表单包含两个输入，用户名和密码，与obtain_auth_token视图所需的输入相匹配。 现在定义了模板，视图需要处理表单提交。-->
         <script type="text/html" id="login-template">
             <form action="" method="post">
                 <label for="id_username">Username</label>
@@ -24,6 +26,7 @@
                 <button type="submit">Login</button>
             </form>
         </script>
+
         <script type="text/html" id="header-template">
             <span class="title">Scrum Board Example</span>
             <% if (authenticated ) { %>
@@ -52,6 +55,7 @@
                 "apiLogin": "{% url 'api-token' %}"
             }
         </script>
+        <!--apiRoot用于API的根目录，apiLogin于API登录URL-->
         <script src="{% static 'board/js/app.js' %}"></script>
         <script src="{% static 'board/js/models.js' %}"></script>
         <script src="{% static 'board/js/views.js' %}"></script>

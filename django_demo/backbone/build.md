@@ -30,3 +30,11 @@
     /// 在 index.html 中创建 ID 如 home-template 作为主页模板代码（Underscore.js中的__.template）的引用.
     /// 在 app.js 中生成全局变量router.
     /// 在 项目配置的 urls.py文件中创建 视图url 来渲染 index.html
+    
+    /// 应用内用户验证 在models.js 创建基本模型
+    /// 在models.js添加方法为XMLHttpRequest(xhr)设置请求头信息
+    /// 在models.js添加CSRF(Cross-site request forgery)跨站点请求伪造
+    /// 在xx/static/xx/js/views.js中创建登录视图
+    /// 由于使用相同的模式创建更多视图来完成我们的应用程序，所以可利用Backbone的可扩展性在iews.js中创建一个通用的视图模板，并在模型上建模所有的views。
+    
+    /// 将login-template添加到index.html文件
