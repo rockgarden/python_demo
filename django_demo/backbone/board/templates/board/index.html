@@ -7,7 +7,9 @@
         <title>Scrum Board</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--normalize.css为应用样式提供了一致的跨浏览器基础。-->
         <link rel="stylesheet" href="{% static 'board/vendor/normalize.css' %}">
+        <!--board.css添加项目样式的地方。-->
         <link rel="stylesheet" href="{% static 'board/css/board.css' %}">
 
         <!--在head中加入模板代码确保当视图代码载入时已经定义了模板-->
@@ -26,7 +28,7 @@
                 <button type="submit">Login</button>
             </form>
         </script>
-
+        <!--在<％..％>中，Underscore可以执行JavaScript - 在这种里是if语句。经过身份验证的值将由用于呈现模板的数据确定。-->
         <script type="text/html" id="header-template">
             <span class="title">Scrum Board Example</span>
             <% if (authenticated ) { %>
