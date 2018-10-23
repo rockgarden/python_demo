@@ -3,7 +3,8 @@
     var AppRouter = Backbone.Router.extend({
         routes: {
             '': 'home',
-            'sprint/:id': 'sprint' 
+            'sprint/:id': 'sprint'
+            //将新条目添加到映射到sprint回调的路由配置中。这将捕获斜杠后的值，并将其作为id传递给回调函数。这与先前在主页模板和NewSprintView中使用的约定相匹配。
         },
         initialize: function (options) {
             this.contentElement = '#content';
@@ -17,6 +18,7 @@
             var view = new app.views.HomepageView({el: this.contentElement});
             this.render(view);
         },
+        //sprint回调获取id并构造一个新的SprintView并呈现它。
         sprint: function (id) {
             var view = new app.views.SprintView({
                 el: this.contentElement,

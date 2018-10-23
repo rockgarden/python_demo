@@ -14,7 +14,9 @@
         <button class="add" type="submit">Add Sprint</button>
         <% if (sprints !== null) { %>
         <div class="sprints">
+            <!--当sprint不为null时，循环并呈现名称和结束日期。链接将呈现以显示sprint的详细信息，但该路由尚未添加到应用程序中。-->
             <% _.each(sprints.models, function (sprint) { %>
+            <!--该链接最终将导航用户以查看sprint的详细信息。应用程序路由器当前不处理此表单的链接。-->
             <a href="#sprint/<%- sprint.get('id') %>" class="sprint">
                 <%- sprint.get('name') %> <br>
                 <span>DUE BY <%- sprint.get('end') %></span>
@@ -22,6 +24,7 @@
             <% }); %>
         </div>
         <% } else { %>
+        <!--如果sprint为空，则显示“正在加载...”消息。-->
         <h3 class="loading">Loading...</h3>
         <% } %>
     </script>
@@ -43,6 +46,7 @@
         </nav>
         <% } %>
     </script>
+    <!--创建一个表单模板-->
     <script type="text/html" id="new-sprint-template">
         <form action="" method="post">
             <label for="id_name">Sprint Name</label>
