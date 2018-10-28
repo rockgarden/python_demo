@@ -92,6 +92,7 @@
     // 为每个模型创建存根：Sprint，Tasks和User。
     // 每个都添加到app.models映射中以在整个应用程序中使用。
     app.models.Sprint = BaseModel.extend({  //模型已更改为从BaseModel而不是Backbone.Model扩展
+        //使用API提供的任务链接。此提取完成后，任务将添加到全局app.tasks集合中。
         fetchTasks: function () {
             var links = this.get('links');
             if (links && links.tasks) {
@@ -100,6 +101,7 @@
         }
     });
     app.models.Task = BaseModel.extend({    //模型已更改为从BaseModel而不是Backbone.Model扩展
+        //statusClass有助于将任务映射到应与之关联的StatusView。
         statusClass: function () {
             var sprint = this.get('sprint'),
                 status;
@@ -110,9 +112,11 @@
             }
             return status;
         },
+        //inBacklog确定了任务对待积压的意义。
         inBacklog: function () {
             return !this.get('sprint');
         },
+        //inSprint确定任务是否在给定的sprint中。
         inSprint: function (sprint) {
             return sprint.get('id') == this.get('sprint');
         }
@@ -131,10 +135,15 @@
             this._count = response.count;
             return response.results || [];
         },
+        // getOrFetch方法返回一个延迟对象，该对象将解析为模型实例。
         getOrFetch: function (id) {
             var result = new $.Deferred(),
+                // 使用this.get在ID中查找当前集合中的模型。
+                // 调用this.get不会向API服务器发出请求; 它只查找与集合中当前内存中模型列表中的给定ID匹配的模型。
+                // 如果在集合中找到模型，则会立即使用结果解析延迟对象。
                 model = this.get(id);
             if (!model) {
+                //如果模型不在集合中，则从API获取。此步骤使用原始视图实现中的相同逻辑，该逻辑首先将空模型放入集合中并从API中检索它。
                 model = this.push({id: id});
                 model.fetch({
                     success: function (model, response, options) {
@@ -165,6 +174,7 @@
         app.collections.Tasks = BaseCollection.extend({ //所有集合都已配置为从BaseCollection扩展。
             model: app.models.Task,
             url: data.tasks,
+            //使用backlog = True过滤器来获取未分配给sprint的任务。与获取任务一样，生成的任务将添加到全局app.tasks集合中。
             getBacklog: function () {
                 this.fetch({remove: false, data: {backlog: 'True'}});
             }

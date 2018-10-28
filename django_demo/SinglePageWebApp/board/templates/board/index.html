@@ -59,13 +59,16 @@
             <button type="submit">Create</button>
         </form>
     </script>
+    <!--sprint模板--->
     <script type="text/html" id="sprint-template">
         <% if (sprint !== null) { %>
+        <!--查看sprint是否设置了无效标志。-->
         <% if (!sprint.invalid) { %>
         <h2><%- sprint.get('name') %></h2>
         <span class="due-date">Due <%- sprint.get('end') %></span>
         <p class="description"><%- sprint.get('description') %></p>
         <div class="tasks"></div>
+        <!--如果sprint被标记为无效，我们将添加一条简单的消息让用户知道。-->
         <% } else { %>
         <h1>Sprint <%- sprint.get('id') %> not found.</h1>
         <% } %>

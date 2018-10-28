@@ -38,5 +38,43 @@ API实现的分页包含对象列表，其中包含有关页面和总计数的�
 * 由HomepageView（在/js/views.js中）渲染视图和模板，它将添加绑定到自定义方法的事件。
 * 添加CSS来清楚地定义列表中的表单
 
-### 路由Sprint详细信息
+
+### Sprint详细信息页面
+**渲染Sprint**
+* 从API获取sprint数据并将其传递到模板以呈现细节。让我们在/js/views.js中构建我们的视图，指向这个新视图模板并传入该数据。
+* 将视图添加到路由器之前，需要将sprint-template添加到我们的index.html文件中（/templates）
+
+**路由Sprint详细信息**
 * 新SprintView在创建时需要sprintId。需要从路径捕获此值并将其传递给视图。Backbone允许捕获部分路由。将路由添加到router.js文件中的sprint详细信息页面。
+
+**使用客户端状态**
+* 在客户端上，我们不需要在每次需要模型对象时都使用API，sprint可能已经在app.sprints集合中。
+* 可以在models.js中使用一个简单的集合助手 collection helper 来解决这个问题。
+* views.js中更新SprintView以使用这种集合助手。当发现sprint时，无论是本地还是来自API，都需要处理成功的情况，以及当给定sprintId不存在sprint时的失败情况。
+* 更新模板（xx/templates/xx/index.html）以处理无效的sprint案例。
+
+**渲染任务**
+* 从任务状态视图开始，在js/views.js中增加statusView.
+* 定义三个选项：sprint，status和title。需要将基本模板添加到 templates/index.html。
+* StatusView共有五个实例，由SprintView管理，一旦视图初始化，应该js / views.js中实现。
+* 在 static/js/models.js中添加两个辅助方法，为每个sprint提取任务。
+* 两个辅助方法都没有返回任何东西。相反，应用程序将在添加这些项目时使用app.tasks集合触发的事件。 这也将由js/views.js中的SprintView处理。
+* addTask回调将处理从API接收的任务以及客户端上已有的任务。仅当任务与sprint或backlog任务相关时，才应呈现该任务。让我们在 js / models.js中为Task模型添加一些新方法来帮助理清这个逻辑。
+* 返回到static/js/views.js中的SprintView来处理添加任务。
+
+**AddTaskView**
+* AddTaskView build in board/static/board/js/views.js
+* 添加了一个新的事件处理程序来处理取消按钮。并将它作为FormView中的默认值（/js/views.js）
+* 在/js/views.js中更新状态视图以呈现这个新表单。
+* 新任务模板添加到index.html文件以完成任务创建工作流程。
+* 提供一个更具可读性和可用性的结构，我们将在/css/board.css中添加一些CSS。
+
+### CRUD任务
+
+**在Sprint中渲染任务**
+* 在/js/views.js中创建TaskItemView，以使用此模板呈现每个任务。TaskItemView初始化时，它会将自身绑定到模型的更改与删除事件。
+如果在客户端上更新了模型实例，则视图将再次呈现自身以反映这些更新。 如果删除模型，视图将从DOM中删除自身。
+渲染还在元素上设置CSS顺序，灵活盒布局使用它来正确呈现顺序，而不管DOM中的位置如何。
+* 在js/views.js中的SprintView.renderTask方法中使用TaskItemView。
+* 在css/board.css添加一些小的样式来分隔任务。
+

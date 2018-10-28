@@ -18,7 +18,7 @@
     var FormView = TemplateView.extend({
         events: {
             'submit form': 'submit',
-            'click button.cancel': 'done'
+            'click button.cancel': 'done'  //FormView现在默认将任何button.cancel点击绑定到done方法。
         },
         errorTemplate: _.template('<span class="error"><%- msg %></span>'),
         clearErrors: function () {
@@ -68,7 +68,7 @@
 
     var NewSprintView = FormView.extend({ //此视图扩展了FormView帮助类，应该在HomepageView之前定义。
         templateName: '#new-sprint-template',
-        className: 'new-sprint',
+        className: 'new-sprint',  //NewSprintView不再需要扩展事件，并且可以从每个视图中删除此声明。
         //单击“添加”按钮将触发表单提交，该表单由FormView基础处理。除了默认的提交事件处理程序之外，视图还将处理取消按钮以调用FormView定义的done方法。
         submit: function (event) {
             var self = this,
@@ -167,13 +167,15 @@
         }
     });
 
-    var AddTaskView = FormView.extend({
-        templateName: '#new-task-template',
+    var AddTaskView = FormView.extend({  //扩展FormView以实现基本模板呈现和表单提交以及错误处理。
+        templateName: '#new-task-template',  //NewSprintView不再需要扩展事件，并且可以从每个视图中删除此声明。
         submit: function (event) {
             var self = this,
                 attributes = {};
             FormView.prototype.submit.apply(this, arguments);
+            //代码将表单序列化为API可以使用的可使用的JSON数据。
             attributes = this.serializeForm(this.form);
+            //在集合中创建新任务，并为与API的交互分配各种属性。因为我们正在使用模型保存方法，所以失败被绑定到FormView的modelFailure回调。
             app.collections.ready.done(function () {
                 app.tasks.create(attributes, {
                     wait: true,
@@ -192,8 +194,10 @@
         className: 'status',
         templateName: '#status-template',
         events: {
+            //视图现在绑定一个事件处理程序，用于单击带有add类的按钮。虽然此视图的所有实例都具有此处理程序，但呈现按钮的唯一模板是待处理任务的StatusView实例。
             'click button.add': 'renderAddForm'
         },
+        //StatusView定义三个选项sprint，status和title
         initialize: function (options) {
             TemplateView.prototype.initialize.apply(this, arguments);
             this.sprint = options.sprint;
@@ -203,6 +207,7 @@
         getContext: function () {
             return {sprint: this.sprint, title: this.title};
         },
+        //单击按钮时会创建一个新的AddTaskView实例，并在完成后自动删除，无论是创建新任务还是用户单击取消。
         renderAddForm: function (event) {
             var view = new AddTaskView(),
                 link = $(event.currentTarget);
@@ -214,6 +219,7 @@
                 link.show();
             });
         },
+        //addTask方法来添加任务视图，它可以插入到DOM中。
         addTask: function (view) {
             $('.list', this.$el).append(view.el);
         }
@@ -307,14 +313,18 @@
         }
     });
 
+    //基于TemplateView扩展，并使用现有的钩子(回调)。
     var SprintView = TemplateView.extend({
         templateName: '#sprint-template',
         initialize: function (options) {
             var self = this;
             TemplateView.prototype.initialize.apply(this, arguments);
+            //该模型仅知道模型的id。随后的fetch方法将从API检索剩余的详细信息。
             this.sprintId = options.sprintId;
             this.sprint = null;
+            //tasks属性为关联数组
             this.tasks = {};
+            //创建SprintView时，会为每种可能的状态案例创建StatusView。
             this.statuses = {
                 unassigned: new StatusView({
                     sprint: null, status: 1, title: 'Backlog'}),
@@ -328,15 +338,18 @@
                     sprint: this.sprintId, status: 4, title: 'Completed'})
             };
             app.collections.ready.done(function () {
+                //返回结果时，app.tasks将触发add事件，该事件将绑定到视图上的addTask。
                 app.tasks.on('add', self.addTask, self);
+                //原始模型fetch已被getOrFetch取代。由于它返回一个延迟对象，因此必须在sprint可用时将其与一个完成回调链接。
                 app.sprints.getOrFetch(self.sprintId).done(function (sprint) {
                     self.sprint = sprint;
                     self.render();
                     // Add any current tasks
+                    //如果我们在sprint页面之间导航，则可能已经存储在客户端上的任务。那些也需要添加。请记住，并非所有任务都与此sprint相关，并且还需要在addTask回调中过滤掉它们。
                     app.tasks.each(self.addTask, self);
                     // Fetch tasks for the current sprint
                     sprint.fetchTasks();
-                }).fail(function (sprint) {
+                }).fail(function (sprint) {  //如果从API获取模型会引发错误，则会触发失败回调。在这种情况下，我们在渲染模板之前将sprint表示为无效。
                     self.sprint = sprint;
                     self.sprint.invalid = true;
                     self.render();
@@ -348,6 +361,7 @@
         getContext: function () {
             return {sprint: this.sprint};
         },
+        //渲染SprintView将删除子视图的现有元素。需要将子视图重新插入DOM中，并且需要再次绑定事件。
         render: function () {
             TemplateView.prototype.render.apply(this, arguments);
             _.each(this.statuses, function (view, name) {
@@ -356,17 +370,21 @@
                 view.render();
             }, this);
             _.each(this.tasks, function (view, taskId) {
+                //tasks数组将task.id映射到任务的子视图实例。addTask已更新为分配。以迭代映射更新渲染。
                 var task = app.tasks.get(taskId);
                 view.remove();
                 this.tasks[taskId] = this.renderTask(task);
             }, this);
         },
+        //过滤到与此视图相关的任务。它还包含所有添加的任务的列表，以防视图需要再次呈现。
         addTask: function (task) {
             if (task.inBacklog() || task.inSprint(this.sprint)) {
                 this.tasks[task.get('id')] = this.renderTask(task);
             }
         },
+        //渲染任务当前由内联的Underscore模板处理。
         renderTask: function (task) {
+            //创建新TaskItemView的实例并循环遍历状态子视图。renderTask现在返回子视图，addTask用于跟踪查看映射的任务。
             var view = new TaskItemView({task: task});
             _.each(this.statuses, function (container, name) {
                 if (container.sprint == task.get('sprint') &&
@@ -382,6 +400,7 @@
     app.views.HomepageView = HomepageView;
     app.views.LoginView = LoginView;
     app.views.HeaderView = HeaderView;
+    //将SprintView添加到app.views中，以便路由器可以使用它。
     app.views.SprintView = SprintView;
 
 })(jQuery, Backbone, _, app);
