@@ -18,7 +18,7 @@
     var FormView = TemplateView.extend({
         events: {
             'submit form': 'submit',
-            'click button.cancel': 'done'  //FormView现在默认将任何button.cancel点击绑定到done方法。
+            'click button.cancel': 'done'
         },
         errorTemplate: _.template('<span class="error"><%- msg %></span>'),
         clearErrors: function () {
@@ -59,49 +59,40 @@
             this.trigger('done');
             this.remove();
         },
-        //$.ajax故障回调将响应对象作为第一个参数，但Model.save将模型实例作为第一个参数，响应作为第二个参数。
         modelFailure: function (model, xhr, options) {
             var errors = xhr.responseJSON;
             this.showErrors(errors);
         }
     });
 
-    var NewSprintView = FormView.extend({ //此视图扩展了FormView帮助类，应该在HomepageView之前定义。
+    var NewSprintView = FormView.extend({
         templateName: '#new-sprint-template',
-        className: 'new-sprint',  //NewSprintView不再需要扩展事件，并且可以从每个视图中删除此声明。
-        //单击“添加”按钮将触发表单提交，该表单由FormView基础处理。除了默认的提交事件处理程序之外，视图还将处理取消按钮以调用FormView定义的done方法。
+        className: 'new-sprint',
         submit: function (event) {
             var self = this,
                 attributes = {};
             FormView.prototype.submit.apply(this, arguments);
             attributes = this.serializeForm(this.form);
             app.collections.ready.done(function () {
-                //表单值是序列化的。视图使用app.sprints.create，而不是手动调用$.post。成功和失败处理程序将重新绑定到视图中。
                 app.sprints.create(attributes, {
                     wait: true,
                     success: $.proxy(self.success, self),
-                    //失败回调转到添加到FormView的新modelFailure。
                     error: $.proxy(self.modelFailure, self)
                 });
             });
         },
-        //创建sprint后，视图调用done并重定向到sprint的详情路由
         success: function (model) {
             this.done();
             window.location.hash = '#sprint/' + model.get('id');
         }
     });
 
-    var HomepageView = TemplateView.extend({ //此视图扩展了FormView帮助类，应该在HomepageView之前定义。
+    var HomepageView = TemplateView.extend({
         templateName: '#home-template',
-        //添加按钮的单击事件现在由renderAddForm处理。
         events: {
             'click button.add': 'renderAddForm'
         },
-        //创建视图时，将获取结束日期大于七天的Sprint。当sprint可用时，将再次呈现视图以显示它们。
         initialize: function (options) {
-            //在initialize函数中保存对this的当前值的引用，该引用将是视图的实例，以便稍后可以在完成的回调函数中使用它。
-            //它的值取决于函数/方法的调用方式，并确保它是正确的可能是棘手的 - 特别是对于嵌套的回调函数。
             var self = this;
             TemplateView.prototype.initialize.apply(this, arguments);
             app.collections.ready.done(function () {
@@ -110,17 +101,13 @@
                 end = end.toISOString().replace(/T.*/g, '');
                 app.sprints.fetch({
                     data: {end_min: end},
-                    //$ .proxy，可用于为函数调用显式设置此上下文。Underscore有一个名为_.bind的等效助手。
-                    //这两个模拟ECMAScript 5中引入的Function.prototype.bind并确保跨浏览器兼容性。
                     success: $.proxy(self.render, self)
                 });
             });
         },
         getContext: function () {
-            //模板上下文现在包含来自app.sprints的当前sprint。如果app.collections未准备好，则可能未定义。在这种情况下，模板将获得空值。
             return {sprints: app.sprints || null};
         },
-        //renderAddForm将创建一个NewSprintView实例，该实例在按钮上方呈现。视图完成后，无论是添加还是取消按钮，都会再次显示该链接。
         renderAddForm: function (event) {
             var view = new NewSprintView(),
                 link = $(event.currentTarget);
@@ -167,15 +154,13 @@
         }
     });
 
-    var AddTaskView = FormView.extend({  //扩展FormView以实现基本模板呈现和表单提交以及错误处理。
-        templateName: '#new-task-template',  //NewSprintView不再需要扩展事件，并且可以从每个视图中删除此声明。
+    var AddTaskView = FormView.extend({
+        templateName: '#new-task-template',
         submit: function (event) {
             var self = this,
                 attributes = {};
             FormView.prototype.submit.apply(this, arguments);
-            //代码将表单序列化为API可以使用的可使用的JSON数据。
             attributes = this.serializeForm(this.form);
-            //在集合中创建新任务，并为与API的交互分配各种属性。因为我们正在使用模型保存方法，所以失败被绑定到FormView的modelFailure回调。
             app.collections.ready.done(function () {
                 app.tasks.create(attributes, {
                     wait: true,
@@ -194,10 +179,12 @@
         className: 'status',
         templateName: '#status-template',
         events: {
-            //视图现在绑定一个事件处理程序，用于单击带有add类的按钮。虽然此视图的所有实例都具有此处理程序，但呈现按钮的唯一模板是待处理任务的StatusView实例。
-            'click button.add': 'renderAddForm'
+            'click button.add': 'renderAddForm',
+            'dragenter': 'enter',
+            'dragover': 'over',
+            'dragleave': 'leave',
+            'drop': 'drop'
         },
-        //StatusView定义三个选项sprint，status和title
         initialize: function (options) {
             TemplateView.prototype.initialize.apply(this, arguments);
             this.sprint = options.sprint;
@@ -207,7 +194,6 @@
         getContext: function () {
             return {sprint: this.sprint, title: this.title};
         },
-        //单击按钮时会创建一个新的AddTaskView实例，并在完成后自动删除，无论是创建新任务还是用户单击取消。
         renderAddForm: function (event) {
             var view = new AddTaskView(),
                 link = $(event.currentTarget);
@@ -219,9 +205,41 @@
                 link.show();
             });
         },
-        //addTask方法来添加任务视图，它可以插入到DOM中。
         addTask: function (view) {
             $('.list', this.$el).append(view.el);
+        },
+        enter: function (event) {
+            event.originalEvent.dataTransfer.effectAllowed = 'move';
+            event.preventDefault();
+            this.$el.addClass('over');
+        },
+        over: function (event) {
+            event.originalEvent.dataTransfer.dropEffect = 'move';
+            event.preventDefault();
+            return false;
+        },
+        leave: function (event) {
+            this.$el.removeClass('over');
+        },
+        drop: function (event) {
+            var dataTransfer = event.originalEvent.dataTransfer,
+                task = dataTransfer.getData('application/model'),
+                tasks, order;
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            }
+            task = app.tasks.get(task);
+            tasks = app.tasks.where({sprint: this.sprint, status: this.status});
+            if (tasks.length) {
+                order = _.min(_.map(tasks, function (model) {
+                    return model.get('order');
+                }));
+            } else {
+                order = 1;
+            }
+            task.moveTo(this.status, this.sprint, order - 1);
+            this.trigger('drop', task);
+            this.leave();
         }
     });
 
@@ -230,10 +248,8 @@
         className: 'task-detail',
         templateName: '#task-detail-template',
         events: _.extend({
-            //事件侦听器中添加事件，查找在我们的模板中出现contenteditable的所有位置。
             'blur [data-field][contenteditable=true]': 'editField'
         }, FormView.prototype.events),
-        //侦听模型的更改，跟踪用户对模型所做的任何更改。
         initialize: function (options) {
             FormView.prototype.initialize.apply(this, arguments);
             this.task = options.task;
@@ -242,11 +258,9 @@
             this.task.on('change', this.render, this);
             this.task.on('remove', this.remove, this);
         },
-        //没有与任务上的特定属性关联的内容，模板将以“-----”作为值呈现。
         getContext: function () {
             return {task: this.task, empty: '-----'};
         },
-        //表单保存用户所做的更改。
         submit: function (event) {
             FormView.prototype.submit.apply(this, arguments);
             this.task.save(this.changes, {
@@ -255,15 +269,12 @@
                 error: $.proxy(this.modelFailure, this)
             });
         },
-        //保存成功后，更改的属性将重置。
         success: function (model) {
             this.changes = {};
             $('button.save', this.$el).hide();
         },
-        //自定义方法，可以使特定内容字段可用于编辑并保存回我们的API。
         editField: function (event) {
             var $this = $(event.currentTarget),
-                //从文本内容中删除前导和尾随空格。
                 value = $this.text().replace(/^\s+|\s+$/g,''),
                 field = $this.data('field');
             this.changes[field] = value;
@@ -294,8 +305,16 @@
         className: 'task-item',
         templateName: '#task-item-template',
         events: {
-            //将click事件绑定到新的详细信息回调。
-            'click': 'details'
+            'click': 'details',
+            'dragstart': 'start',
+            'dragenter': 'enter',
+            'dragover': 'over',
+            'dragleave': 'leave',
+            'dragend': 'end',
+            'drop': 'drop'
+        },
+        attributes: {
+            draggable: true
         },
         initialize: function (options) {
             TemplateView.prototype.initialize.apply(this, arguments);
@@ -310,7 +329,6 @@
             TemplateView.prototype.render.apply(this, arguments);
             this.$el.css('order', this.task.get('order'));
         },
-        //在事件回调中，为任务创建了一个新的TaskDetailView实例。在编辑完成之前隐藏当前视图，这由FormView触发的done事件指示。
         details: function () {
             var view = new TaskDetailView({task: this.task});
             this.$el.before(view.el);
@@ -319,21 +337,75 @@
             view.on('done', function () {
                 this.$el.show();
             }, this);
+        },
+        start: function (event) {
+            var dataTransfer = event.originalEvent.dataTransfer;
+            dataTransfer.effectAllowed = 'move';
+            dataTransfer.setData('application/model', this.task.get('id'));
+            this.trigger('dragstart', this.task);
+        },
+        enter: function (event) {
+            event.originalEvent.dataTransfer.effectAllowed = 'move';
+            event.preventDefault();
+            this.$el.addClass('over');
+        },
+        over: function (event) {
+            event.originalEvent.dataTransfer.dropEffect = 'move';
+            event.preventDefault();
+            return false;
+        },
+        end: function (event) {
+            this.trigger('dragend', this.task);
+        },
+        leave: function (event) {
+            this.$el.removeClass('over');
+        },
+        drop: function (event) {
+            var self = this,
+                dataTransfer = event.originalEvent.dataTransfer,
+                task = dataTransfer.getData('application/model'),
+                tasks, order;
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            }
+            task = app.tasks.get(task);
+            if (task !== this.task) {
+                // Task is being moved in front of this.task
+                order = this.task.get('order');
+                tasks = app.tasks.filter(function (model) {
+                    return model.get('id') !== task.get('id') &&
+                        model.get('status') === self.task.get('status') &&
+                        model.get('sprint') === self.task.get('sprint') &&
+                        model.get('order') >= order;
+                });
+                _.each(tasks, function (model, i) {
+                    model.save({order: order + (i + 1)});
+                });
+                task.moveTo(
+                    this.task.get('status'),
+                    this.task.get('sprint'),
+                    order);
+            }
+            this.trigger('drop', task);
+            this.leave();
+            return false;
+        },
+        lock: function () {
+            this.$el.addClass('locked');
+        },
+        unlock: function () {
+            this.$el.removeClass('locked');
         }
     });
 
-    //基于TemplateView扩展，并使用现有的钩子(回调)。
     var SprintView = TemplateView.extend({
         templateName: '#sprint-template',
         initialize: function (options) {
             var self = this;
             TemplateView.prototype.initialize.apply(this, arguments);
-            //该模型仅知道模型的id。随后的fetch方法将从API检索剩余的详细信息。
             this.sprintId = options.sprintId;
             this.sprint = null;
-            //tasks属性为关联数组
             this.tasks = {};
-            //创建SprintView时，会为每种可能的状态案例创建StatusView。
             this.statuses = {
                 unassigned: new StatusView({
                     sprint: null, status: 1, title: 'Backlog'}),
@@ -346,19 +418,28 @@
                 done: new StatusView({
                     sprint: this.sprintId, status: 4, title: 'Completed'})
             };
+            _.each(this.statuses, function (view, name) {
+                view.on('drop', function (model) {
+                    this.socket.send({
+                        model: 'task',
+                        id: model.get('id'),
+                        action: 'drop'
+                    });
+                }, this);
+            }, this);
+            this.socket = null;
             app.collections.ready.done(function () {
-                //返回结果时，app.tasks将触发add事件，该事件将绑定到视图上的addTask。
                 app.tasks.on('add', self.addTask, self);
-                //原始模型fetch已被getOrFetch取代。由于它返回一个延迟对象，因此必须在sprint可用时将其与一个完成回调链接。
+                app.tasks.on('change', self.changeTask, self);
                 app.sprints.getOrFetch(self.sprintId).done(function (sprint) {
                     self.sprint = sprint;
+                    self.connectSocket();
                     self.render();
                     // Add any current tasks
-                    //如果我们在sprint页面之间导航，则可能已经存储在客户端上的任务。那些也需要添加。请记住，并非所有任务都与此sprint相关，并且还需要在addTask回调中过滤掉它们。
                     app.tasks.each(self.addTask, self);
                     // Fetch tasks for the current sprint
                     sprint.fetchTasks();
-                }).fail(function (sprint) {  //如果从API获取模型会引发错误，则会触发失败回调。在这种情况下，我们在渲染模板之前将sprint表示为无效。
+                }).fail(function (sprint) {
                     self.sprint = sprint;
                     self.sprint.invalid = true;
                     self.render();
@@ -370,7 +451,6 @@
         getContext: function () {
             return {sprint: this.sprint};
         },
-        //渲染SprintView将删除子视图的现有元素。需要将子视图重新插入DOM中，并且需要再次绑定事件。
         render: function () {
             TemplateView.prototype.render.apply(this, arguments);
             _.each(this.statuses, function (view, name) {
@@ -379,21 +459,17 @@
                 view.render();
             }, this);
             _.each(this.tasks, function (view, taskId) {
-                //tasks数组将task.id映射到任务的子视图实例。addTask已更新为分配。以迭代映射更新渲染。
                 var task = app.tasks.get(taskId);
                 view.remove();
                 this.tasks[taskId] = this.renderTask(task);
             }, this);
         },
-        //过滤到与此视图相关的任务。它还包含所有添加的任务的列表，以防视图需要再次呈现。
         addTask: function (task) {
             if (task.inBacklog() || task.inSprint(this.sprint)) {
                 this.tasks[task.get('id')] = this.renderTask(task);
             }
         },
-        //渲染任务当前由内联的Underscore模板处理。
         renderTask: function (task) {
-            //创建新TaskItemView的实例并循环遍历状态子视图。renderTask现在返回子视图，addTask用于跟踪查看映射的任务。
             var view = new TaskItemView({task: task});
             _.each(this.statuses, function (container, name) {
                 if (container.sprint == task.get('sprint') &&
@@ -401,15 +477,68 @@
                     container.addTask(view);
                 }
             });
+            view.on('dragstart', function (model) {
+                this.socket.send({
+                    model: 'task',
+                    id: model.get('id'),
+                    action: 'dragstart'
+                });
+            }, this);
+            view.on('dragend', function (model) {
+                this.socket.send({
+                    model: 'task',
+                    id: model.get('id'),
+                    action: 'dragend'
+                });
+            }, this);
+            view.on('drop', function (model) {
+                this.socket.send({
+                    model: 'task',
+                    id: model.get('id'),
+                    action: 'drop'
+                });
+            }, this);
             view.render();
             return view;
+        },
+        connectSocket: function () {
+            var links = this.sprint && this.sprint.get('links');
+            if (links && links.channel) {
+                this.socket = new app.Socket(links.channel);
+                this.socket.on('task:dragstart', function (task) {
+                    var view = this.tasks[task];
+                    if (view) {
+                        view.lock();
+                    }
+                }, this);
+                this.socket.on('task:dragend task:drop', function (task) {
+                    var view = this.tasks[task];
+                    if (view) {
+                        view.unlock();
+                    }
+                }, this);
+            }
+        },
+        remove: function () {
+            TemplateView.prototype.remove.apply(this, arguments);
+            if (this.socket && this.socket.close) {
+                this.socket.close();
+            }
+        },
+        changeTask: function (task) {
+            var changed = task.changedAttributes(),
+                view = this.tasks[task.get('id')];
+            if (view && typeof(changed.status) !== 'undefined' ||
+                typeof(changed.sprint) !== 'undefined') {
+                view.remove();
+                this.addTask(task);
+            }
         }
     });
 
     app.views.HomepageView = HomepageView;
     app.views.LoginView = LoginView;
     app.views.HeaderView = HeaderView;
-    //将SprintView添加到app.views中，以便路由器可以使用它。
     app.views.SprintView = SprintView;
 
 })(jQuery, Backbone, _, app);

@@ -78,3 +78,15 @@ API实现的分页包含对象列表，其中包含有关页面和总计数的�
 * 在js/views.js中的SprintView.renderTask方法中使用TaskItemView。
 * 在css/board.css添加一些小的样式来分隔任务。
 
+**更新任务**
+* 首先在/js/views.js中创建模板添任务详细视图。
+* 模板添任务详细信息加到index.html，并包含用于在sprint中创建新任务的相应表单。
+* 保存按钮默认隐藏，仅在保存更改时显示。当用户单击列表中的任务时，需要创建TaskDetailView实例。
+TaskItemView需要侦听此事件。在/js/views.js中实现这些要求。
+
+**内联编辑功能**
+* 通过在可信的HTML5元素上使用自定义方法来添加创建内联可编辑内容的功能JS/views.js。
+* 将新方法添加我们的模板index.html，并为我们想要内联编辑的每个部分分配contenteditable。DOM的特定区域通过data-field属性与模型字段相关联。
+* 默认的FormView.showErrors无法显示API中的错误。FormView.showErrors依赖于<input>和<label>标记，使名称与模型名称匹配。
+* 在js/views.js中TaskDetailView定义自己的showErrors，它将错误与基于data-field属性的正确区域相关联。
+* css/board.css中添加detail/edit状态样式。
