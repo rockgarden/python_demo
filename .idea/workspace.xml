@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="opt">
-      <change afterPath="$PROJECT_DIR$/elasticsearch_demo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elasticsearch_demo/es_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elasticsearch_demo/es_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/elasticsearch_demo/es_load.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="349">
-                <caret line="76" column="59" lean-forward="true" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+              <first_editor relative-caret-position="-688">
+                <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               </first_editor>
               <second_editor />
             </state>
@@ -29,18 +27,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elasticsearch_demo/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elasticsearch_demo/es_load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="42" selection-end-column="22" />
+            <state relative-caret-position="2533">
+              <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
               <folding>
                 <element signature="e#46#83#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/client/indices.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/transport.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="352" selection-start-line="352" selection-end-line="352" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/connection/http_urllib3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="243" selection-start-line="243" selection-end-line="243" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/client/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -165,8 +194,8 @@
         <option value="$PROJECT_DIR$/scrapy_demo/pipelines_demo/pipelines_demo/__init__.py" />
         <option value="$PROJECT_DIR$/scrapy_demo/pipelines_demo/pipelines/__init__.py" />
         <option value="$PROJECT_DIR$/scrapy_demo/pipelines_demo/pipelines/mysql.py" />
-        <option value="$PROJECT_DIR$/elasticsearch_demo/es_load.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/elasticsearch_demo/es_load.py" />
       </list>
     </option>
   </component>
@@ -284,7 +313,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test for pyquery_demo.QueryStringSuite.test_url_openself">
+  <component name="RunManager" selected="Python.es_load">
     <configuration name="python_demo" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,6 +329,27 @@
       <option name="additionalOptions" value="" />
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
+    </configuration>
+    <configuration name="es_load" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/elasticsearch_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elasticsearch_demo/es_load.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="file" type="PythonConfigurationType" factoryName="Python">
       <module name="python_demo" />
@@ -334,21 +384,6 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;fuzzywuzzy_demo.FuzzywuzzySuite.test_simple&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="py.test for pyquery_demo.QueryStringSuite" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_crawling" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;pyquery_demo.QueryStringSuite&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -417,17 +452,17 @@
       <item itemvalue="Python tests.unittests_demo" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_simple" />
       <item itemvalue="Python tests.py.test in pyquery_demo.py" />
-      <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_url_openself" />
       <item itemvalue="Python tests.py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" />
+      <item itemvalue="Python.es_load" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.es_load" />
         <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_url_openself" />
         <item itemvalue="Python tests.py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" />
         <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_simple" />
         <item itemvalue="Python tests.py.test in pyquery_demo.py" />
-        <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -666,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536642499354</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="opt">
+      <created>1560845781297</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1560845781297</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -719,14 +761,14 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46409714" weight="0.42276424" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66243833" weight="0.49212122" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62566" weight="0.44512194" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.66243833" visible="true" weight="0.31685168" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62566" weight="0.44500506" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4982382" weight="0.32848486" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.48680043" weight="0.35317862" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7006336" visible="true" weight="0.2038345" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7006336" weight="0.45812312" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.75712776" weight="0.29979676" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51319957" side_tool="true" weight="0.35317862" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" weight="0.32969698" />
@@ -831,35 +873,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/fast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/basic0.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/build/lib/properties/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1426" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_demo/generic/generic/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1188" />
@@ -1121,23 +1134,54 @@
     <entry file="file://$PROJECT_DIR$/elasticsearch_demo/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/git/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="349">
-            <caret line="76" column="59" lean-forward="true" selection-start-line="76" selection-start-column="59" selection-end-line="76" selection-end-column="59" />
+          <first_editor relative-caret-position="-688">
+            <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/transport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="352" selection-start-line="352" selection-end-line="352" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/connection/http_urllib3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/elasticsearch_demo/es_load.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="2533">
+          <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
           <folding>
             <element signature="e#46#83#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/client/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch/client/indices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>

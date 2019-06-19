@@ -7,12 +7,10 @@ import logging
 from datetime import datetime
 from os.path import dirname, basename, abspath
 
+import git
 from elasticsearch import Elasticsearch
 from elasticsearch.exceptions import TransportError
 from elasticsearch.helpers import bulk, streaming_bulk
-
-
-# import git
 
 
 def create_git_index(client, index):
@@ -145,7 +143,8 @@ if __name__ == "__main__":
         "-H",
         "--host",
         action="store",
-        default="localhost:9200",
+        # 输入elasticsearch host IP
+        default="http://192.168.97.134:9200",
         help="The elasticsearch host you wish to connect to. (Default: localhost:9200)",
     )
     parser.add_argument(

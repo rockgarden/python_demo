@@ -29,6 +29,8 @@
 
 - [PyMySQL](https://pypi.org/project/PyMySQL/):可代替MySQLdb-python.
 
+- [GitPython](https://pypi.org/project/GitPython/):git的开发库.
+
 
     # 应用主文件 __init.py__/app.py
     # 手动指定将MySQLdb转给pymysql处理
