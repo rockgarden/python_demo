@@ -283,6 +283,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Docker" />
@@ -351,6 +352,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="py.test for fuzzywuzzy_demo.FuzzywuzzySuite.test_simple" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -365,6 +369,7 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;fuzzywuzzy_demo.FuzzywuzzySuite.test_simple&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="py.test for pyquery_demo.QueryStringSuite" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -379,6 +384,7 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;pyquery_demo.QueryStringSuite&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="py.test for pyquery_demo.QueryStringSuite.test_simple" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -393,6 +399,7 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;pyquery_demo.QueryStringSuite.test_simple&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -407,6 +414,7 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;pyquery_demo.QueryStringSuite.test_url_openself&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="py.test in pyquery_demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_demo" />
@@ -421,6 +429,7 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/web_crawling/pyquery_demo.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
     </configuration>
     <configuration name="unittests_demo" type="tests" factoryName="Unittests">
       <module name="python_demo" />
@@ -435,9 +444,9 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/code/test_unittests.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jupyter Notebook.python_demo" />
       <item itemvalue="Python.file" />
       <item itemvalue="Python tests.unittests_demo" />
       <item itemvalue="Python tests.py.test for pyquery_demo.QueryStringSuite.test_simple" />
