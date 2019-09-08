@@ -15,6 +15,7 @@
   4. requests_demo: requests 网络请求库入门
   5. beautiful_soup_demo: bs4 网页解析库入门
   6. socket_demo: socket 库开发
+  7. elasticsearch: 文本搜索
   
 ## 相关库
 
@@ -27,6 +28,8 @@
 - [PyQt5](https://www.riverbankcomputing.com/software/pyqt/):GUI库, QT5应用的框架, 跨平台的工具包.
 
 - [PyMySQL](https://pypi.org/project/PyMySQL/):可代替MySQLdb-python.
+
+- [GitPython](https://pypi.org/project/GitPython/):git的开发库.
 
 
     # 应用主文件 __init.py__/app.py
@@ -70,11 +73,13 @@
 - [re](https://docs.python.org/3.6/library/re.html):(自带)正则表达式解析和处理功能库
 - [goose3](http://goose3.readthedocs.io/en/latest/index.html):提取文章类型Web页面的功能库, [github_python-goose](https://github.com/goose3/goose3),另有JAVA版支持python2 [goose-extractor](https://github.com/grangier/python-goose)
 
-
 ### Web网站开发
 - [django](https://www.djangoproject.com/)最流行的Web开发框架, [github](https://github.com/django/django)
 - [pyramid](https://trypyramid.com/):规模适中的Web应用框架
 - [Flask](https://www.palletsprojects.com/p/flask/):轻量级Web开发框架.
+
+### 文本搜索
+- [elasticsearch](https://github.com/elastic/elasticsearch-py):文本搜索库.
 
 ### 网络应用开发
 - [werobot](https://github.com/offu/WeRoBot):微信公众号开发框架.
