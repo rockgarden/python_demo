@@ -2,122 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="471e836e-2be8-4f16-858f-cea570c45799" name="Default" comment="add some charts">
-      <change afterPath="$PROJECT_DIR$/apyori_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sklearn_demo/linear_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/assets/李学锋身份证.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/pilow_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python_demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/librarys_batch_installer.py" beforeDir="false" afterPath="$PROJECT_DIR$/librarys_batch_installer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklearn_demo/DBSCAN_eg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2736">
-                <caret line="152" selection-start-line="152" selection-end-line="152" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/scatter_squares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/seaborn_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matplotlib/squarify_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/librarys_batch_installer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklearn_demo/KMeans_eg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklearn_demo/REDME.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="36">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apyori_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-587">
-              <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sklearn_demo/linear_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-              <folding>
-                <element signature="e#7#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,51 +22,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>font.family</find>
-      <find>STFangsong</find>
-      <find>font.sans-serif</find>
-      <find>fc-list:</find>
-      <find>import</find>
-      <find>as</find>
-      <find>coding: utf-8</find>
-      <find>finally</find>
-      <find>continue</find>
-      <find>random</find>
-      <find>turtle</find>
-      <find>保留字</find>
-      <find>eval</find>
-      <find>wheel</find>
-      <find>demo.html</find>
-      <find>pop</find>
-      <find>items</find>
-      <find>etree</find>
-      <find>fromkeys</find>
-      <find>regex</find>
-      <find>fuzzywuzzy</find>
-      <find>translate</find>
-      <find>zip</find>
-      <find>PropertiesItem</find>
-      <find>urlparse</find>
-      <find>unicode</find>
-      <find>APPERYIO_DB_ID</find>
-      <find>.csv</find>
-      <find>sitka_weather_2014</find>
-      <find>normpdf</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>str</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/code/source</dir>
-      <dir>$PROJECT_DIR$/game</dir>
-      <dir>$PROJECT_DIR$/numpy</dir>
-      <dir>$PROJECT_DIR$/code</dir>
-      <dir>$PROJECT_DIR$/matplotlib</dir>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -184,145 +34,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/code/sequence.ipynb" />
-        <option value="$PROJECT_DIR$/code/json.ipynb" />
-        <option value="$PROJECT_DIR$/code/列表.py" />
-        <option value="$PROJECT_DIR$/code/basic.ipynb" />
-        <option value="$PROJECT_DIR$/code/字符串.py" />
-        <option value="$PROJECT_DIR$/code/dictionary.ipynb" />
-        <option value="$PROJECT_DIR$/code/fuzzywuzzy_demo.py" />
-        <option value="$PROJECT_DIR$/code/string.ipynb" />
-        <option value="$PROJECT_DIR$/code/RegularExpression.ipynb" />
-        <option value="$PROJECT_DIR$/code/sequence_list.ipynb" />
-        <option value="$PROJECT_DIR$/web_crawling/pyquery_demo.ipynb" />
-        <option value="$PROJECT_DIR$/code/conditions.ipynb" />
-        <option value="$PROJECT_DIR$/web_crawling/pyquery_demo.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/items.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/scrapydemo/spiders/stocks.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/basic0.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/basic.py" />
-        <option value="/usr/local/lib/python3.6/site-packages/scrapyapperyio.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/tomobile.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/login.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/noncelogin.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/api.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/easy.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/fast.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/manual.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/generic/todo.csv" />
-        <option value="$PROJECT_DIR$/scrapy_demo/generic/generic/spiders/fromcsv.py" />
-        <option value="$PROJECT_DIR$/matplotlib/highs_lows.py" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/scrapinghub.yml" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/scrapy.cfg" />
-        <option value="$PROJECT_DIR$/scrapy_demo/README.md" />
-        <option value="$PROJECT_DIR$/scrapy_demo/properties/properties/settings.py" />
-        <option value="$PROJECT_DIR$/sklearn_demo/REDME.md" />
-        <option value="$PROJECT_DIR$/sklearn_demo/KMeans.py" />
-        <option value="$PROJECT_DIR$/sklearn_demo/DBSCAN_eg.py" />
-        <option value="$PROJECT_DIR$/matplotlib/rainfall.py" />
-        <option value="$PROJECT_DIR$/matplotlib/chinese_font_check.py" />
-        <option value="$PROJECT_DIR$/matplotlib/plt_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/squarify_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/pie_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/bar_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/scatter_squares.py" />
-        <option value="$PROJECT_DIR$/matplotlib/histogram_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/heatmap_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/box_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/seaborn_demo.py" />
-        <option value="$PROJECT_DIR$/matplotlib/ticker_demo.py" />
-        <option value="$PROJECT_DIR$/librarys_batch_installer.py" />
-        <option value="$PROJECT_DIR$/apyori_demo.py" />
-        <option value="$PROJECT_DIR$/sklearn_demo/linear_demo.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="lego" type="cbb8eebc:String" user="lego" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="scrapydemo" type="cbb8eebc:String" user="scrapydemo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="scrapydemo" type="cbb8eebc:String" user="scrapydemo" />
-              <item name="scrapydemo" type="cbb8eebc:String" user="scrapydemo" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="scrapydemo" type="cbb8eebc:String" user="scrapydemo" />
-              <item name="scrapydemo" type="cbb8eebc:String" user="scrapydemo" />
-              <item name="spiders" type="cbb8eebc:String" user="spiders" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="WebCrawling" type="cbb8eebc:String" user="WebCrawling" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="python_demo" type="cbb8eebc:String" user="python_demo" />
-              <item name="WebCrawling" type="cbb8eebc:String" user="WebCrawling" />
-              <item name="output" type="cbb8eebc:String" user="output" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="sklearn_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1lx8uyBKZmPwychwT3GjT2B2LRw" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -335,11 +53,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/code/assets" />
       <recent name="$PROJECT_DIR$/scrapy_demo/generic/generic" />
       <recent name="$PROJECT_DIR$/code" />
       <recent name="$PROJECT_DIR$/lego" />
       <recent name="$PROJECT_DIR$/tensorflow_demo" />
-      <recent name="$PROJECT_DIR$/legos" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -354,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.linear_demo">
+  <component name="RunManager" selected="Python.pilow_demo">
     <configuration name="python_demo" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,27 +102,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apyori_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="box_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="python_demo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/matplotlib" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/matplotlib/box_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -476,6 +173,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pilow_demo" type="PythonConfigurationType" factoryName="Python">
+      <module name="python_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/pilow_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="seaborn_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="python_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -514,12 +232,12 @@
     </configuration>
     <list>
       <item itemvalue="Python.file" />
+      <item itemvalue="Python.pilow_demo" />
       <item itemvalue="Python.seaborn_demo" />
       <item itemvalue="Python.heatmap_demo" />
-      <item itemvalue="Python.box_demo" />
       <item itemvalue="Python.apyori_demo" />
-      <item itemvalue="Python tests.unittests_demo" />
       <item itemvalue="Python.linear_demo" />
+      <item itemvalue="Python tests.unittests_demo" />
     </list>
     <recent_temporary>
       <list>
@@ -527,7 +245,6 @@
         <item itemvalue="Python.apyori_demo" />
         <item itemvalue="Python.heatmap_demo" />
         <item itemvalue="Python.seaborn_demo" />
-        <item itemvalue="Python.box_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -787,68 +504,47 @@
       <configuration name="py.test for pyquery_demo.QueryStringSuite.test_url_openself" configurationId="tests" />
     </history-entry>
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16560958" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="DB Browser" order="2" weight="0.32980973" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.46409714" weight="0.42276424" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.66032416" visible="true" weight="0.32048193" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.62566" weight="0.44512194" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4982382" weight="0.32848486" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4883721" weight="0.35393938" />
-      <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.84284705" weight="0.13253012" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.75712776" weight="0.29979676" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3396758" side_tool="true" visible="true" weight="0.32048193" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49964765" weight="0.32969698" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
     <option name="RECENT_FILTERS">
       <map>
@@ -912,376 +608,6 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/scrapinghub.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/generic/generic/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_demo/properties/properties/spiders/tomobile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tensorflow_demo/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.ipynb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/lib/python3.6/site-packages/scipy/spatial/tests/test__plotutils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/random_walk_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/chinese_font_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_diff_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-309">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_multiplication_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_2_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/rainfall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="45" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/die.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/python_repos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/random_walk.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/modules/weather_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/pygal2_update/die.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/pygal2_update/die_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/pygal2_update/different_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/btc_close_2017.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1956" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/bar_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/mpl_squares.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/highs_lows.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/github_python_repos_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/github_python_repos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/die_3_visual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/holland_radar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="e#258#275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/hn_submissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/histogram_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Python/3.6/lib/python/site-packages/matplotlib/mlab.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27342">
-          <caret line="1536" column="46" selection-start-line="1536" selection-start-column="46" selection-end-line="1536" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/box_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/pie_demo.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn_demo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/ticker_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#8#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn_demo/DBSCAN_eg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2736">
-            <caret line="152" selection-start-line="152" selection-end-line="152" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/scatter_squares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/seaborn_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matplotlib/squarify_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/librarys_batch_installer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn_demo/KMeans_eg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn_demo/REDME.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="36">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apyori_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="109" column="39" selection-start-line="109" selection-start-column="39" selection-end-line="109" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklearn_demo/linear_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
